@@ -6,13 +6,25 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/Home/home/home.component';
 import { LayoutComponent } from './Shared/layout/layout.component';
 import { FooterComponent } from './Shared/footer/footer.component';
+import { SliderComponent } from './components/Home/slider/slider.component';
+import { TrendingComponent } from './components/Home/trending/trending.component';
+import { RecentlyComponent } from './components/Home/recently/recently.component';
+import { SuperStarComponent } from './components/Home/super-star/super-star.component';
+import { MostViewsComponent } from './components/Home/most-views/most-views.component';
+import { SeeMoreComponent } from './components/Home/see-more/see-more.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LayoutComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent,
+    TrendingComponent,
+    RecentlyComponent,
+    SuperStarComponent,
+    MostViewsComponent,
+    SeeMoreComponent
   ],
   imports: [
     BrowserModule,
