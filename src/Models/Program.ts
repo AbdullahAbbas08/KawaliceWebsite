@@ -1,5 +1,5 @@
 export class Program{
-ProgramId:number;           
+ProgramId:number;
 ProgramDescription:string;
 ProgramName:string;
 ProgramImg:string;
@@ -12,4 +12,5 @@ ProgramOrder:number;
 ProgramTypeId:number;
 ProgramViews:number;
 CreationDate:number;
+ProgramTypeName:string;
 }

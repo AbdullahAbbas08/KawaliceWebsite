@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-   URL:"https://api.kawalic365.com"
+   URL:"https://api.kawalic365.com/api"
 };
 
 /*

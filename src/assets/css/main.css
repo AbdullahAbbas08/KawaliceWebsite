@@ -1798,7 +1798,7 @@ body::-webkit-scrollbar-thumb {
   top: 1px;
   bottom: 0;
   width: 34px;
-  background: url("../assets/img/breadcrumb.svg") no-repeat center/16px auto;
+  background: url("../img/breadcrumb.svg") no-repeat center/16px auto;
 }
 .breadcrumb__item:hover {
   color: #c0c0c0;

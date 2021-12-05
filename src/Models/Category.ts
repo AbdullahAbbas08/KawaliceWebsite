@@ -7,4 +7,5 @@ CategoryDescription:string
 CategoryVisible:boolean
 CategoryOrder:number
 CategoryViews:number
+ProgramsCount:number
 }
