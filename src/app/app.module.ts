@@ -25,7 +25,7 @@ import { SeeMoreComponent } from './components/Home/see-more/see-more.component'
     LayoutComponent,
     FooterComponent,
     CategoryComponent,
-    ProgramComponent
+    ProgramComponent,
 
     SliderComponent,
     TrendingComponent,

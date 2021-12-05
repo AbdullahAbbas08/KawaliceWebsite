@@ -7,7 +7,7 @@ import { ProgramComponent } from './components/program/program.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'Categories',component:CategoryComponent},
+  {path:'Categories/abc',component:CategoryComponent},
   {path:'Programs',component:ProgramComponent},
   {path:'Interviewer',component:InterviewerComponent}
 ];
