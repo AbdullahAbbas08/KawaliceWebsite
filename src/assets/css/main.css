@@ -2040,7 +2040,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #25a56a;
 }
 .hero .owl-stage-outer {
-  border-radius: 12px;
+  border-radius: 0px;
 }
 .hero__slide {
   display: flex;
@@ -2238,7 +2238,7 @@ body::-webkit-scrollbar-thumb {
   aspect-ratio: 3/4;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 2px;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -2637,6 +2637,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+  aspect-ratio: 3/4;
   width: 100%;
 }
 .artist__cover:before {
@@ -2691,7 +2692,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-end;
   margin-top: 20px;
   width: 100%;
-  border-radius: 12px;
+  border-radius:2px;
   position: relative;
   overflow: hidden;
   padding: 20px;
@@ -3039,7 +3040,7 @@ body::-webkit-scrollbar-thumb {
 .post {
   position: relative;
   margin-top: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   width: 100%;
   overflow: hidden;
   background-color: #222227;
@@ -3047,13 +3048,14 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: calc(100% - 20px);
+  max-height: 630px;
 }
 .post__img {
   display: block;
   width: 100%;
   position: relative;
   background-color: #000;
+  aspect-ratio: 3/4;
 }
 .post__img:before {
   content: '';
@@ -3228,6 +3230,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  aspect-ratio: 3/4;
 }
 .live__cover img {
   position: relative;
