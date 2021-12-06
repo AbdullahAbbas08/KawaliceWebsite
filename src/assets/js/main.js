@@ -18,6 +18,7 @@ $(document).ready(function () {
 	==============================*/
 	$('.hero').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
@@ -47,6 +48,7 @@ $(document).ready(function () {
 	==============================*/
 	$('.main__carousel--events').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
@@ -80,6 +82,7 @@ $(document).ready(function () {
 
 	$('.main__carousel--artists').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
@@ -112,6 +115,7 @@ $(document).ready(function () {
 
 	$('.main__carousel--store').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
@@ -144,6 +148,7 @@ $(document).ready(function () {
 
 	$('.main__carousel--podcasts').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
@@ -192,6 +197,7 @@ $(document).ready(function () {
 	==============================*/
 	$('.partners').owlCarousel({
 		mouseDrag: false,
+    rtl:true,
 		touchDrag: false,
 		dots: false,
 		loop: false,
@@ -233,6 +239,7 @@ $(document).ready(function () {
 	==============================*/
 	$('.store-item__carousel').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
 		loop: false,

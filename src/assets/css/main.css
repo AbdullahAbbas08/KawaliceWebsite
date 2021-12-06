@@ -1303,10 +1303,10 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 .main__carousel .owl-dot {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .main__carousel .owl-dot:last-child {
-  margin-right: 0;
+  margin-left: 0;
 }
 .main__carousel .owl-dot span {
   display: block;
@@ -1712,7 +1712,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 0;
   }
   .main__carousel .owl-dots {
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-left: 68px;
   }
   .main__nav {
@@ -2046,7 +2046,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
   min-height: 300px;
   border-radius: 12px;
@@ -2087,7 +2087,7 @@ body::-webkit-scrollbar-thumb {
 .hero__btns {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
@@ -2112,7 +2112,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   padding: 0 20px;
   margin-top: 20px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .hero__btn svg {
   fill: #fff;
@@ -2189,7 +2189,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 30px;
   }
   .hero .owl-dots {
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-top: -34px;
     margin-bottom: 30px;
     padding-left: 124px;
@@ -2684,12 +2684,19 @@ body::-webkit-scrollbar-thumb {
 }
 /*==============================
 	Event
+
+
 ==============================*/
+.bg-img-event{
+  height: 0%!important;
+  width: 100%!important;
+  aspect-ratio: 3/4;
+}
 .event {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-top: 20px;
   width: 100%;
   border-radius:2px;
