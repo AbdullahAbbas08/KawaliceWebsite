@@ -18,10 +18,12 @@ $(document).ready(function () {
 	==============================*/
 	$('.hero').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
-		loop: true,
-		autoplay: false,
+		loop: false,
+    rewind: true,
+		autoplay: true,
 		smartSpeed: 600,
 		autoHeight: true,
 		items: 1,
@@ -46,10 +48,12 @@ $(document).ready(function () {
 	==============================*/
 	$('.main__carousel--events').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
-		loop: true,
-		autoplay: false,
+		loop: false,
+    rewind: true,
+		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
@@ -78,10 +82,12 @@ $(document).ready(function () {
 
 	$('.main__carousel--artists').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
-		loop: true,
-		autoplay: false,
+		loop: false,
+    rewind: true,
+		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
@@ -109,10 +115,12 @@ $(document).ready(function () {
 
 	$('.main__carousel--store').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
-		loop: true,
-		autoplay: false,
+		loop: false,
+    rewind: true,
+		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
@@ -140,10 +148,12 @@ $(document).ready(function () {
 
 	$('.main__carousel--podcasts').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
-		loop: true,
-		autoplay: false,
+		loop: false,
+    rewind: true,
+		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
@@ -187,9 +197,11 @@ $(document).ready(function () {
 	==============================*/
 	$('.partners').owlCarousel({
 		mouseDrag: false,
+    rtl:true,
 		touchDrag: false,
 		dots: false,
-		loop: true,
+		loop: false,
+    rewind: true,
 		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
@@ -227,10 +239,12 @@ $(document).ready(function () {
 	==============================*/
 	$('.store-item__carousel').owlCarousel({
 		mouseDrag: true,
+    rtl:true,
 		touchDrag: true,
 		dots: true,
-		loop: true,
-		autoplay: false,
+		loop: false,
+    rewind: true,
+		autoplay: true,
 		smartSpeed: 600,
 		autoHeight: true,
 		items: 1,

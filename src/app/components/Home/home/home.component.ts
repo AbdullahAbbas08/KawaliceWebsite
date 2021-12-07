@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CollectionData } from 'src/DTO/collection-data';
+import { Slider } from 'src/Models/Slider';
+import { SliderService } from 'src/Services/Slider/slider.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CollectionData } from 'src/DTO/collection-data';
+import { Trending } from 'src/DTO/Trending';
+import { SeeMoreService } from 'src/Services/seeMore/seeMore.service';
 
 @Component({
   selector: 'app-see-more',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeeMoreComponent implements OnInit {
 
-  constructor() { }
+  seeMoreData:CollectionData<Trending>=new CollectionData<Trending>()
+
+  constructor(private seemoreService:SeeMoreService) { }
 
   ngOnInit(): void {
+    this.getTrending()
+  }
+
+  getTrending(){
+    this.seemoreService.getall().subscribe((res)=>{
+      this.seeMoreData=res
+    },
+    (err)=>{console.log(err)})
   }
 
 }
