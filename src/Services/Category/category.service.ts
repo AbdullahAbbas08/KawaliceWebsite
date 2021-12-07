@@ -17,8 +17,7 @@ export class CategoryService {
     httpOptionsWithKey = { headers: new HttpHeaders({ 'ApiKey': 'ac6716a0-039d-4d21-98b5-dcefa416e266', 'Accept': ' */*' }) };
     //#endregion
 
-      //#region Categories API's
-
+  //#region Categories API's
   GetCategories(): Observable<CollectionData<Category>> {
     return this.http.get<CollectionData<Category>>(`${environment.URL}/episodes/getallcategories`, this.httpOptionsWithKey);
   }
@@ -27,6 +26,5 @@ export class CategoryService {
     let result = this.http.get<ObjectIDName[]>(`${environment.URL}/programs/getprogramidname_withcategoryid?ID=${ID}`, this.httpOptionsWithKey);
     return result;
   }
-
   //#endregion
 }

@@ -1,8 +1,15 @@
 .programCount
 {
-  color:white
+  color:white;
+  margin-bottom: 3px;
 }
 .Direction
 {
   direction: rtl;
 }
+.mr
+{
+  margin-right: 15px;
+}
+
+
