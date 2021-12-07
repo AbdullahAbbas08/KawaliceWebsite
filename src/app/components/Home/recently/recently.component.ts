@@ -37,9 +37,9 @@ export class RecentlyComponent implements OnInit {
         this.imageOne = this.recently.DataList[0].EpisodeImg;
         this.imageTwo = this.recently.DataList[1].EpisodeImg;
         this.imageThree = this.recently.DataList[2].EpisodeImg;
-        // this.imageFour = this.recently.DataList[3].EpisodeImg;
-        // this.imageFive = this.recently.DataList[4].EpisodeImg;
-        // this.imageSex = this.recently.DataList[5].EpisodeImg;
+        this.imageFour = this.recently.DataList[3].EpisodeImg;
+        this.imageFive = this.recently.DataList[4].EpisodeImg;
+        this.imageSex = this.recently.DataList[5].EpisodeImg;
       },
       (err) => {
         console.log(err);
