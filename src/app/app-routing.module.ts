@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CategoryComponent } from './components/category/category.component';
 import { EpisodeComponent } from './components/episode/episode.component';
 import { HomeComponent } from './components/Home/home/home.component';
+import { InterviewerDetailComponent } from './components/Interviewer/interviewer-detail/interviewer-detail.component';
 import { InterviewerComponent } from './components/Interviewer/Interviewer.component';
 import { ProgramTypeComponent } from './components/program-type/program-type.component';
 import { ProgramDetailsComponent } from './components/program/program-details/program-details.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'Interviewer',component:InterviewerComponent},
   {path:'Episode',component:EpisodeComponent},
   {path:'ProgramDetails',component:ProgramDetailsComponent},
+  {path:'InterviewerDetails',component:InterviewerDetailComponent},
   {path:'Type',component:ProgramTypeComponent},
 ];
 

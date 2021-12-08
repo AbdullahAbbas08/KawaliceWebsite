@@ -25,19 +25,19 @@
 								<span style="padding-right: 10px;">{{ProgramObject.CategoryName}}</span>
 							</a>
 							<i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
+							<a>
 								<span style="padding-right: 10px;">{{ProgramObject.ProgramName}} </span>
+							</a>
 						</div>
 
 						<div class="col-12">
-							<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i>
-							<a [routerLink]="['/InterviewerDetails']" [queryParams]="{id: ProgramObject.InterviewerId}"> 
-								<span style="padding-right: 10px;"> {{ProgramObject.InterviewerName}}</span>
-							</a>
-							
+							<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px;"></i>
+							<span class=""> {{ProgramObject.InterviewerName}}</span>
 						</div>
 
 						<div class="dol-12">
-							<i class="fa fa-dot-circle-o" aria-hidden="true" style="font-size: 15px;"></i>
+							<i class="fa fa-dot-circle-o" aria-hidden="true"
+								style="font-size: 25px;padding-right: 15px;padding-left: 5px;"></i>
 							<span>{{ProgramObject.ProgramTypeName}}</span>
 						</div>
 
@@ -58,18 +58,13 @@
 
 							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. <a href="#">Link</a> the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
 						 -->
-					</div><br>
+					</div>
 					<!-- end article content -->
 
 					<!-- share -->
-					<div class="row">
-						<div class="col-12">
-							<div *ngFor="let item of Seasons" style="padding-right: 20px;">
-								<a [routerLink]="['/Episode']" [queryParams]="{id: item.SessionId}"> {{item.SessionTitle}}</a>
-							</div>
-						</div>
+					<div *ngFor="let item of Seasons">
+						<a [routerLink]="['/Episode']" [queryParams]="{id: item.SessionId}"> {{item.SessionTitle}}</a>
 					</div>
-					
 					<!-- end share -->
 				</div>
 			</div>
