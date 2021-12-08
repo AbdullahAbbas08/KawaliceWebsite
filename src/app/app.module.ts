@@ -19,6 +19,8 @@ import { SeeMoreComponent } from './components/Home/see-more/see-more.component'
 import { InterviewerComponent } from './components/Interviewer/Interviewer.component';
 import { ProgramComponent } from './components/program/Programs/program.component';
 import { ProgramDetailsComponent } from './components/program/program-details/program-details.component';
+import { ProgramTypeComponent } from './components/program-type/program-type.component';
+import { ArabicNumberPipe } from './Shared/Pipes/arabic-number.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ProgramDetailsComponent } from './components/program/program-details/pr
     SuperStarComponent,
     MostViewsComponent,
     SeeMoreComponent,
-    ProgramDetailsComponent
+    ProgramDetailsComponent,
+    ProgramTypeComponent,
+    ArabicNumberPipe
   ],
   imports: [
     BrowserModule,

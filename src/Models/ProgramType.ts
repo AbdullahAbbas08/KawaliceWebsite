@@ -4,4 +4,5 @@ export class ProgramType {
   ProgramTypeImgPath: string;
   ProgramTypeOrder: number;
   ProgramTypeViews: number;
+  ProgramCount:number
 }

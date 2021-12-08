@@ -1,0 +1,49 @@
+<app-layout></app-layout>
+<!-- main content -->
+<main class="main">
+  <div class="container-fluid">
+    <div class="row row--grid">
+      <div class="col-12">
+        <div class="row mt-0">
+          <!-- breadcrumb -->
+          <!-- <div class="col-12">
+            <ul class="breadcrumb">
+              <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb__item breadcrumb__item--active">Artists</li>
+            </ul>
+          </div> -->
+          <!-- end breadcrumb -->
+
+          <!-- title -->
+          <div class="col-12 ">
+            <div class="main__title main__title--page mt-3">
+              <h1>الأنواع</h1>
+            </div>
+          </div>
+          <!-- end title -->
+        </div>
+
+        <div class="row flex-row-reverse">
+          <div class="col-6 col-sm-4 col-lg-3" *ngFor="let item of programType.DataList">
+            <div class="product">
+              <div class="product__img">
+                <img src="{{programType.Url}}{{item.ProgramTypeImgPath}}" alt="">
+
+                <button class="product__add" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
+                  </svg></button>
+              </div>
+              <h3 class="product__title"><a href="product.html">{{item.ProgramTypeTitle}}</a></h3>
+              <span class="product__price">يحتوي علي {{item.ProgramCount | arabicNumber}} برامج </span>
+              <!-- <span class="product__new">New</span> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- <button class="main__load" type="button">Load more</button> -->
+      </div>
+    </div>
+  </div>
+</main>
+<!-- end main content -->
+<app-footer></app-footer>

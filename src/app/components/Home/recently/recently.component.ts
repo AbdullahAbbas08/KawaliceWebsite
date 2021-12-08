@@ -9,7 +9,7 @@ import { RecentlyService } from 'src/Services/Recently/recently.service';
   styleUrls: ['./recently.component.css'],
 })
 export class RecentlyComponent implements OnInit {
-  recently: CollectionData<Recently> ;
+  recently: CollectionData<Recently> =new CollectionData<Recently>();
   imageOne: string;
   imageTwo: string;
   imageThree: string;
@@ -27,6 +27,8 @@ export class RecentlyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.recently.DataList=[]
+    this.recently.Url=''
     this.getRecently();
   }
 
