@@ -1,4 +1,276 @@
 <app-layout></app-layout>
-<p style="color:white">episode works!</p>
+
+<!-- main content -->
+<main class="main">
+	<div class="container-fluid">
+		<!-- slider -->
+		<section class="row">
+			<div class="col-12">
+				<!-- {{ProgramObject.ProgramPromoUrl}} -->
+				<!-- <iframe  class="ProgramPromo" src="https://www.youtube.com/embed/Z_ey5oZ0D-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					 -->
+				<iframe class="ProgramPromo" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+			</div>
+		</section>
+		<!-- end slider -->
+
+		<div class="row row--grid" style="direction: rtl;">
+			<div class="col-12 col-xl-10">
+				<div class="article ContentStyle">
+					<!-- article content -->
+					<div class="article__content Content">
+
+						<div class="col-12">
+							<i class="fa fa-home"></i>
+							<a [routerLink]="['/Categories']" [queryParams]="{id: EpisodeObject.ProgramId}">
+								<span style="padding-right: 10px;">{{EpisodeObject.ProgramName}}</span>
+							</a>
+							<i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
+								<span style="padding-right: 10px;">{{EpisodeObject.EpisodeTitle}} </span>
+						</div>
+
+						<div class="col-12">
+							<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i>
+							<a [routerLink]="['/InterviewerDetails']" [queryParams]="{id: EpisodeObject.CategoryId}"> 
+								<span style="padding-right: 10px;"> {{EpisodeObject.CategoryTitle}}</span>
+							</a>
+							
+						</div>
+
+						<div class="dol-12">
+							<i class="fa fa-dot-circle-o" aria-hidden="true" style="font-size: 20px;padding-right:15px;padding-left: 15px;"></i>
+							<span>{{EpisodeObject.ProgramTypeTitle}}</span>
+						</div>
+
+						<div class="col-12 Description">
+							<p>{{EpisodeObject.EpisodeDescription}}</p>
+						</div>
+
+
+						<!-- <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+							<ol style="list-style-type:circle ;direction:RTL; text-align: right">
+								<li>Theme Forest</li>
+								<li>Graphic River</li>
+								<li>Audio Jungle</li>
+								<li>3D Ocean</li>
+								<li>Code Canayon</li>
+							</ol>
+
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. <a href="#">Link</a> the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+						 -->
+					</div><br>
+					<!-- end article content -->
+
+					<!-- share -->
+					<div class="row">
+						<div class="col-12">
+							<div *ngFor="let item of Seasons" style="padding-right: 20px;">
+								<a [routerLink]="['/Episode']" [queryParams]="{id: item.SessionId}"> {{item.SessionTitle}}</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- end share -->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+				<!-- title -->
+				<div class="col-12" style="color: white;padding-top: 20px;">
+						<h3> حلقات متعلقة بالبرنامج</h3>
+				</div>
+				<!-- end title -->
+		</div>
+		<!-- events -->
+		<section class="row row--grid">
+			<!-- releases -->
+				<div class="row flex-row-reverse">
+					<div class="col-6 col-sm-4 col-lg-2 "
+					*ngFor="let item of EpisodeCollection.DataList | slice:0:6; let i=index">
+					<div class="album">
+						<div class="album__cover">
+							<img src="{{Url}}{{item.EpisodeImg}}" alt="">
+							<a href="release.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+								</svg></a>
+							<span class="album__stat">
+								<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path
+											d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+									</svg> 22</span>
+								<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path
+											d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+									</svg> {{item.EpisodeViews}}</span>
+							</span>
+						</div>
+						<div class="album__title">
+							<h3><a href="release.html">{{item.EpisodeTitle}}</a></h3>
+							<span><a href="artist.html">{{item.ProgramName}}</a></span>
+						</div>
+					</div>
+				</div>
+				</div>
+			<!-- end releases -->
+
+		</section>
+		<!-- end events -->
+	</div>
+</main>
+<!-- end main content -->
 
 <app-footer></app-footer>
+
+<!-- modal ticket -->
+<form action="#" id="modal-ticket" class="zoom-anim-dialog mfp-hide modal modal--form">
+	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
+		</svg></button>
+
+	<h4 class="sign__title">To buy tickets</h4>
+
+	<div class="sign__group sign__group--row">
+		<label class="sign__label">Your balance:</label>
+		<span class="sign__value">$90.99</span>
+	</div>
+
+	<div class="sign__group sign__group--row">
+		<label class="sign__label" for="value">Choose ticket:</label>
+		<select class="sign__select" name="value" id="value">
+			<option value="50">Regular - $49</option>
+			<option value="100">VIP Light - $99</option>
+			<option value="200">VIP - $169</option>
+		</select>
+
+		<span class="sign__text sign__text--small">You can spend money from your account on the renewal of the connected
+			packages, or on the purchase of goods on our website.</span>
+	</div>
+
+	<button class="sign__btn" type="button">Buy</button>
+</form>
+<!-- end modal ticket -->
+
+<!-- modal info -->
+<div id="modal-info2" class="zoom-anim-dialog mfp-hide modal modal--info">
+	<span class="modal__icon modal__icon--green">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M14.72,8.79l-4.29,4.3L8.78,11.44a1,1,0,1,0-1.41,1.41l2.35,2.36a1,1,0,0,0,.71.29,1,1,0,0,0,.7-.29l5-5a1,1,0,0,0,0-1.42A1,1,0,0,0,14.72,8.79ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z">
+			</path>
+		</svg>
+	</span>
+
+	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
+		</svg></button>
+
+	<h4 class="sign__title">Payment #51 was successful!</h4>
+
+	<div class="sign__group sign__group--row">
+		<label class="sign__label">Total cost:</label>
+		<span class="sign__value">$18.00</span>
+	</div>
+
+	<div class="sign__group sign__group--row">
+		<label class="sign__label">Payment method: <b>Paypal</b></label>
+
+		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
+			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
+			even slightly believable.</span>
+	</div>
+</div>
+<!-- end modal info -->
+
+<!-- modal info -->
+<div id="modal-info3" class="zoom-anim-dialog mfp-hide modal modal--info">
+	<span class="modal__icon modal__icon--red">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M15.71,8.29a1,1,0,0,0-1.42,0L12,10.59,9.71,8.29A1,1,0,0,0,8.29,9.71L10.59,12l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L13.41,12l2.3-2.29A1,1,0,0,0,15.71,8.29Zm3.36-3.36A10,10,0,1,0,4.93,19.07,10,10,0,1,0,19.07,4.93ZM17.66,17.66A8,8,0,1,1,20,12,7.95,7.95,0,0,1,17.66,17.66Z">
+			</path>
+		</svg>
+	</span>
+
+	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
+		</svg></button>
+
+	<h4 class="sign__title">Payment #50 failed!</h4>
+
+	<div class="sign__group sign__group--row">
+		<label class="sign__label">Total cost:</label>
+		<span class="sign__value">$18.00</span>
+	</div>
+
+	<div class="sign__group sign__group--row">
+		<label class="sign__label">Payment method: <b>Paypal</b></label>
+
+		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
+			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
+			even slightly believable.</span>
+	</div>
+</div>
+<!-- end modal info -->
+
+<!-- modal info -->
+<div id="modal-info4" class="zoom-anim-dialog mfp-hide modal modal--info">
+	<span class="modal__icon">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Zm0-8.5a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0v-3A1,1,0,0,0,12,11.5Zm0-4a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,7.5Z">
+			</path>
+		</svg>
+	</span>
+
+	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
+		</svg></button>
+
+	<h4 class="sign__title">Example of notification.</h4>
+
+	<div class="sign__group sign__group--row">
+		<label class="sign__label">Amount to auto-renew:</label>
+		<span class="sign__value">$18.00</span>
+	</div>
+
+	<div class="sign__group sign__group--row">
+		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
+			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
+			even slightly believable.</span>
+	</div>
+</div>
+<!-- end modal info -->
+
+<!-- modal info -->
+<div id="modal-info5" class="zoom-anim-dialog mfp-hide modal modal--info">
+	<span class="modal__icon modal__icon--purple">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M18,7h-.35A3.45,3.45,0,0,0,18,5.5a3.49,3.49,0,0,0-6-2.44A3.49,3.49,0,0,0,6,5.5,3.45,3.45,0,0,0,6.35,7H6a3,3,0,0,0-3,3v2a1,1,0,0,0,1,1H5v6a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V13h1a1,1,0,0,0,1-1V10A3,3,0,0,0,18,7ZM11,20H8a1,1,0,0,1-1-1V13h4Zm0-9H5V10A1,1,0,0,1,6,9h5Zm0-4H9.5A1.5,1.5,0,1,1,11,5.5Zm2-1.5A1.5,1.5,0,1,1,14.5,7H13ZM17,19a1,1,0,0,1-1,1H13V13h4Zm2-8H13V9h5a1,1,0,0,1,1,1Z">
+			</path>
+		</svg>
+	</span>
+
+	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path
+				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
+		</svg></button>
+
+	<h4 class="sign__title">You have received a gift!</h4>
+
+	<div class="sign__group sign__group--row">
+		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
+			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
+			even slightly believable.</span>
+
+		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
+			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
+			even slightly believable.</span>
+	</div>
+</div>
+<!-- end modal info -->
