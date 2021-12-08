@@ -3056,7 +3056,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  max-height: 630px;
+  /* max-height: 630px; */
 }
 .post__img {
   display: block;
