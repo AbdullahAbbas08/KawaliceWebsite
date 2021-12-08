@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CollectionData } from 'src/DTO/collection-data';
+import { ProgramModel } from 'src/DTO/Program/program-model';
 import { environment } from 'src/environments/environment';
 import { Program } from 'src/Models/Program';
 
@@ -29,8 +30,8 @@ GetProgramsByCatId(ID:number): Observable<CollectionData<Program>> {
 //#endregion
 
 //#region Program By ID
-GetProgramById(ID:number): Observable<CollectionData<Program>> {
-  return this.http.get<CollectionData<Program>>(`${environment.URL}/episodes/Programfilterforrecently?ProgramID=${ID}`, this.httpOptionsWithKey);
+GetProgramById(ID:number): Observable<CollectionData<ProgramModel>> {
+  return this.http.get<CollectionData<ProgramModel>>(`${environment.URL}/episodes/Programfilterforrecently?ProgramID=${ID}`, this.httpOptionsWithKey);
 }
 //#endregion
 

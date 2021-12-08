@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CollectionData } from 'src/DTO/collection-data';
+import { ProgramModel } from 'src/DTO/Program/program-model';
 import { Program } from 'src/Models/Program';
+import { Season } from 'src/Models/Season';
 import { ProgramService } from 'src/Services/program/Program.service';
+import { SeasonService } from 'src/Services/Seasons/season.service';
 
 @Component({
   selector: 'app-program-details',
@@ -11,24 +14,25 @@ import { ProgramService } from 'src/Services/program/Program.service';
 })
 export class ProgramDetailsComponent implements OnInit {
 
-  constructor(private Service:ProgramService ,private route:ActivatedRoute) { }
+  constructor(private Service:ProgramService ,private _SeasonService:SeasonService,private route:ActivatedRoute) { }
 
    //#region Declaration Section
-   ProgramObject : Program = new Program();
-   Programs : CollectionData<Program> = new CollectionData<Program>();
+   ProgramObject : ProgramModel = new ProgramModel();
+   Programs : CollectionData<ProgramModel> = new CollectionData<ProgramModel>();
+   Seasons : Season[] =[];
    categoryID:number=0;
    ProgramID:number=0;
    //#endregion
   
-//#region Init Methode
+   //#region Init Methode
 ngOnInit(): void {
   this.GetProgramById();
+  this.GetSeasonsByProgramID();
 }
 
 //#endregion
 
-
- //#region Get Program By Id
+  //#region Get Program By Id
  GetProgramById()
  {
        //#region  Filter Program By Category ID
@@ -47,4 +51,20 @@ ngOnInit(): void {
  }
  //#endregion
 
+ //#region Get All Season Realted With This Program
+ GetSeasonsByProgramID()
+ {
+       //#region  Filter Program By Category ID
+       //this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
+      //#endregion
+   let Seasons = this._SeasonService.GetSeasonsByProgramId(45).subscribe(
+     (data)=>
+     {
+       this.Seasons = data;  
+       console.log( this.Seasons );     
+     },
+     (err)=>{ }
+   );
+ }
+ //#endregion
 }

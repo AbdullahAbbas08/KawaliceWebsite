@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Tajawal";
+    src: local("Tajawal"), url(./assets/fonts/Tajawal/Tajawal-Regular.ttf) format("truetype");
+}
+
+body
+{
+    font-family: "Tajawal" !important;
+}

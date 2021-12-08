@@ -19,6 +19,7 @@ import { SeeMoreComponent } from './components/Home/see-more/see-more.component'
 import { InterviewerComponent } from './components/Interviewer/Interviewer.component';
 import { ProgramComponent } from './components/program/Programs/program.component';
 import { ProgramDetailsComponent } from './components/program/program-details/program-details.component';
+import { EpisodeComponent } from './components/episode/episode.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProgramDetailsComponent } from './components/program/program-details/pr
     SuperStarComponent,
     MostViewsComponent,
     SeeMoreComponent,
-    ProgramDetailsComponent
+    ProgramDetailsComponent,
+    EpisodeComponent
   ],
   imports: [
     BrowserModule,
