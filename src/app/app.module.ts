@@ -20,6 +20,8 @@ import { InterviewerComponent } from './components/Interviewer/Interviewer.compo
 import { ProgramComponent } from './components/program/Programs/program.component';
 import { ProgramDetailsComponent } from './components/program/program-details/program-details.component';
 import { EpisodeComponent } from './components/episode/episode.component';
+import { ProgramTypeComponent } from './components/program-type/program-type.component';
+import { ArabicNumberPipe } from './Shared/Pipes/arabic-number.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { EpisodeComponent } from './components/episode/episode.component';
     MostViewsComponent,
     SeeMoreComponent,
     ProgramDetailsComponent,
-    EpisodeComponent
+    EpisodeComponent,
+    ProgramTypeComponent,
+    ArabicNumberPipe
   ],
   imports: [
     BrowserModule,
