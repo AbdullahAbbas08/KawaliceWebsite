@@ -3,6 +3,7 @@ import { Category } from 'src/Models/Category';
 import { CollectionData } from 'src/DTO/collection-data';
 import { CategoryService } from 'src/Services/Category/category.service';
 import { ObjectIDName } from 'src/DTO/object-idname';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -11,7 +12,7 @@ import { ObjectIDName } from 'src/DTO/object-idname';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor(private Service:CategoryService) { }
+  constructor(private Service:CategoryService , private route: ActivatedRoute) { }
 
     //#region Declaration Section
     Categories : CollectionData<Category> = new CollectionData<Category>();
@@ -30,21 +31,23 @@ export class CategoryComponent implements OnInit {
       //#region Call Methods
       this.getCategory();
       //#endregion
-
     }
     //#endregion
 
     //#region Get Categories
     getCategory()
         {
-          let Categories = this.Service.GetCategories().subscribe(
-            (data)=>
-            {
-              this.Categories.DataList = data.DataList;
-              this.Categories.Url = data.Url;
-            },
-            (err)=>{ }
-          );
+          // let Categories = this.Service.GetCategories().subscribe(
+          //   (data)=>
+          //   {
+          //     this.Categories.DataList = data.DataList;
+          //     this.Categories.Url = data.Url;
+          //   },
+          //   (err)=>{ }
+          // );
+
+          //CategoryResolver
+          this.Categories = this.route.snapshot.data['categories']
         }
     //#endregion
 

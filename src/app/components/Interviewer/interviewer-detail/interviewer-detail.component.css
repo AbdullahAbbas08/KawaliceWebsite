@@ -1,0 +1,19 @@
+ol li
+{
+    display: inline-block;
+    padding: 10px;
+    list-style-type:none ;
+    direction:RTL; 
+    text-align: right;
+    color: white;
+}
+ol
+{
+    padding-right: 0px;
+}
+
+
+.hrStyle
+{
+    border-color:rgb(34, 34, 39) ;
+}

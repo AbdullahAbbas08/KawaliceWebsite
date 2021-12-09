@@ -1,271 +1,222 @@
-<app-layout></app-layout>
+	<app-layout></app-layout>
+    <!-- main content -->
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row row--grid" style="direction: rtl;">
+				<div class="col-12">
+					<div class="article article--page">
+						<!-- article content -->
+						<div class="article__content">
+							<div class="article__artist">
+								<img src="{{Interviewers.Url}}{{InterviewerObject.InterviewerPicture}}" alt="">
+								<div class="col-12"><br>
+									<h1 style="padding-right: 15px;">{{InterviewerObject.InterviewerName}}</h1>
+                                    <a [hidden]="!InterviewerObject.WebsiteUrl" style="padding-right: 15px;" href="{{InterviewerObject.WebsiteUrl}}">
+                                        <span> الموقع الرسمي </span><br>
+                                    </a>
+									<p style="padding-right: 15px;">{{InterviewerObject.InterviewerDescription}}</p>
 
-<!-- main content -->
-<main class="main">
-	<div class="container-fluid">
-		<!-- slider -->
-		<section class="row">
-			<div class="col-12">
-				<!-- {{ProgramObject.ProgramPromoUrl}} -->
-				<!-- <iframe  class="ProgramPromo" src="https://www.youtube.com/embed/Z_ey5oZ0D-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					 -->
-				<iframe class="ProgramPromo" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-			</div>
-		</section>
-		<!-- end slider -->
-
-		<div class="row row--grid" style="direction: rtl;">
-			<div class="col-12 col-xl-10">
-				<div class="article ContentStyle">
-					<!-- article content -->
-					<div class="article__content Content">
-
-						<div class="col-12">
-							<i class="fa fa-home"></i>
-							<a [routerLink]="['/Categories']" [queryParams]="{id: ProgramObject.CategoryId}">
-								<span style="padding-right: 10px;">{{ProgramObject.CategoryName}}</span>
-							</a>
-							<i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
-							<a>
-								<span style="padding-right: 10px;">{{ProgramObject.ProgramName}} </span>
-							</a>
-						</div>
-
-						<div class="col-12">
-							<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px;"></i>
-							<span class=""> {{ProgramObject.InterviewerName}}</span>
-						</div>
-
-						<div class="dol-12">
-							<i class="fa fa-dot-circle-o" aria-hidden="true"
-								style="font-size: 25px;padding-right: 15px;padding-left: 5px;"></i>
-							<span>{{ProgramObject.ProgramTypeName}}</span>
-						</div>
-
-						<div class="col-12 Description">
-							<p>{{ProgramObject.ProgramDescription}}</p>
-						</div>
-
-
-						<!-- <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-							<ol style="list-style-type:circle ;direction:RTL; text-align: right">
-								<li>Theme Forest</li>
-								<li>Graphic River</li>
-								<li>Audio Jungle</li>
-								<li>3D Ocean</li>
-								<li>Code Canayon</li>
-							</ol>
-
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. <a href="#">Link</a> the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-						 -->
+                                    <ol>
+                                        <li>
+                                            <a  [hidden]="!InterviewerObject.FacebookUrl" href="{{InterviewerObject.FacebookUrl}}" class="share__link share__link--fb">
+                                                <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.56341 16.8197V8.65888H7.81615L8.11468 5.84663H5.56341L5.56724 4.43907C5.56724 3.70559 5.63693 3.31257 6.69042 3.31257H8.09873V0.5H5.84568C3.1394 0.5 2.18686 1.86425 2.18686 4.15848V5.84695H0.499939V8.6592H2.18686V16.8197H5.56341Z"/></svg> 
+                                                &nbsp;  فيس بوك
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a [hidden]="!InterviewerObject.TwitterUrl"  href="{{InterviewerObject.TwitterUrl}}" class="share__link share__link--tw"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.55075 3.19219L7.58223 3.71122L7.05762 3.64767C5.14804 3.40404 3.47978 2.57782 2.06334 1.1902L1.37085 0.501686L1.19248 1.01013C0.814766 2.14353 1.05609 3.34048 1.843 4.14552C2.26269 4.5904 2.16826 4.65396 1.4443 4.38914C1.19248 4.3044 0.972149 4.24085 0.951164 4.27263C0.877719 4.34677 1.12953 5.31069 1.32888 5.69202C1.60168 6.22165 2.15777 6.74068 2.76631 7.04787L3.28043 7.2915L2.67188 7.30209C2.08432 7.30209 2.06334 7.31268 2.12629 7.53512C2.33613 8.22364 3.16502 8.95452 4.08833 9.2723L4.73884 9.49474L4.17227 9.8337C3.33289 10.321 2.34663 10.5964 1.36036 10.6175C0.888211 10.6281 0.5 10.6705 0.5 10.7023C0.5 10.8082 1.78005 11.4014 2.52499 11.6344C4.75983 12.3229 7.41435 12.0264 9.40787 10.8506C10.8243 10.0138 12.2408 8.35075 12.9018 6.74068C13.2585 5.88269 13.6152 4.315 13.6152 3.56293C13.6152 3.07567 13.6467 3.01212 14.2343 2.42953C14.5805 2.09056 14.9058 1.71983 14.9687 1.6139C15.0737 1.41264 15.0632 1.41264 14.5281 1.59272C13.6362 1.91049 13.5103 1.86812 13.951 1.39146C14.2762 1.0525 14.6645 0.438131 14.6645 0.258058C14.6645 0.22628 14.5071 0.279243 14.3287 0.374576C14.1398 0.480501 13.7202 0.639389 13.4054 0.734722L12.8388 0.914795L12.3247 0.565241C12.0414 0.374576 11.6427 0.162725 11.4329 0.0991699C10.8978 -0.0491255 10.0794 -0.0279404 9.59673 0.14154C8.2852 0.618204 7.45632 1.84694 7.55075 3.19219Z"/></svg>
+                                                &nbsp; تويتر
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a [hidden]="!InterviewerObject.InstgramUrl" href="{{InterviewerObject.InstgramUrl}}" class="share__link share__link--vk">
+                                                <i class="fa fa-instagram" aria-hidden="true" style="font-size: 23px"></i>
+                                                &nbsp;إنستجرام
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a [hidden]="!InterviewerObject.YoutubeUrl" class="share__link share__link--yo" style="background-color: #d50154;" href="{{InterviewerObject.YoutubeUrl}}">
+                                                <i class="fa fa-youtube-play" aria-hidden="true" style="font-size: 23px"></i>
+                                                &nbsp;يوتيوب
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a [hidden]="!InterviewerObject.LinkedInUrl" class="share__link share__link--vk" style="background-color: #5897fb;" href="{{InterviewerObject.LinkedInUrl}}">
+                                                <i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 20px;"></i>
+                                                &nbsp;لينكيد إن
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a [hidden]="!InterviewerObject.TiktokUrl" class="share__link share__link--yo"  href="{{InterviewerObject.TiktokUrl}}">
+                                                <i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 20px;"></i>
+                                                &nbsp; تيك توك
+                                            </a>
+                                        </li>
+                                    </ol>      
+								</div> 
+							</div>
+                            <br><hr class="hrStyle">
+                        </div>
+						<!-- end article content -->
 					</div>
-					<!-- end article content -->
-
-					<!-- share -->
-					<div *ngFor="let item of Seasons">
-						<a [routerLink]="['/Episode']" [queryParams]="{id: item.SessionId}"> {{item.SessionTitle}}</a>
-					</div>
-					<!-- end share -->
 				</div>
 			</div>
-		</div>
-		<div class="row">
+
+		
+
+			<!-- events -->
+			<section class="row row--grid">
 				<!-- title -->
-				<div class="col-12" style="color: white;padding-top: 20px;">
-						<h3> حلقات متعلقة بالبرنامج</h3>
+				<div class="col-12">
+					<div class="main__title">
+						<h2>برامج خاصة للمذيع </h2>
+					</div>
 				</div>
 				<!-- end title -->
+
+				<div class="col-12">
+					<div class="row flex-row-reverse">
+                        <div class="col-6 col-sm-4 col-lg-2 "
+                        *ngFor="let item of Programs.DataList | slice:0:6; let i=index">
+                        <div class="album" [routerLink]="['/ProgramDetails']" [queryParams]="{id: item.ProgramId}" style="cursor: pointer;">
+                            <div class="album__cover" [routerLink]="['/ProgramDetails']" [queryParams]="{id: item.ProgramId}" style="cursor: pointer;">
+                                <img src="{{Interviewers.Url}}{{item.ProgramImg}}" alt="">
+                                <a [routerLink]="['/ProgramDetails']" [queryParams]="{id: item.ProgramId}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
+                                    </svg></a>
+                                <span class="album__stat">
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
+                                        </svg> 22</span>
+                                    <span style="font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
+                                        </svg> {{item.ProgramName}}</span>
+                                </span>
+                            </div>
+                            <div class="album__title">
+                                <!-- <h3><a href="release.html">{{item.EpisodeTitle}}</a></h3>
+                                <span><a href="artist.html">{{item.ProgramName}}</a></span> -->
+                            </div>
+                        </div>
+                    </div></div>
+				</div>
+			</section>
+			<!-- end events -->
 		</div>
-		<!-- events -->
-		<section class="row row--grid">
-			<!-- releases -->
-				<div class="row flex-row-reverse">
-					<div class="col-6 col-sm-4 col-lg-2 "
-					*ngFor="let item of EpisodeCollection.DataList | slice:0:6; let i=index">
-					<div class="album">
-						<div class="album__cover">
-							<img src="{{Url}}{{item.EpisodeImg}}" alt="">
-							<a href="release.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path
-										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-								</svg></a>
-							<span class="album__stat">
-								<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path
-											d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" />
-									</svg> 22</span>
-								<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path
-											d="M20,13.18V11A8,8,0,0,0,4,11v2.18A3,3,0,0,0,2,16v2a3,3,0,0,0,3,3H8a1,1,0,0,0,1-1V14a1,1,0,0,0-1-1H6V11a6,6,0,0,1,12,0v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a3,3,0,0,0,3-3V16A3,3,0,0,0,20,13.18ZM7,15v4H5a1,1,0,0,1-1-1V16a1,1,0,0,1,1-1Zm13,3a1,1,0,0,1-1,1H17V15h2a1,1,0,0,1,1,1Z" />
-									</svg> {{item.EpisodeViews}}</span>
-							</span>
-						</div>
-						<div class="album__title">
-							<h3><a href="release.html">{{item.EpisodeTitle}}</a></h3>
-							<span><a href="artist.html">{{item.ProgramName}}</a></span>
-						</div>
-					</div>
-				</div>
-				</div>
-			<!-- end releases -->
+	</main>
+	<!-- end main content -->
+    <app-footer></app-footer>
+	<!-- modal ticket -->
+	<form action="#" id="modal-ticket" class="zoom-anim-dialog mfp-hide modal modal--form">
+		<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg></button>
 
-		</section>
-		<!-- end events -->
+		<h4 class="sign__title">To buy tickets</h4>
+
+		<div class="sign__group sign__group--row">
+			<label class="sign__label">Your balance:</label>
+			<span class="sign__value">$90.99</span>
+		</div>
+
+		<div class="sign__group sign__group--row">
+			<label class="sign__label" for="value">Choose ticket:</label>
+			<select class="sign__select" name="value" id="value">
+				<option value="50">Regular - $49</option>
+				<option value="100">VIP Light - $99</option>
+				<option value="200">VIP - $169</option>
+			</select>
+
+			<span class="sign__text sign__text--small">You can spend money from your account on the renewal of the connected packages, or on the purchase of goods on our website.</span>
+		</div>
+
+		<button class="sign__btn" type="button">Buy</button>
+	</form>
+	<!-- end modal ticket -->
+
+	<!-- modal info -->
+	<div id="modal-info2" class="zoom-anim-dialog mfp-hide modal modal--info">
+		<span class="modal__icon modal__icon--green">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.72,8.79l-4.29,4.3L8.78,11.44a1,1,0,1,0-1.41,1.41l2.35,2.36a1,1,0,0,0,.71.29,1,1,0,0,0,.7-.29l5-5a1,1,0,0,0,0-1.42A1,1,0,0,0,14.72,8.79ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"></path></svg>
+		</span>
+		
+		<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg></button>
+
+		<h4 class="sign__title">Payment #51 was successful!</h4>
+
+		<div class="sign__group sign__group--row">
+			<label class="sign__label">Total cost:</label>
+			<span class="sign__value">$18.00</span>
+		</div>
+
+		<div class="sign__group sign__group--row">
+			<label class="sign__label">Payment method: <b>Paypal</b></label>
+
+			<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</span>
+		</div>
 	</div>
-</main>
-<!-- end main content -->
+	<!-- end modal info -->
 
-<app-footer></app-footer>
+	<!-- modal info -->
+	<div id="modal-info3" class="zoom-anim-dialog mfp-hide modal modal--info">
+		<span class="modal__icon modal__icon--red">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.71,8.29a1,1,0,0,0-1.42,0L12,10.59,9.71,8.29A1,1,0,0,0,8.29,9.71L10.59,12l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L13.41,12l2.3-2.29A1,1,0,0,0,15.71,8.29Zm3.36-3.36A10,10,0,1,0,4.93,19.07,10,10,0,1,0,19.07,4.93ZM17.66,17.66A8,8,0,1,1,20,12,7.95,7.95,0,0,1,17.66,17.66Z"></path></svg>
+		</span>
+		
+		<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg></button>
 
-<!-- modal ticket -->
-<form action="#" id="modal-ticket" class="zoom-anim-dialog mfp-hide modal modal--form">
-	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
-		</svg></button>
+		<h4 class="sign__title">Payment #50 failed!</h4>
 
-	<h4 class="sign__title">To buy tickets</h4>
+		<div class="sign__group sign__group--row">
+			<label class="sign__label">Total cost:</label>
+			<span class="sign__value">$18.00</span>
+		</div>
 
-	<div class="sign__group sign__group--row">
-		<label class="sign__label">Your balance:</label>
-		<span class="sign__value">$90.99</span>
+		<div class="sign__group sign__group--row">
+			<label class="sign__label">Payment method: <b>Paypal</b></label>
+
+			<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</span>
+		</div>
 	</div>
+	<!-- end modal info -->
 
-	<div class="sign__group sign__group--row">
-		<label class="sign__label" for="value">Choose ticket:</label>
-		<select class="sign__select" name="value" id="value">
-			<option value="50">Regular - $49</option>
-			<option value="100">VIP Light - $99</option>
-			<option value="200">VIP - $169</option>
-		</select>
+	<!-- modal info -->
+	<div id="modal-info4" class="zoom-anim-dialog mfp-hide modal modal--info">
+		<span class="modal__icon">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Zm0-8.5a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0v-3A1,1,0,0,0,12,11.5Zm0-4a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,7.5Z"></path></svg>
+		</span>
+		
+		<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg></button>
 
-		<span class="sign__text sign__text--small">You can spend money from your account on the renewal of the connected
-			packages, or on the purchase of goods on our website.</span>
+		<h4 class="sign__title">Example of notification.</h4>
+
+		<div class="sign__group sign__group--row">
+			<label class="sign__label">Amount to auto-renew:</label>
+			<span class="sign__value">$18.00</span>
+		</div>
+
+		<div class="sign__group sign__group--row">
+			<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</span>
+		</div>
 	</div>
+	<!-- end modal info -->
 
-	<button class="sign__btn" type="button">Buy</button>
-</form>
-<!-- end modal ticket -->
+	<!-- modal info -->
+	<div id="modal-info5" class="zoom-anim-dialog mfp-hide modal modal--info">
+		<span class="modal__icon modal__icon--purple">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18,7h-.35A3.45,3.45,0,0,0,18,5.5a3.49,3.49,0,0,0-6-2.44A3.49,3.49,0,0,0,6,5.5,3.45,3.45,0,0,0,6.35,7H6a3,3,0,0,0-3,3v2a1,1,0,0,0,1,1H5v6a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V13h1a1,1,0,0,0,1-1V10A3,3,0,0,0,18,7ZM11,20H8a1,1,0,0,1-1-1V13h4Zm0-9H5V10A1,1,0,0,1,6,9h5Zm0-4H9.5A1.5,1.5,0,1,1,11,5.5Zm2-1.5A1.5,1.5,0,1,1,14.5,7H13ZM17,19a1,1,0,0,1-1,1H13V13h4Zm2-8H13V9h5a1,1,0,0,1,1,1Z"></path></svg>
+		</span>
+		
+		<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg></button>
 
-<!-- modal info -->
-<div id="modal-info2" class="zoom-anim-dialog mfp-hide modal modal--info">
-	<span class="modal__icon modal__icon--green">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M14.72,8.79l-4.29,4.3L8.78,11.44a1,1,0,1,0-1.41,1.41l2.35,2.36a1,1,0,0,0,.71.29,1,1,0,0,0,.7-.29l5-5a1,1,0,0,0,0-1.42A1,1,0,0,0,14.72,8.79ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z">
-			</path>
-		</svg>
-	</span>
+		<h4 class="sign__title">You have received a gift!</h4>
 
-	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
-		</svg></button>
+		<div class="sign__group sign__group--row">
+			<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</span>
 
-	<h4 class="sign__title">Payment #51 was successful!</h4>
-
-	<div class="sign__group sign__group--row">
-		<label class="sign__label">Total cost:</label>
-		<span class="sign__value">$18.00</span>
+			<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</span>
+		</div>
 	</div>
-
-	<div class="sign__group sign__group--row">
-		<label class="sign__label">Payment method: <b>Paypal</b></label>
-
-		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
-			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
-			even slightly believable.</span>
-	</div>
-</div>
-<!-- end modal info -->
-
-<!-- modal info -->
-<div id="modal-info3" class="zoom-anim-dialog mfp-hide modal modal--info">
-	<span class="modal__icon modal__icon--red">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M15.71,8.29a1,1,0,0,0-1.42,0L12,10.59,9.71,8.29A1,1,0,0,0,8.29,9.71L10.59,12l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L13.41,12l2.3-2.29A1,1,0,0,0,15.71,8.29Zm3.36-3.36A10,10,0,1,0,4.93,19.07,10,10,0,1,0,19.07,4.93ZM17.66,17.66A8,8,0,1,1,20,12,7.95,7.95,0,0,1,17.66,17.66Z">
-			</path>
-		</svg>
-	</span>
-
-	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
-		</svg></button>
-
-	<h4 class="sign__title">Payment #50 failed!</h4>
-
-	<div class="sign__group sign__group--row">
-		<label class="sign__label">Total cost:</label>
-		<span class="sign__value">$18.00</span>
-	</div>
-
-	<div class="sign__group sign__group--row">
-		<label class="sign__label">Payment method: <b>Paypal</b></label>
-
-		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
-			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
-			even slightly believable.</span>
-	</div>
-</div>
-<!-- end modal info -->
-
-<!-- modal info -->
-<div id="modal-info4" class="zoom-anim-dialog mfp-hide modal modal--info">
-	<span class="modal__icon">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Zm0-8.5a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0v-3A1,1,0,0,0,12,11.5Zm0-4a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,7.5Z">
-			</path>
-		</svg>
-	</span>
-
-	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
-		</svg></button>
-
-	<h4 class="sign__title">Example of notification.</h4>
-
-	<div class="sign__group sign__group--row">
-		<label class="sign__label">Amount to auto-renew:</label>
-		<span class="sign__value">$18.00</span>
-	</div>
-
-	<div class="sign__group sign__group--row">
-		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
-			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
-			even slightly believable.</span>
-	</div>
-</div>
-<!-- end modal info -->
-
-<!-- modal info -->
-<div id="modal-info5" class="zoom-anim-dialog mfp-hide modal modal--info">
-	<span class="modal__icon modal__icon--purple">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M18,7h-.35A3.45,3.45,0,0,0,18,5.5a3.49,3.49,0,0,0-6-2.44A3.49,3.49,0,0,0,6,5.5,3.45,3.45,0,0,0,6.35,7H6a3,3,0,0,0-3,3v2a1,1,0,0,0,1,1H5v6a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V13h1a1,1,0,0,0,1-1V10A3,3,0,0,0,18,7ZM11,20H8a1,1,0,0,1-1-1V13h4Zm0-9H5V10A1,1,0,0,1,6,9h5Zm0-4H9.5A1.5,1.5,0,1,1,11,5.5Zm2-1.5A1.5,1.5,0,1,1,14.5,7H13ZM17,19a1,1,0,0,1-1,1H13V13h4Zm2-8H13V9h5a1,1,0,0,1,1,1Z">
-			</path>
-		</svg>
-	</span>
-
-	<button class="modal__close" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path
-				d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
-		</svg></button>
-
-	<h4 class="sign__title">You have received a gift!</h4>
-
-	<div class="sign__group sign__group--row">
-		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
-			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
-			even slightly believable.</span>
-
-		<span class="sign__text sign__text--small">There are many variations of passages of Lorem Ipsum available, but
-			the majority have suffered alteration in some form, by injected humour, or randomised words which don't look
-			even slightly believable.</span>
-	</div>
-</div>
-<!-- end modal info -->
+	<!-- end modal info -->

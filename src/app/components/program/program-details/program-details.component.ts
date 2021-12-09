@@ -39,7 +39,6 @@ export class ProgramDetailsComponent implements OnInit {
       this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
       this.GetEpisodebyProgramID(this.ProgramID);
     }
-
 //#endregion
 
   //#region Get Program By Id

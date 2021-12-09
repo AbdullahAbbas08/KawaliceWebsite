@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CollectionData } from 'src/DTO/collection-data';
+import { InterviewerProgfile } from 'src/DTO/Interviewer/interviewer-progfile';
 import { environment } from 'src/environments/environment';
 import { InterViewer } from 'src/Models/InterViewer';
 import { SuperStar } from 'src/Models/SuperStar';
@@ -28,4 +29,10 @@ constructor(private http: HttpClient) { }
       return this.http.get<CollectionData<SuperStar>>(`${environment.URL}/interviewers/superstar`, this.httpOptionsWithKey);
     }
     //#endregion
+
+        //#region Find Interviewer
+        FindInterviewer(ID:number): Observable<CollectionData<InterviewerProgfile>> {
+          return this.http.get<CollectionData<InterviewerProgfile>>(`${environment.URL}/interviewers/findinterviewer?ID=${ID}`, this.httpOptionsWithKey);
+        }
+        //#endregion
 }

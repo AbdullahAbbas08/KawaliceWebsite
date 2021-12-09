@@ -33,26 +33,37 @@ export class EpisodeComponent implements OnInit {
 
   //#region Init Methode
   ngOnInit(): void {
-    this.route.queryParams.subscribe((query) => { this.ProgramID = query['id'] })
-    this.GetEpisodebyID(this.ProgramID);
+    // this.GetEpisodebyID( query['id']);
+    this.route.queryParams.subscribe(
+      (query) => {
+          this._EpisodeService.GetEpisodebyID(query['id']).subscribe(
+            (data) => {
+              this.EpisodeCollection = data;
+              this.EpisodeObject = this.EpisodeCollection .DataList[0];
+              console.log(this.EpisodeObject)
+              this.Url = this.EpisodeCollection.Url;
+            },
+            (err) => { }
+          );
+        }) 
   }
 
   //#endregion
 
   //#region Get All Season Realted With This Program
-  GetEpisodebyID(id: number) {
-    //#region  Filter Program By Category ID
-    //this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
-    //#endregion
-    let Episodes = this._EpisodeService.GetEpisodebyProgramID(id).subscribe(
-      (data) => {
-        this.EpisodeCollection = data;
-        this.EpisodeObject =  this.EpisodeCollection .DataList[0];
-        this.Url = this.EpisodeCollection.Url;
-      },
-      (err) => { }
-    );
-  }
+  // GetEpisodebyID(id: number) {
+  //   //#region  Filter Program By Category ID
+  //   //this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
+  //   //#endregion
+  //   let Episodes = this._EpisodeService.GetEpisodebyProgramID(id).subscribe(
+  //     (data) => {
+  //       this.EpisodeCollection = data;
+  //       this.EpisodeObject =  this.EpisodeCollection .DataList[0];
+  //       this.Url = this.EpisodeCollection.Url;
+  //     },
+  //     (err) => { }
+  //   );
+  // }
   //#endregion
 
 

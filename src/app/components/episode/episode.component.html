@@ -17,26 +17,26 @@
 			<div class="col-12 col-xl-10">
 				<div class="article ContentStyle">
 					<!-- article content -->
-					<div class="article__content Content">
+					<div class="article__content Content" style="font-size: 20px;">
 
-						<div class="col-12">
+						<div class="col-12" style="color: white;">
 							<i class="fa fa-home"></i>
-							<a [routerLink]="['/Categories']" [queryParams]="{id: EpisodeObject.ProgramId}">
+							<a [routerLink]="['/ProgramDetails']" [queryParams]="{id: EpisodeObject.ProgramId}">
 								<span style="padding-right: 10px;">{{EpisodeObject.ProgramName}}</span>
 							</a>
 							<i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
 								<span style="padding-right: 10px;">{{EpisodeObject.EpisodeTitle}} </span>
 						</div>
 
-						<div class="col-12">
+						<div class="col-12" style="color: white;">
 							<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i>
-							<a [routerLink]="['/InterviewerDetails']" [queryParams]="{id: EpisodeObject.CategoryId}"> 
+							<a [routerLink]="['/Categories']" [queryParams]="{id: EpisodeObject.CategoryId}"> 
 								<span style="padding-right: 10px;"> {{EpisodeObject.CategoryTitle}}</span>
 							</a>
 							
 						</div>
 
-						<div class="dol-12">
+						<div class="dol-12" style="color: white;">
 							<i class="fa fa-dot-circle-o" aria-hidden="true" style="font-size: 20px;padding-right:15px;padding-left: 15px;"></i>
 							<span>{{EpisodeObject.ProgramTypeTitle}}</span>
 						</div>

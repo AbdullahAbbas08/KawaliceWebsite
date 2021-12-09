@@ -1,0 +1,20 @@
+.Description
+{
+    min-height: 50px;
+    margin-top: 5px;
+}
+.Content
+{
+    font-size: 20px;
+}
+
+.ProgramPromo {
+    width: 100%;
+    min-height: 500px;
+    border-width: 0px;
+  }
+
+  .ContentStyle
+  {
+      color: white;
+  }

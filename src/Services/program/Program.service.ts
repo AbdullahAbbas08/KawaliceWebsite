@@ -31,7 +31,16 @@ GetProgramsByCatId(ID:number): Observable<CollectionData<Program>> {
 
 //#region Program By ID
 GetProgramById(ID:number): Observable<CollectionData<ProgramModel>> {
-  return this.http.get<CollectionData<ProgramModel>>(`${environment.URL}/episodes/Programfilterforrecently?ProgramID=${ID}`, this.httpOptionsWithKey);
+  let x=  this.http.get<CollectionData<ProgramModel>>(`${environment.URL}/episodes/Programfilterforrecently?ProgramID=${ID}`, this.httpOptionsWithKey);
+return x;
+}
+//#endregion
+
+//#region  Program By Interviewer ID 
+//
+GetProgramsByInterviewerId(ID:number): Observable<CollectionData<Program>> {
+  let x=  this.http.get<CollectionData<Program>>(`${environment.URL}/interviewers/getprogramsbyinterviewerid?ID=${ID}`, this.httpOptionsWithKey);
+return x;
 }
 //#endregion
 
