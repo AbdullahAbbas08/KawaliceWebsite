@@ -10,12 +10,14 @@ import { SliderService } from 'src/Services/Slider/slider.service';
 })
 export class HomeComponent implements OnInit {
 
+  jQuery: any;
 
   constructor() { }
 
   ngOnInit(): void {
-
   }
+
+
 
 
 }

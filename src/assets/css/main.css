@@ -48,7 +48,12 @@ Primary use:	Volna HTML Template
 /*==============================
 	Fonts
 ==============================*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Inter:wght@400;500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Inter:wght@400;500&display=swap"); */
+
+@font-face {
+  font-family: "Tajawal";
+  src: local("Tajawal"), url(./assets/fonts/Tajawal/Tajawal-Regular.ttf) format("truetype");
+}
 /*==============================
 	Common styles
 ==============================*/
@@ -61,7 +66,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Tajawal','Open Sans', sans-serif;
   font-weight: 400;
   background-color: #16151a;
   -webkit-font-smoothing: antialiased;
@@ -312,7 +317,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 1px;
   left: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-size: 10px;
   pointer-events: none;
 }
@@ -428,7 +433,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px;
   border: none;
   padding: 0 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .header__search input:focus {
   border-color: #fff;
@@ -658,7 +663,7 @@ body::-webkit-scrollbar-thumb {
     color: #c0c0c0;
     font-size: 16px;
     margin-right: 10px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Tajawal','Inter', sans-serif;
     transition: color 0.5s ease;
   }
   .header__content {
@@ -742,7 +747,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 16px;
     color: #c0c0c0;
     margin-right: 30px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Tajawal','Inter', sans-serif;
   }
   .header__nav a:last-child {
     margin-right: 0;
@@ -760,7 +765,7 @@ body::-webkit-scrollbar-thumb {
     color: #c0c0c0;
     font-size: 13px;
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Tajawal','Inter', sans-serif;
     margin-bottom: 15px;
     height: 24px;
     border-radius: 8px 8px 0 0;
@@ -821,7 +826,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   font-size: 16px;
   color: #c0c0c0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   margin-left: 15px;
   transition: 0.4s ease;
   position: relative;
@@ -1138,7 +1143,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   color: #fff;
   font-size: 30px;
@@ -1160,7 +1165,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   color: #fff;
   font-size: 26px;
@@ -1188,7 +1193,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   font-size: 24px;
   color: #fff;
@@ -1239,7 +1244,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 0;
   margin-top: 20px;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .main__title ol li {
   font-size: 16px;
@@ -1389,7 +1394,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px;
   border: none;
   padding: 0 60px 0 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .main__filter-search input:focus {
   border-color: #222227;
@@ -1428,7 +1433,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   margin: 30px auto 0;
 }
@@ -1574,7 +1579,7 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 2px dashed #25a56a;
 }
 .main__table-text--price {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   color: #c0c0c0;
   font-size: 16px;
@@ -1872,7 +1877,7 @@ body::-webkit-scrollbar-thumb {
   color: #c0c0c0;
   position: relative;
   font-size: 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .profile__tabs a:hover {
   color: #fff;
@@ -1915,7 +1920,7 @@ body::-webkit-scrollbar-thumb {
   color: #c0c0c0;
   margin-right: 10px;
   transition: 0.5s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .profile__logout svg {
   fill: #c0c0c0;
@@ -1944,7 +1949,7 @@ body::-webkit-scrollbar-thumb {
 }
 .profile__meta h3 {
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   display: block;
   font-size: 16px;
   font-weight: 400;
@@ -2046,7 +2051,7 @@ body::-webkit-scrollbar-thumb {
 .hero__slide {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   width: 100%;
   min-height: 300px;
@@ -2072,7 +2077,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   font-weight: 400;
   font-size: 30px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   margin-bottom: 0;
   line-height: 130%;
 }
@@ -2109,7 +2114,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   padding: 0 20px;
   margin-top: 20px;
@@ -2464,7 +2469,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   padding: 0 25px;
   margin-top: 15px;
@@ -2547,7 +2552,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   padding: 0 25px;
   margin-top: 15px;
@@ -2669,7 +2674,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   transition: color 0.5s ease;
   margin-top: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .artist:hover .artist__cover:before {
@@ -2737,7 +2742,7 @@ body::-webkit-scrollbar-thumb {
 .event__title {
   position: relative;
   z-index: 2;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   color: #fff;
   font-size: 24px;
@@ -2774,7 +2779,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   font-size: 14px;
   z-index: 2;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   padding: 0 15px;
   border: 1px solid rgba(255,255,255,0.05);
@@ -2809,7 +2814,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   font-size: 14px;
   z-index: 2;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   padding: 0 15px;
 }
@@ -2849,7 +2854,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 22px;
   min-width: 20px;
   width: auto;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .single-item__rate {
@@ -2983,7 +2988,7 @@ body::-webkit-scrollbar-thumb {
   padding: 0 12px;
   border-radius: 8px;
   font-size: 12px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .single-item__add {
@@ -3098,7 +3103,7 @@ body::-webkit-scrollbar-thumb {
   height: 40px;
   border-radius: 12px;
   background-color: #222227;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #fff;
@@ -3157,7 +3162,7 @@ body::-webkit-scrollbar-thumb {
 }
 .post__title {
   display: block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 140%;
@@ -3307,12 +3312,12 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   font-size: 12px;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .live__title {
   font-size: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family:'Tajawal', 'Inter', sans-serif;
   font-weight: 400;
   color: #fff;
   margin-bottom: 0;
@@ -3452,7 +3457,7 @@ body::-webkit-scrollbar-thumb {
   margin-top: 5px;
   display: block;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family:'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .product__new {
@@ -3507,7 +3512,7 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid #222227;
 }
 .stats span {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-size: 20px;
   line-height: 100%;
   font-weight: 400;
@@ -3550,7 +3555,7 @@ body::-webkit-scrollbar-thumb {
   color: #c0c0c0;
   margin-bottom: 0;
   margin-top: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   line-height: 100%;
 }
@@ -3606,7 +3611,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .stats__form button svg {
   position: relative;
@@ -3663,7 +3668,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 20px;
   line-height: 100%;
   margin-bottom: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .dashbox__title h3 svg {
   fill: #25a56a;
@@ -3681,7 +3686,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   padding: 0 5px;
   border-radius: 6px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-size: 10px;
   pointer-events: none;
   background-color: #25a56a;
@@ -3702,7 +3707,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 13px;
   margin-left: 15px;
   color: #c0c0c0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .dashbox__more:hover {
   color: #25a56a;
@@ -3871,7 +3876,7 @@ body::-webkit-scrollbar-thumb {
   fill: #2f80ed;
 }
 .feature__title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
@@ -3929,7 +3934,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px;
   width: 46px;
   height: 46px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   line-height: 100%;
   font-weight: 500;
   font-size: 20px;
@@ -3937,7 +3942,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(37,165,106,0.15);
 }
 .step__title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
@@ -4007,7 +4012,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   font-weight: 500;
   margin-bottom: 15px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .plan__list {
   position: relative;
@@ -4047,7 +4052,7 @@ body::-webkit-scrollbar-thumb {
 .plan__price {
   position: relative;
   z-index: 2;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   font-size: 32px;
   color: #fff;
@@ -4075,7 +4080,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   margin-top: 20px;
 }
@@ -4106,7 +4111,7 @@ body::-webkit-scrollbar-thumb {
 .contacts__list a {
   font-size: 16px;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .contacts__list a:hover {
@@ -4194,7 +4199,7 @@ body::-webkit-scrollbar-thumb {
 }
 .cart__table td a {
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .cart__table td a:hover {
@@ -4242,7 +4247,7 @@ body::-webkit-scrollbar-thumb {
 .cart__price {
   font-size: 16px;
   color: #c0c0c0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
 }
 .cart__price span {
@@ -4277,7 +4282,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 28px;
   color: #fff;
   line-height: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
 }
 .cart__systems {
@@ -4333,7 +4338,7 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
   font-size: 16px;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   pointer-events: none;
 }
 .cart__amount button {
@@ -4487,7 +4492,7 @@ body::-webkit-scrollbar-thumb {
 .article__content h4,
 .article__content h5,
 .article__content h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   color: #fff;
   margin-bottom: 15px;
@@ -4545,7 +4550,7 @@ body::-webkit-scrollbar-thumb {
 .article__content blockquote {
   display: block;
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   padding: 0 0 0 20px;
   font-size: 16px;
   line-height: 28px;
@@ -4609,7 +4614,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   display: block;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -4632,7 +4637,7 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
   font-size: 16px;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   pointer-events: none;
 }
 .article__amount button {
@@ -4666,7 +4671,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   padding: 0 25px;
   margin-bottom: 20px;
@@ -4841,7 +4846,7 @@ body::-webkit-scrollbar-thumb {
   line-height: 100%;
   margin-bottom: 0;
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .comments__title span {
   display: flex;
@@ -4900,7 +4905,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   line-height: 20px;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .comments__time {
   display: block;
@@ -5202,7 +5207,7 @@ body::-webkit-scrollbar-thumb {
   margin-top: 30px;
   font-size: 16px;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -5341,7 +5346,7 @@ body::-webkit-scrollbar-thumb {
 .sign__title {
   font-size: 16px;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   color: #fff;
   margin-bottom: 20px;
 }
@@ -5366,7 +5371,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 16px;
   width: 100%;
   padding: 0 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .sign__input:focus {
   border-color: #25a56a;
@@ -5383,7 +5388,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   padding: 0 20px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .sign__select:focus {
   border-color: #25a56a;
@@ -5399,7 +5404,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   padding: 15px 20px;
   resize: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .sign__textarea:focus {
   border-color: #25a56a;
@@ -5501,7 +5506,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   margin: 15px auto;
 }
@@ -5601,7 +5606,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   font-weight: 500;
   margin-left: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .sign__radio {
   position: relative;
@@ -5732,7 +5737,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 100px;
   margin-bottom: 10px;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
 }
 .page-404__text {
   text-align: center;
@@ -5757,7 +5762,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   margin: 0 auto;
 }
@@ -5984,7 +5989,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 100;
   transition: color 0.5s;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
 }
 .slider-radio label:hover {
@@ -6024,7 +6029,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   padding: 0 18px 0 0;
   font-size: 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   transition: 0.5s ease;
 }
@@ -6068,7 +6073,7 @@ body::-webkit-scrollbar-thumb {
 .select2-results__option {
   padding: 0 0;
   font-size: 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 400;
   color: #fff;
   height: 40px;

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CollectionData } from 'src/DTO/collection-data';
 import { InterViewer } from 'src/Models/InterViewer';
 import { InterviewerService } from 'src/Services/Interviewer/Interviewer.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-Interviewer',
@@ -10,7 +11,7 @@ import { InterviewerService } from 'src/Services/Interviewer/Interviewer.service
 })
 export class InterviewerComponent implements OnInit {
 
-  constructor(private Service:InterviewerService) { }
+  constructor(private Service:InterviewerService,private route:ActivatedRoute) { }
 
     //#region Declaration Section
     Interviewers : CollectionData<InterViewer> = new CollectionData<InterViewer>();
@@ -27,24 +28,15 @@ export class InterviewerComponent implements OnInit {
       //#endregion
 
       //#region Call Methods
-      this.getInterviewers();
+      this.Interviewers=this.route.snapshot.data['interviewer']
       //#endregion
 
+      window.scrollTo(0, 0)
     }
     //#endregion
 
     //#region Get Interviewers
-    getInterviewers()
-        {
-          let Categories = this.Service.GetInterviewer().subscribe(
-            (data)=>
-            {
-              this.Interviewers.DataList = data.DataList;
-              this.Interviewers.Url = data.Url;
-            },
-            (err)=>{ }
-          );
-        }
+
     //#endregion
 
 }

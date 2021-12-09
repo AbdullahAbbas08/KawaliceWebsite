@@ -14,14 +14,24 @@ export class SliderComponent implements OnInit {
   slideOne:Slider=new Slider()
   slideTwo:Slider=new Slider()
   slideThree:Slider=new Slider()
+  slideFour:Slider=new Slider()
+  slideFive:Slider=new Slider()
+  slideSex:Slider=new Slider()
   constructor(private slider:SliderService) {
     this.slideOne.SliderImagePath=''
     this.slideTwo.SliderImagePath=''
     this.slideThree.SliderImagePath=''
+    this.slideFour.SliderImagePath=''
+    this.slideFive.SliderImagePath=''
+    this.slideSex.SliderImagePath=''
    }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
     this.GetSlider()
+
   }
 
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CollectionData } from 'src/DTO/collection-data';
 import { ProgramType } from 'src/Models/ProgramType';
 import { ProgramTypeService } from './../../../Services/ProgramType/program-type.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-program-type',
@@ -10,7 +11,7 @@ import { ProgramTypeService } from './../../../Services/ProgramType/program-type
 })
 export class ProgramTypeComponent implements OnInit {
 
-  constructor(private ProgramTypeService:ProgramTypeService) { }
+  constructor(private ProgramTypeService:ProgramTypeService,private route:ActivatedRoute) { }
 
     //#region Declaration Section
     programType : CollectionData<ProgramType> = new CollectionData<ProgramType>();
@@ -27,20 +28,8 @@ export class ProgramTypeComponent implements OnInit {
       //#endregion
 
       //#region Call Methods
-      this.getProgramType();
+      this.programType=this.route.snapshot.data['programType']
       //#endregion
     }
-
-    getProgramType(){
-      let programTypes = this.ProgramTypeService.getall().subscribe(
-        (data)=>
-        {
-          this.programType.DataList = data.DataList;
-          this.programType.Url = data.Url;
-        },
-        (err)=>{ }
-      );
-    }
-
 
 }

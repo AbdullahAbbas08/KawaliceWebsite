@@ -1,4 +1,4 @@
-$(document).ready(function () {
+setTimeout(function () {
 	"use strict"; // start of use strict
 
 	/*==============================
@@ -24,6 +24,7 @@ $(document).ready(function () {
 		loop: false,
     rewind: true,
 		autoplay: true,
+    autoplayHoverPause: true,
 		smartSpeed: 600,
 		autoHeight: true,
 		items: 1,
@@ -560,4 +561,4 @@ $(document).ready(function () {
 			}
 		}
 	}
-});
+}, 2000);
