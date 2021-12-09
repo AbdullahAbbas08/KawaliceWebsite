@@ -9,11 +9,11 @@ import { ProgramService } from 'src/Services/program/Program.service';
 import { SeasonService } from 'src/Services/Seasons/season.service';
 
 @Component({
-  selector: 'app-episode',
-  templateUrl: './episode.component.html',
-  styleUrls: ['./episode.component.css']
+  selector: 'app-interviewer-detail',
+  templateUrl: './interviewer-detail.component.html',
+  styleUrls: ['./interviewer-detail.component.css']
 })
-export class EpisodeComponent implements OnInit {
+export class InterviewerDetailComponent implements OnInit {
 
   constructor(private Service: ProgramService,
     private _SeasonService: SeasonService,
@@ -21,7 +21,7 @@ export class EpisodeComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   //#region Declaration Section
-  EpisodeObject: Recently = new Recently();
+  ProgramObject: ProgramModel = new ProgramModel();
   Programs: CollectionData<ProgramModel> = new CollectionData<ProgramModel>();
   Seasons: Season[] = [];
   Episodes: Recently[] = [];
@@ -33,22 +33,55 @@ export class EpisodeComponent implements OnInit {
 
   //#region Init Methode
   ngOnInit(): void {
+    this.GetProgramById();
+    this.GetSeasonsByProgramID();
     this.route.queryParams.subscribe((query) => { this.ProgramID = query['id'] })
-    this.GetEpisodebyID(this.ProgramID);
+    this.GetEpisodebyProgramID(this.ProgramID);
   }
 
   //#endregion
 
+  //#region Get Program By Id
+  GetProgramById() {
+    //#region  Filter Program By Category ID
+    this.route.queryParams.subscribe((query) => { this.ProgramID = query['id'] })
+    //#endregion
+    let Programs = this.Service.GetProgramById(this.ProgramID).subscribe(
+      (data) => {
+        this.Programs.DataList = data.DataList;
+        this.ProgramObject = this.Programs.DataList[0];
+        this.Programs.Url = data.Url;
+
+      },
+      (err) => { }
+    );
+  }
+  //#endregion
+
   //#region Get All Season Realted With This Program
-  GetEpisodebyID(id: number) {
+  GetSeasonsByProgramID() {
+    //#region  Filter Program By Category ID
+    //this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
+    //#endregion
+    let Seasons = this._SeasonService.GetSeasonsByProgramId(45).subscribe(
+      (data) => {
+        this.Seasons = data;
+      },
+      (err) => { }
+    );
+  }
+  //#endregion
+
+  //#region Get All Season Realted With This Program
+  GetEpisodebyProgramID(id: number) {
     //#region  Filter Program By Category ID
     //this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
     //#endregion
     let Episodes = this._EpisodeService.GetEpisodebyProgramID(id).subscribe(
       (data) => {
         this.EpisodeCollection = data;
-        this.EpisodeObject =  this.EpisodeCollection .DataList[0];
         this.Url = this.EpisodeCollection.Url;
+        console.log(this.EpisodeCollection.DataList)
       },
       (err) => { }
     );

@@ -22,6 +22,7 @@ import { ProgramDetailsComponent } from './components/program/program-details/pr
 import { EpisodeComponent } from './components/episode/episode.component';
 import { ProgramTypeComponent } from './components/program-type/program-type.component';
 import { ArabicNumberPipe } from './Shared/Pipes/arabic-number.pipe';
+import { InterviewerDetailComponent } from './components/Interviewer/interviewer-detail/interviewer-detail.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ArabicNumberPipe } from './Shared/Pipes/arabic-number.pipe';
     ProgramDetailsComponent,
     EpisodeComponent,
     ProgramTypeComponent,
-    ArabicNumberPipe
+    ArabicNumberPipe,
+    InterviewerDetailComponent
   ],
   imports: [
     BrowserModule,
