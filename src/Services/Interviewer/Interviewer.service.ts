@@ -14,6 +14,10 @@ export class InterviewerService {
 
 constructor(private http: HttpClient) { }
 
+      //#region  Variables
+      InterviewerID:number;
+      //#endregion
+
     //#region Options
     httpOptionsWithKey = { headers: new HttpHeaders({ 'ApiKey': 'ac6716a0-039d-4d21-98b5-dcefa416e266', 'Accept': ' */*' }) };
     //#endregion

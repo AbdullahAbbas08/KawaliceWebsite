@@ -4,13 +4,13 @@
 		<div class="container-fluid">
 			<div class="row row--grid">
 				<!-- breadcrumb -->
-				<div class="col-12" style="direction: ltr;">
+				<!-- <div class="col-12" style="direction: ltr;">
 					<ul class="breadcrumb">
 						<li class="breadcrumb__item"><a href="index.html">Home</a></li>
 						<li class="breadcrumb__item"><a href="store.html">Store</a></li>
 						<li class="breadcrumb__item breadcrumb__item--active">Product</li>
 					</ul>
-				</div>
+				</div> -->
 				<!-- end breadcrumb -->
 
 				<!-- title -->
@@ -22,7 +22,7 @@
 				<!-- end title -->
 
 				<div class="col-12 " *ngFor="let item of Categories.DataList">
-					<div class="store-item" >
+					<div (click)="SetCategories(item.CategoryId)" class="store-item CategoryBody" routerLink="/Programs"  [queryParams]="{id: item.CategoryId}" >
 						<div class="store-item__content" style="margin-left: 15px;">
 							<!-- <div class="store-item__carousel owl-carousel"> -->
 								<div class="store-item__cover ">
@@ -53,7 +53,7 @@
 									</button>
 								</div> -->
 
-								<a routerLink="/Programs"  [queryParams]="{id: item.CategoryId}" class="article__buy">ADD TO CART </a>
+								<a routerLink="/Programs"  [queryParams]="{id: item.CategoryId}" class="article__buy" style="width:fit-content;"> برامج خاصة بتصنيف {{item.CategoryTitle}}</a>
 
 									<span >Theme Forest</span><br>
 									<span >Graphic River</span><br>
@@ -80,18 +80,18 @@
 			</div>
 
 			<!-- recommend -->
-			<section class="row row--grid">
+			<!-- <section class="row row--grid"> -->
 				<!-- title -->
-				<div class="col-12">
+				<!-- <div class="col-12">
 					<div class="main__title">
 						<h2>Recommend</h2>
 
 						<a href="store.html" class="main__link">See all <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"/></svg></a>
 					</div>
-				</div>
+				</div> -->
 				<!-- end title -->
 
-				<div class="col-12">
+				<!-- <div class="col-12">
 					<div class="main__carousel-wrap">
 						<div class="main__carousel main__carousel--store owl-carousel" id="store">
 							<div class="product">
@@ -180,8 +180,8 @@
 						<button class="main__nav main__nav--prev" data-nav="#store" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"/></svg></button>
 						<button class="main__nav main__nav--next" data-nav="#store" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"/></svg></button>
 					</div>
-				</div>
-			</section>
+				</div> -->
+			<!-- </section> -->
 			<!-- end recommend -->
 		</div>
 	</main>

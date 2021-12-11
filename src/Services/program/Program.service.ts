@@ -13,13 +13,18 @@ export class ProgramService {
 
   constructor(private http: HttpClient) { }
 
+      //#region  Variables
+      ProgramID : number;
+      SeasonID:number;
+      //#endregion
+
   //#region Options
   httpOptionsWithKey = { headers: new HttpHeaders({ 'ApiKey': 'ac6716a0-039d-4d21-98b5-dcefa416e266', 'Accept': ' */*' }) };
   //#endregion
 
   //#region  Program API's
-  GetPrograms(): Observable<CollectionData<Program>> {
-    return this.http.get<CollectionData<Program>>(`${environment.URL}/programs/getallprogramsapikey`, this.httpOptionsWithKey);
+  GetPrograms(ID:number): Observable<CollectionData<Program>> {
+    return this.http.get<CollectionData<Program>>(`${environment.URL}/programs/getallprogramsbycategoryid?ID=${ID}`, this.httpOptionsWithKey);
   }
   //#endregion
 
@@ -31,8 +36,7 @@ GetProgramsByCatId(ID:number): Observable<CollectionData<Program>> {
 
 //#region Program By ID
 GetProgramById(ID:number): Observable<CollectionData<ProgramModel>> {
-  let x=  this.http.get<CollectionData<ProgramModel>>(`${environment.URL}/episodes/Programfilterforrecently?ProgramID=${ID}`, this.httpOptionsWithKey);
-return x;
+  return  this.http.get<CollectionData<ProgramModel>>(`${environment.URL}/episodes/Programfilterforrecently?ProgramID=${ID}`, this.httpOptionsWithKey);
 }
 //#endregion
 

@@ -44,15 +44,19 @@ export class InterviewerDetailComponent implements OnInit {
 
   //#region Get Interviewer By Id
   FindInterviewer() {
-    this.route.queryParams.subscribe((query) => {
-       this.Service.FindInterviewer( query['id']).subscribe(
-        (data) => {
-          this.Interviewers.DataList = data.DataList;
-          this.InterviewerObject = this.Interviewers.DataList[0];
-          console.log(this.InterviewerObject)
-          this.Interviewers.Url = data.Url; },
-        (err) => { }
-      );})  
+    // this.route.queryParams.subscribe((query) => {
+    //    this.Service.FindInterviewer( query['id']).subscribe(
+    //     (data) => {
+    //       this.Interviewers.DataList = data.DataList;
+    //       this.InterviewerObject = this.Interviewers.DataList[0];
+    //       console.log(this.InterviewerObject)
+    //       this.Interviewers.Url = data.Url; },
+    //     (err) => { }
+    //   );}) 
+    
+    this.Interviewers = this.route.snapshot.data['interviewer'];
+    this.InterviewerObject = this.Interviewers.DataList[0];
+
   }
   //#endregion
 

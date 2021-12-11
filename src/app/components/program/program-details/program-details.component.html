@@ -21,7 +21,7 @@
 
 						<div class="col-12">
 							<i class="fa fa-home"></i>
-							<a [routerLink]="['/Categories']" [queryParams]="{id: ProgramObject.CategoryId}">
+							<a (click)="SetCategories(ProgramObject.CategoryId)" [routerLink]="['/Categories']" [queryParams]="{id: ProgramObject.CategoryId}">
 								<span style="padding-right: 10px;">{{ProgramObject.CategoryName}}</span>
 							</a>
 							<i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
@@ -30,7 +30,7 @@
 
 						<div class="col-12">
 							<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i>
-							<a [routerLink]="['/InterviewerDetails']" [queryParams]="{id: ProgramObject.InterviewerId}"> 
+							<a (click)="SetInterviewer( ProgramObject.InterviewerId)" [routerLink]="['/InterviewerDetails']" [queryParams]="{id: ProgramObject.InterviewerId}"> 
 								<span style="padding-right: 10px;"> {{ProgramObject.InterviewerName}}</span>
 							</a>
 							
@@ -64,8 +64,8 @@
 					<!-- share -->
 					<div class="row">
 						<div class="col-12">
-							<div *ngFor="let item of Seasons" style="padding-right: 20px;">
-								<a [routerLink]="['/Episode']" [queryParams]="{id: item.SessionId}"> {{item.SessionTitle}}</a>
+							<div *ngFor="let item of Seasons" style="padding-right: 20px;display: inline-block;">
+								<a (click)="SetSeason(item.SessionId)" [routerLink]="['/Episodes']" [queryParams]="{id: item.SessionId}"> {{item.SessionTitle}}</a>
 							</div>
 						</div>
 					</div>
@@ -87,10 +87,10 @@
 				<div class="row flex-row-reverse">
 					<div class="col-6 col-sm-4 col-lg-2 "
 					*ngFor="let item of EpisodeCollection.DataList | slice:0:6; let i=index">
-					<div class="album" [routerLink]="['/Episode']" [queryParams]="{id: item.EpisodeId}" style="cursor: pointer;">
-						<div class="album__cover" [routerLink]="['/Episode']" [queryParams]="{id: item.EpisodeId}" style="cursor: pointer;">
+					<div (click)="SetEpisode(item.EpisodeId)" class="album" [routerLink]="['/Episode']" [queryParams]="{id: item.EpisodeId}" style="cursor: pointer;">
+						<div (click)="SetEpisode(item.EpisodeId)" class="album__cover" [routerLink]="['/Episode']" [queryParams]="{id: item.EpisodeId}" style="cursor: pointer;">
 							<img src="{{Url}}{{item.EpisodeImg}}" alt="">
-							<a [routerLink]="['/Episode']" [queryParams]="{id: item.EpisodeId}">
+							<a (click)="SetEpisode(item.EpisodeId)" [routerLink]="['/Episode']" [queryParams]="{id: item.EpisodeId}">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path
 										d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />

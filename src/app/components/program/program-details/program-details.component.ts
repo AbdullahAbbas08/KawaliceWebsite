@@ -5,7 +5,9 @@ import { ProgramModel } from 'src/DTO/Program/program-model';
 import { Recently } from 'src/DTO/Recently';
 import { Program } from 'src/Models/Program';
 import { Season } from 'src/Models/Season';
+import { CategoryService } from 'src/Services/Category/category.service';
 import { EpisodeService } from 'src/Services/Episode/episode.service';
+import { InterviewerService } from 'src/Services/Interviewer/Interviewer.service';
 import { ProgramService } from 'src/Services/program/Program.service';
 import { SeasonService } from 'src/Services/Seasons/season.service';
 
@@ -19,7 +21,8 @@ export class ProgramDetailsComponent implements OnInit {
   constructor(private Service:ProgramService ,
               private _SeasonService:SeasonService,
               private _EpisodeService:EpisodeService,
-              private route:ActivatedRoute) { }
+              private interviewerService:InterviewerService,
+              private route:ActivatedRoute , private _CategoryService:CategoryService) { }
 
    //#region Declaration Section
    ProgramObject : ProgramModel = new ProgramModel();
@@ -47,16 +50,20 @@ export class ProgramDetailsComponent implements OnInit {
        //#region  Filter Program By Category ID
        this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
       //#endregion
-   let Programs = this.Service.GetProgramById(this.ProgramID).subscribe(
-     (data)=>
-     {
-       this.Programs.DataList = data.DataList;
-       this.ProgramObject = this.Programs.DataList[0];
-       this.Programs.Url = data.Url;
+  //  let Programs = this.Service.GetProgramById(this.ProgramID).subscribe(
+  //    (data)=>
+  //    {
+  //      this.Programs.DataList = data.DataList;
+  //      this.ProgramObject = this.Programs.DataList[0];
+  //      this.Programs.Url = data.Url;
        
-     },
-     (err)=>{ }
-   );
+  //    },
+  //    (err)=>{ }
+  //  );
+
+  this.Programs = this.route.snapshot.data['programDetail']
+  this.ProgramObject = this.Programs.DataList[0];
+  // console.log("program detail : ",this.Programs.DataList)
  }
  //#endregion
 
@@ -66,7 +73,7 @@ export class ProgramDetailsComponent implements OnInit {
        //#region  Filter Program By Category ID
        //this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
       //#endregion
-   let Seasons = this._SeasonService.GetSeasonsByProgramId(45).subscribe(
+   let Seasons = this._SeasonService.GetSeasonsByProgramId(this.Service.ProgramID).subscribe(
      (data)=>
      {
        this.Seasons = data;
@@ -76,7 +83,7 @@ export class ProgramDetailsComponent implements OnInit {
  }
  //#endregion
 
-  //#region Get All Season Realted With This Program
+  //#region Get All Episode Realted With This Program
   GetEpisodebyProgramID(id:number)
   {
         //#region  Filter Program By Category ID
@@ -87,10 +94,28 @@ export class ProgramDetailsComponent implements OnInit {
       {
         this.EpisodeCollection = data; 
         this.Url = this.EpisodeCollection.Url;
-        console.log(this.EpisodeCollection.DataList)
       },
       (err)=>{ }
     );
+  }
+  //#endregion
+
+  //#region Set Data Into Service
+  SetEpisode(ID:number)
+  {
+    this._EpisodeService.EpisodeID = ID;
+  }
+  SetInterviewer(ID:number)
+  {
+    this.interviewerService.InterviewerID = ID;
+  }
+  SetSeason(ID:number)
+  {
+    this.Service.SeasonID = ID;
+  }
+  SetCategories(ID:number)
+  {
+    this._CategoryService.categoryID = ID;
   }
   //#endregion
 

@@ -8,3 +8,8 @@ body
 {
     font-family: "Tajawal" !important;
 }
+
+.Max-Size-Description
+{
+  min-height: 100px;
+}

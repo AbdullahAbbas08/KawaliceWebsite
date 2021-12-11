@@ -19,10 +19,11 @@ import { SeeMoreComponent } from './components/Home/see-more/see-more.component'
 import { InterviewerComponent } from './components/Interviewer/Interviewer.component';
 import { ProgramComponent } from './components/program/Programs/program.component';
 import { ProgramDetailsComponent } from './components/program/program-details/program-details.component';
-import { EpisodeComponent } from './components/episode/episode.component';
 import { ProgramTypeComponent } from './components/program-type/program-type.component';
 import { ArabicNumberPipe } from './Shared/Pipes/arabic-number.pipe';
 import { InterviewerDetailComponent } from './components/Interviewer/interviewer-detail/interviewer-detail.component';
+import { EpisodeComponent } from './components/episode/Episode-Detail/episode.component';
+import { EpisodesComponent } from './components/episode/episodes/episodes.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { InterviewerDetailComponent } from './components/Interviewer/interviewer
     EpisodeComponent,
     ProgramTypeComponent,
     ArabicNumberPipe,
-    InterviewerDetailComponent
+    InterviewerDetailComponent,
+    EpisodesComponent
   ],
   imports: [
     BrowserModule,

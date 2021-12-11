@@ -63,4 +63,10 @@ export class ProgramComponent implements OnInit {
         }
     //#endregion
 
+    //#region  Set Program ID
+    SetProgramID(ID:number)
+    {
+      this.Service.ProgramID = ID
+    }
+    //#endregion
 }

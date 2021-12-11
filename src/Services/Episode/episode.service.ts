@@ -12,6 +12,10 @@ export class EpisodeService {
 
   constructor(private http: HttpClient) { }
   
+  //#region Variables
+  EpisodeID:number;
+  //#endregion
+
       //#region Options
       httpOptionsWithKey = { headers: new HttpHeaders({ 'ApiKey': 'ac6716a0-039d-4d21-98b5-dcefa416e266', 'Accept': ' */*' }) };
       //#endregion
@@ -22,5 +26,9 @@ export class EpisodeService {
 
       GetEpisodebyID(ID:number): Observable<CollectionData<Recently>> {
         return  this.http.get<CollectionData<Recently>>(`${environment.URL}/episodes/episodesfilterforrecently?EpisodeID=${ID}`, this.httpOptionsWithKey);
+      }
+
+      GetEpisodesbySeasonID(ID:number): Observable<CollectionData<Recently>> {
+        return  this.http.get<CollectionData<Recently>>(`${environment.URL}/episodes/episodesfilterforrecently?SeasonID=${ID}`, this.httpOptionsWithKey);
       }
 }
