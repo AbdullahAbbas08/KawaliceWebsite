@@ -4,12 +4,12 @@ setTimeout(function () {
 	/*==============================
 	Menu
 	==============================*/
-	$('.header__btn').on('click', function() {
+	$('.header__btn').on('click', function () {
 		$(this).toggleClass('header__btn--active');
 		$('.sidebar').toggleClass('sidebar--active');
 	});
 
-	$('.header__search .close, .header__action--search button').on('click', function() {
+	$('.header__search .close, .header__action--search button').on('click', function () {
 		$('.header__search').toggleClass('header__search--active');
 	});
 
@@ -18,27 +18,27 @@ setTimeout(function () {
 	==============================*/
 	$('.hero').owlCarousel({
 		mouseDrag: true,
-    rtl:true,
+		rtl: true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
-    rewind: true,
+		rewind: true,
 		autoplay: true,
-    autoplayHoverPause: true,
+		autoplayHoverPause: true,
 		smartSpeed: 600,
 		autoHeight: true,
 		items: 1,
 		responsive: {
-			0 : {
+			0: {
 				margin: 20,
 			},
-			576 : {
+			576: {
 				margin: 20,
 			},
-			768 : {
+			768: {
 				margin: 30,
 			},
-			1200 : {
+			1200: {
 				margin: 30,
 			},
 		}
@@ -49,31 +49,31 @@ setTimeout(function () {
 	==============================*/
 	$('.main__carousel--events').owlCarousel({
 		mouseDrag: true,
-    rtl:true,
+		rtl: true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
-    rewind: true,
+		rewind: true,
 		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
 		responsive: {
-			0 : {
+			0: {
 				items: 1,
 			},
-			576 : {
+			576: {
 				items: 2,
 			},
-			768 : {
+			768: {
 				items: 2,
 				margin: 30,
 			},
-			992 : {
+			992: {
 				items: 3,
 				margin: 30,
 			},
-			1200 : {
+			1200: {
 				items: 3,
 				margin: 30,
 				mouseDrag: false,
@@ -83,31 +83,31 @@ setTimeout(function () {
 
 	$('.main__carousel--artists').owlCarousel({
 		mouseDrag: true,
-    rtl:true,
+		rtl: true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
-    rewind: true,
+		rewind: true,
 		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
 		responsive: {
-			0 : {
+			0: {
 				items: 2,
 			},
-			576 : {
+			576: {
 				items: 3,
 			},
-			768 : {
+			768: {
 				items: 4,
 				margin: 30,
 			},
-			992 : {
+			992: {
 				items: 6,
 				margin: 30,
 			},
-			1200 : {
+			1200: {
 				items: 6,
 				margin: 30,
 			},
@@ -116,31 +116,31 @@ setTimeout(function () {
 
 	$('.main__carousel--store').owlCarousel({
 		mouseDrag: true,
-    rtl:true,
+		rtl: true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
-    rewind: true,
+		rewind: true,
 		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
 		responsive: {
-			0 : {
+			0: {
 				items: 2,
 			},
-			576 : {
+			576: {
 				items: 3,
 			},
-			768 : {
+			768: {
 				items: 3,
 				margin: 30,
 			},
-			992 : {
+			992: {
 				items: 4,
 				margin: 30,
 			},
-			1200 : {
+			1200: {
 				items: 5,
 				margin: 30,
 			},
@@ -149,31 +149,31 @@ setTimeout(function () {
 
 	$('.main__carousel--podcasts').owlCarousel({
 		mouseDrag: true,
-    rtl:true,
+		rtl: true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
-    rewind: true,
+		rewind: true,
 		autoplay: true,
 		smartSpeed: 600,
 		margin: 20,
 		autoHeight: true,
 		responsive: {
-			0 : {
+			0: {
 				items: 1,
 			},
-			576 : {
+			576: {
 				items: 2,
 			},
-			768 : {
+			768: {
 				items: 2,
 				margin: 30,
 			},
-			992 : {
+			992: {
 				items: 3,
 				margin: 30,
 			},
-			1200 : {
+			1200: {
 				items: 3,
 				margin: 30,
 				mouseDrag: false,
@@ -184,11 +184,11 @@ setTimeout(function () {
 	/*==============================
 	Navigation
 	==============================*/
-	$('.main__nav--prev').on('click', function() {
+	$('.main__nav--prev').on('click', function () {
 		var carouselId = $(this).attr('data-nav');
 		$(carouselId).trigger('prev.owl.carousel');
 	});
-	$('.main__nav--next').on('click', function() {
+	$('.main__nav--next').on('click', function () {
 		var carouselId = $(this).attr('data-nav');
 		$(carouselId).trigger('next.owl.carousel');
 	});
@@ -198,37 +198,37 @@ setTimeout(function () {
 	==============================*/
 	$('.partners').owlCarousel({
 		mouseDrag: false,
-    rtl:true,
+		rtl: true,
 		touchDrag: false,
 		dots: false,
 		loop: false,
-    rewind: true,
+		rewind: true,
 		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
 		smartSpeed: 600,
 		margin: 20,
-		responsive : {
-			0 : {
+		responsive: {
+			0: {
 				items: 2,
 			},
-			576 : {
+			576: {
 				items: 3,
 				margin: 20,
 			},
-			768 : {
+			768: {
 				items: 4,
 				margin: 30,
 			},
-			992 : {
+			992: {
 				items: 4,
 				margin: 30,
 			},
-			1200 : {
+			1200: {
 				items: 6,
 				margin: 30,
 			},
-			1900 : {
+			1900: {
 				items: 8,
 				margin: 30,
 			},
@@ -240,11 +240,11 @@ setTimeout(function () {
 	==============================*/
 	$('.store-item__carousel').owlCarousel({
 		mouseDrag: true,
-    rtl:true,
+		rtl: true,
 		touchDrag: true,
 		dots: true,
 		loop: false,
-    rewind: true,
+		rewind: true,
 		autoplay: true,
 		smartSpeed: 600,
 		autoHeight: true,
@@ -255,15 +255,15 @@ setTimeout(function () {
 	/*==============================
 	Filter
 	==============================*/
-	$('.filter__item-menu li').each( function() {
+	$('.filter__item-menu li').each(function () {
 		$(this).attr('data-value', $(this).text().toLowerCase());
 	});
 
-	$('.filter__item-menu li').on('click', function() {
+	$('.filter__item-menu li').on('click', function () {
 		var text = $(this).text();
 		var item = $(this);
 		var id = item.closest('.filter').attr('id');
-		$('#'+id).find('.filter__item-btn input').val(text);
+		$('#' + id).find('.filter__item-btn input').val(text);
 	});
 
 	/*==============================
@@ -307,7 +307,7 @@ setTimeout(function () {
 	==============================*/
 	var Scrollbar = window.Scrollbar;
 
-	$('.sidebar__nav-link[data-toggle="collapse"]').on('click', function() {
+	$('.sidebar__nav-link[data-toggle="collapse"]').on('click', function () {
 		if ($('.sidebar__menu--scroll').length) {
 			Scrollbar.init(document.querySelector('.sidebar__menu--scroll'), {
 				damping: 0.1,
@@ -357,8 +357,8 @@ setTimeout(function () {
 	/*==============================
 	Bg
 	==============================*/
-	$('.hero__slide, .event').each( function() {
-		if ($(this).attr("data-bg")){
+	$('.hero__slide, .event').each(function () {
+		if ($(this).attr("data-bg")) {
 			$(this).css({
 				'background': 'url(' + $(this).data('bg') + ')',
 				'background-position': 'center center',
@@ -376,7 +376,7 @@ setTimeout(function () {
 	/*==============================
 	Player
 	==============================*/
-	$('.player__btn').on('click', function() {
+	$('.player__btn').on('click', function () {
 		$(this).toggleClass('player__btn--active');
 		$('.player').toggleClass('player--active');
 	});
@@ -445,13 +445,13 @@ setTimeout(function () {
 	});
 
 	/* single */
-	$('a[data-link]').on('click', function(e){
+	$('a[data-link]').on('click', function (e) {
 		e.preventDefault();
 		let link = $(this);
 		run(link, audio[0]);
 	});
 
-	function run(link, player){
+	function run(link, player) {
 		if ($(link).hasClass('play')) {
 			$(link).removeClass('play');
 			audio[0].pause();
@@ -488,7 +488,7 @@ setTimeout(function () {
 		var tracks = playlist.find('li a[data-playlist]');
 		var len = tracks.length;
 
-		playlist.find('a[data-playlist]').on('click', function(e){
+		playlist.find('a[data-playlist]').on('click', function (e) {
 			e.preventDefault();
 			let link = $(this);
 			current = link.parent().index();
@@ -504,10 +504,10 @@ setTimeout(function () {
 			} else {
 				link = playlist.find('a[data-playlist]')[current];
 			}
-			run2($(link),audio[0]);
+			run2($(link), audio[0]);
 		});
 
-		$('.plyr__control--prev').on('click', function(e){
+		$('.plyr__control--prev').on('click', function (e) {
 			let link = $('.single-item__cover.play');
 			current--;
 			if (current == -1) {
@@ -516,10 +516,10 @@ setTimeout(function () {
 			} else {
 				link = playlist.find('a[data-playlist]')[current];
 			}
-			run2($(link),audio[0]);
+			run2($(link), audio[0]);
 		});
 
-		$('.plyr__control--next').on('click', function(e){
+		$('.plyr__control--next').on('click', function (e) {
 			let link = $('.single-item__cover.play');
 			current++;
 			if (current == len) {
@@ -528,10 +528,10 @@ setTimeout(function () {
 			} else {
 				link = playlist.find('a[data-playlist]')[current];
 			}
-			run2($(link),audio[0]);
+			run2($(link), audio[0]);
 		});
 
-		function run2(link, player){
+		function run2(link, player) {
 			if ($(link).hasClass('play')) {
 				$(link).removeClass('play');
 				audio[0].pause();
