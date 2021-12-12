@@ -2372,7 +2372,7 @@ body::-webkit-scrollbar-thumb {
   width: 14px;
   height: auto;
   fill: #fff;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 @media (min-width: 768px) {
   .album {
@@ -3199,7 +3199,7 @@ body::-webkit-scrollbar-thumb {
   fill: #fff;
   width: 16px;
   height: auto;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 .post__comments {
   display: flex;
@@ -3213,7 +3213,7 @@ body::-webkit-scrollbar-thumb {
   fill: #fff;
   width: 16px;
   height: auto;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 @media (min-width: 768px) {
   .post {

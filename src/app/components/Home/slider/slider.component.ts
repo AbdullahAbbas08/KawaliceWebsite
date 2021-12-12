@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener  } from '@angular/core';
 import { CollectionData } from 'src/DTO/collection-data';
 import { Slider } from 'src/Models/Slider';
 import { SliderService } from 'src/Services/Slider/slider.service';
+
+declare function myFun():any;
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })
+
 export class SliderComponent implements OnInit {
   sliderData:CollectionData<Slider>=new CollectionData<Slider>()
   imageUrl:any=''
@@ -27,12 +30,18 @@ export class SliderComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.GetSlider();
+    myFun()
   }
 
   ngAfterViewInit() {
-    this.GetSlider()
-
+    myFun()
   }
+
+  // @HostListener('window:popstate', ['$event'])
+  // onPopState(event) {
+  //   console.log('Back button pressed');
+  // }
 
 
   GetSlider(){
@@ -44,7 +53,9 @@ export class SliderComponent implements OnInit {
          this.slideOne=this.sliderData.DataList[0]
          this.slideTwo=this.sliderData.DataList[1]
          this.slideThree=this.sliderData.DataList[2]
-         console.log(this.sliderData)
+         this.slideFour=this.sliderData.DataList[3]
+         this.slideFive=this.sliderData.DataList[4]
+         this.slideSex=this.sliderData.DataList[5]
        },
        (err)=>{console.log(err)}
      )

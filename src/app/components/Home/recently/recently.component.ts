@@ -24,11 +24,12 @@ export class RecentlyComponent implements OnInit {
     this.imageFour = '';
     this.imageFive = '';
     this.imageSex = '';
+    this.recently.DataList=[]
+    this.recently.Url=''
   }
 
   ngOnInit(): void {
-    this.recently.DataList=[]
-    this.recently.Url=''
+
     this.getRecently();
   }
 

@@ -9,9 +9,11 @@ import { SuperStar } from './../../../../Models/SuperStar';
   styleUrls: ['./super-star.component.css']
 })
 export class SuperStarComponent implements OnInit {
-  SuperStar : CollectionData<SuperStar> = new CollectionData<SuperStar>();
+  superStar : CollectionData<SuperStar> = new CollectionData<SuperStar>();
 
-  constructor(private interviewerService:InterviewerService) { }
+  constructor(private interviewerService:InterviewerService) {
+    this.superStar.DataList=[]
+   }
 
   ngOnInit(): void {
     this.getSuperStar()
@@ -19,7 +21,7 @@ export class SuperStarComponent implements OnInit {
 
   getSuperStar(){
     this.interviewerService.GetSuperStars().subscribe((res)=>{
-      this.SuperStar=res
+      this.superStar=res
     },
     (err)=>{console.log(err)})
   }
