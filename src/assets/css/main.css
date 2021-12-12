@@ -129,12 +129,12 @@ ul {
 }
 ::-moz-selection {
   background: #fff;
-  color: #222227;
+  color: #101010;
   text-shadow: none;
 }
 ::selection {
   background: #fff;
-  color: #222227;
+  color: #101010;
   text-shadow: none;
 }
 ::-webkit-input-placeholder {
@@ -160,11 +160,11 @@ body::-webkit-scrollbar {
   width: 16px;
 }
 body::-webkit-scrollbar-track {
-  background: #222227;
+  background: #101010;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #c0c0c0;
-  outline: 1px solid #222227;
+  outline: 1px solid #101010;
 }
 .tab-content {
   width: 100%;
@@ -254,7 +254,7 @@ body::-webkit-scrollbar-thumb {
   width: auto;
   height: 70px;
   background-color: #101010;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
   z-index: 101;
 }
 .header__content {
@@ -421,13 +421,13 @@ body::-webkit-scrollbar-thumb {
   background-color: #101010;
   z-index: 1;
   padding: 0 15px;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
   transition: top 0.5s ease;
 }
 .header__search input {
   width: calc(100% - 30px);
   height: 40px;
-  background-color: #222227;
+  background-color: #101010;
   color: #fff;
   font-size: 16px;
   border-radius: 12px;
@@ -471,7 +471,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 100%;
   right: -15px;
-  background-color: #222227;
+  background-color: #101010;
   padding: 15px;
   border-radius: 12px;
   width: 200px;
@@ -644,7 +644,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     width: 1px;
     height: 24px;
-    background-color: #222227;
+    background-color: #101010;
     top: 50%;
     right: 0;
     margin-top: -11px;
@@ -791,7 +791,7 @@ body::-webkit-scrollbar-thumb {
   width: 280px;
   transform: translateX(100%);
   transition: transform 0.5s ease;
-  border-left: 1px solid #222227;
+  border-left: 1px solid #101010;
 }
 .sidebar__logo {
   display: inline-flex;
@@ -801,7 +801,7 @@ body::-webkit-scrollbar-thumb {
   height: 70px;
   width: 100%;
   padding: 0 30px 0 15px;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
 }
 .sidebar__logo img {
   width: 100px;
@@ -885,7 +885,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   text-align: right;
   overflow: hidden;
-  background-color: #222227;
+  background-color: #101010;
   transition: 0.4s ease;
   height: auto;
 }
@@ -978,7 +978,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-top: 1px solid #222227;
+  border-top: 1px solid #101010;
   transform: translateY(100%);
   transition: transform 0.5s ease;
 }
@@ -1030,7 +1030,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 103;
   color: #fff;
   font-size: 14px;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
   border-bottom: none;
 }
 .player__btn svg {
@@ -1085,13 +1085,13 @@ body::-webkit-scrollbar-thumb {
   margin: 0 5px;
 }
 .plyr__tooltip {
-  background-color: #222227;
+  background-color: #101010;
   box-shadow: none;
   color: #fff;
   font-size: 14px !important;
 }
 .plyr__tooltip:before {
-  border-top-color: #222227;
+  border-top-color: #101010;
 }
 .plyr__wrap {
   display: flex;
@@ -1361,8 +1361,8 @@ body::-webkit-scrollbar-thumb {
   right: -15px;
   width: auto;
   top: 0;
-  border-top: 1px solid #222227;
-  border-bottom: 1px solid #222227;
+  border-top: 1px solid #101010;
+  border-bottom: 1px solid #101010;
   bottom: 0;
   background-color: #16151a;
 }
@@ -1388,7 +1388,7 @@ body::-webkit-scrollbar-thumb {
 .main__filter-search input {
   width: 100%;
   height: 40px;
-  background-color: #222227;
+  background-color: #101010;
   color: #fff;
   font-size: 14px;
   border-radius: 12px;
@@ -1397,7 +1397,7 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Tajawal','Inter', sans-serif;
 }
 .main__filter-search input:focus {
-  border-color: #222227;
+  border-color: #101010;
 }
 .main__filter-search button {
   position: absolute;
@@ -1439,7 +1439,7 @@ body::-webkit-scrollbar-thumb {
 }
 .main__load:hover {
   color: #f9c74f;
-  background-color: #222227;
+  background-color: #101010;
 }
 .main__tabs {
   display: flex;
@@ -1489,7 +1489,7 @@ body::-webkit-scrollbar-thumb {
   border-spacing: 0;
 }
 .main__table thead {
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
 }
 .main__table thead th {
   font-size: 14px;
@@ -1529,7 +1529,7 @@ body::-webkit-scrollbar-thumb {
 .main__table tbody tr {
   border-bottom: none;
   background-color: transparent;
-  border-top: 1px solid #222227;
+  border-top: 1px solid #101010;
 }
 .main__table tbody td {
   padding: 0;
@@ -1852,7 +1852,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px;
   position: relative;
   margin-top: 20px;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
 }
 .profile__tabs {
   display: flex;
@@ -2104,7 +2104,7 @@ body::-webkit-scrollbar-thumb {
   min-width: 120px;
   height: 50px;
   border-radius: 12px;
-  background-color: #222227;
+  background-color: #101010;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -2155,7 +2155,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
 }
 .hero__btn--green:hover {
-  background-color: #222227;
+  background-color: #101010;
   color: #f9c74f;
 }
 @media (min-width: 576px) {
@@ -2271,7 +2271,7 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   margin: -28px 0 0 -28px;
   border-radius: 12px;
-  background-color: #222227;
+  background-color: #101010;
   transform: scale(0.8);
   opacity: 0;
   transition: 0.5s ease;
@@ -2399,7 +2399,7 @@ body::-webkit-scrollbar-thumb {
 ==============================*/
 .release {
   margin-top: 20px;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
   background-color: #16151a;
   padding: 20px;
   border-radius: 12px;
@@ -2481,7 +2481,7 @@ body::-webkit-scrollbar-thumb {
   margin-right: 7px;
 }
 .release__buy:hover {
-  background-color: #222227;
+  background-color: #101010;
   color: #fff;
 }
 @media (min-width: 768px) {
@@ -2512,7 +2512,7 @@ body::-webkit-scrollbar-thumb {
 ==============================*/
 .store-item {
   margin-top: 20px;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
   background-color: #16151a;
   padding: 20px;
   border-radius: 12px;
@@ -2564,7 +2564,7 @@ body::-webkit-scrollbar-thumb {
   margin-right: 7px;
 }
 .store-item__buy:hover {
-  background-color: #222227;
+  background-color: #101010;
   color: #fff;
 }
 .store-item__content {
@@ -2771,7 +2771,7 @@ body::-webkit-scrollbar-thumb {
   min-width: 130px;
   height: 40px;
   border-radius: 12px;
-  background-color: #222227;
+  background-color: #101010;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -2840,7 +2840,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
   height: 58px;
 }
 .single-item:last-child {
@@ -3030,7 +3030,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(128,81,212,0.3);
 }
 .single-item:hover .single-item__cover {
-  background-color: #222227;
+  background-color: #101010;
 }
 .single-item:hover .single-item__cover img {
   opacity: 0.35;
@@ -3056,7 +3056,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 2px;
   width: 100%;
   overflow: hidden;
-  background-color: #222227;
+  background-color: #101010;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -3102,7 +3102,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   height: 40px;
   border-radius: 12px;
-  background-color: #222227;
+  background-color: #101010;
   font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -3132,7 +3132,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   width: 100%;
   padding: 20px;
-  background-color: #222227;
+  background-color: #101010;
   border-radius: 0 0 12px 12px;
   height: 100%;
   position: relative;
@@ -3361,7 +3361,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 2px;
   width: 100%;
   overflow: hidden;
-  background-color: #222227;
+  background-color: #101010;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -3415,7 +3415,7 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   margin: -24px 0 0 -24px;
   border-radius: 12px;
-  background-color: #222227;
+  background-color: #101010;
   transform: scale(0.8);
   opacity: 0;
   transition: 0.5s ease;
@@ -3509,7 +3509,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px;
   background-color: #16151a;
   width: 100%;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
 }
 .stats span {
   font-family: 'Tajawal','Inter', sans-serif;
@@ -3648,7 +3648,7 @@ body::-webkit-scrollbar-thumb {
   margin-top: 20px;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
 }
 .dashbox__title {
   display: flex;
@@ -3656,7 +3656,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
 }
 .dashbox__title h3 {
   display: flex;
@@ -3762,7 +3762,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
   height: 58px;
 }
 .dashbox__note:last-child {
@@ -3840,7 +3840,7 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   margin-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
 }
 .feature__icon {
   display: flex;
@@ -3924,7 +3924,7 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
   border-radius: 12px;
   background-color: #16151a;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
 }
 .step__number {
   display: flex;
@@ -3974,7 +3974,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #16151a;
   position: relative;
   overflow: hidden;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
 }
 .plan--red .plan__title {
   color: #eb5757;
@@ -4058,7 +4058,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #222227;
+  border-bottom: 1px solid #101010;
   display: block;
   line-height: 100%;
 }
@@ -4070,7 +4070,7 @@ body::-webkit-scrollbar-thumb {
   min-width: 140px;
   height: 50px;
   border-radius: 12px;
-  background-color: #222227;
+  background-color: #101010;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -4171,7 +4171,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #16151a;
   width: 100%;
   padding: 0;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
   border-radius: 20px;
   min-height: 400px;
   margin-top: 20px;
@@ -4325,7 +4325,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: #222227;
+  background-color: #101010;
   height: 36px;
   border-radius: 12px;
   padding: 0 10px;
@@ -4623,7 +4623,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: #222227;
+  background-color: #101010;
   height: 36px;
   border-radius: 12px;
   padding: 0 10px;
@@ -4683,7 +4683,7 @@ body::-webkit-scrollbar-thumb {
   margin-right: 7px;
 }
 .article__buy:hover {
-  background-color: #222227;
+  background-color: #101010;
   color: #f9c74f;
 }
 .article__artist {
@@ -4830,7 +4830,7 @@ body::-webkit-scrollbar-thumb {
 .comments {
   margin-top: 50px;
   padding-top: 50px;
-  border-top: 1px solid #222227;
+  border-top: 1px solid #101010;
 }
 .comments__title {
   display: flex;
@@ -4922,8 +4922,8 @@ body::-webkit-scrollbar-thumb {
   line-height: 26px;
   padding: 20px 0;
   position: relative;
-  border-top: 1px solid #222227;
-  border-bottom: 1px solid #222227;
+  border-top: 1px solid #101010;
+  border-bottom: 1px solid #101010;
 }
 .comments__text b {
   font-weight: 600;
@@ -4943,13 +4943,13 @@ body::-webkit-scrollbar-thumb {
   min-height: 80px;
   border-radius: 12px;
   color: #c0c0c0;
-  background-color: #222227;
+  background-color: #101010;
 }
 .comments__item {
   margin-bottom: 20px;
   display: block;
   background-color: #16151a;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
   padding: 20px;
   border-radius: 12px;
 }
@@ -5046,7 +5046,7 @@ body::-webkit-scrollbar-thumb {
   margin-left: 12px;
   width: 1px;
   height: 16px;
-  background-color: #222227;
+  background-color: #101010;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -5059,7 +5059,7 @@ body::-webkit-scrollbar-thumb {
 .comments__form {
   border-radius: 12px;
   padding: 20px;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
   background-color: #16151a;
   margin-top: 30px;
 }
@@ -5302,7 +5302,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   width: 100%;
   max-width: 420px;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
 }
 .sign__form--contacts,
 .sign__form--profile,
@@ -5362,7 +5362,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
 }
 .sign__input {
-  background-color: #222227;
+  background-color: #101010;
   border: 1px solid transparent;
   border-radius: 12px;
   height: 46px;
@@ -5377,7 +5377,7 @@ body::-webkit-scrollbar-thumb {
   border-color: #f9c74f;
 }
 .sign__select {
-  background: url("../assets/img/arrow2.svg") no-repeat center right 20px #222227;
+  background: url("../assets/img/arrow2.svg") no-repeat center right 20px #101010;
   background-size: 18px auto;
   border: 1px solid transparent;
   border-radius: 12px;
@@ -5394,7 +5394,7 @@ body::-webkit-scrollbar-thumb {
   border-color: #f9c74f;
 }
 .sign__textarea {
-  background-color: #222227;
+  background-color: #101010;
   border: 1px solid transparent;
   border-radius: 12px;
   height: 144px;
@@ -5459,7 +5459,7 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   width: 22px;
   height: 22px;
-  background-color: #222227;
+  background-color: #101010;
   border: 1px solid transparent;
   border-radius: 6px;
 }
@@ -5512,7 +5512,7 @@ body::-webkit-scrollbar-thumb {
 }
 .sign__btn:hover {
   color: #fff;
-  background-color: #222227;
+  background-color: #101010;
 }
 .sign__text {
   margin-top: 15px;
@@ -5648,7 +5648,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 6px solid #222227;
+  border: 6px solid #101010;
   background-color: transparent;
   border-radius: 50%;
   left: 0;
@@ -5728,7 +5728,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   width: 100%;
   max-width: 420px;
-  border: 1px solid #222227;
+  border: 1px solid #101010;
 }
 .page-404__title {
   position: relative;
@@ -5768,7 +5768,7 @@ body::-webkit-scrollbar-thumb {
 }
 .page-404__btn:hover {
   color: #fff;
-  background-color: #222227;
+  background-color: #101010;
 }
 @media (min-width: 576px) {
   .page-404__content {
@@ -5929,7 +5929,7 @@ body::-webkit-scrollbar-thumb {
 }
 .mfp-figure::after {
   box-shadow: none;
-  background-color: #222227;
+  background-color: #101010;
 }
 .mfp-fade.mfp-bg {
   opacity: 0;
@@ -5965,7 +5965,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: #222227;
+  background-color: #101010;
   padding: 5px 0;
   border-radius: 12px;
   margin-top: 10px;
@@ -6088,7 +6088,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px !important;
   min-width: 180px;
   padding: 5px 0 5px 15px;
-  background-color: #222227;
+  background-color: #101010;
 }
 .select2-container--open .select2-dropdown--below {
   border-bottom-left-radius: 12px;
@@ -6102,7 +6102,7 @@ body::-webkit-scrollbar-thumb {
 	Scrollbar-track
 ==============================*/
 .scrollbar-track-y {
-  background: #222227 !important;
+  background: #101010 !important;
   top: 0px !important;
   bottom: 0px !important;
   height: auto !important;
@@ -6117,7 +6117,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px !important;
 }
 .scrollbar-track-x {
-  background: #222227 !important;
+  background: #101010 !important;
   left: 0px !important;
   right: 0px !important;
   height: 4px !important;
