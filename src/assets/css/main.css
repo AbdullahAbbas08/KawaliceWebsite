@@ -129,12 +129,12 @@ ul {
 }
 ::-moz-selection {
   background: #fff;
-  color: #101010;
+  color: #222227;
   text-shadow: none;
 }
 ::selection {
   background: #fff;
-  color: #101010;
+  color: #222227;
   text-shadow: none;
 }
 ::-webkit-input-placeholder {
@@ -160,11 +160,11 @@ body::-webkit-scrollbar {
   width: 16px;
 }
 body::-webkit-scrollbar-track {
-  background: #101010;
+  background: #222227;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #c0c0c0;
-  outline: 1px solid #101010;
+  outline: 1px solid #222227;
 }
 .tab-content {
   width: 100%;
@@ -254,7 +254,7 @@ body::-webkit-scrollbar-thumb {
   width: auto;
   height: 70px;
   background-color: #101010;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
   z-index: 101;
 }
 .header__content {
@@ -421,7 +421,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #101010;
   z-index: 1;
   padding: 0 15px;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
   transition: top 0.5s ease;
 }
 .header__search input {
@@ -430,7 +430,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #101010;
   color: #fff;
   font-size: 16px;
-  border-radius: 12px;
+  border-radius: 2px;
   border: none;
   padding: 0 20px;
   font-family: 'Tajawal','Inter', sans-serif;
@@ -473,7 +473,7 @@ body::-webkit-scrollbar-thumb {
   right: -15px;
   background-color: #101010;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 2px;
   width: 200px;
   pointer-events: none;
   opacity: 0;
@@ -791,7 +791,7 @@ body::-webkit-scrollbar-thumb {
   width: 280px;
   transform: translateX(100%);
   transition: transform 0.5s ease;
-  border-left: 1px solid #101010;
+  border-left: 1px solid #222227;
 }
 .sidebar__logo {
   display: inline-flex;
@@ -801,7 +801,7 @@ body::-webkit-scrollbar-thumb {
   height: 70px;
   width: 100%;
   padding: 0 30px 0 15px;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
 }
 .sidebar__logo img {
   width: 100px;
@@ -978,7 +978,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-top: 1px solid #101010;
+  border-top: 1px solid #222227;
   transform: translateY(100%);
   transition: transform 0.5s ease;
 }
@@ -990,7 +990,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
+  border-radius: 2px;
   margin-bottom: 10px;
 }
 .player__track {
@@ -1021,7 +1021,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   background-color: #16151a;
-  border-radius: 12px 12px 0 0;
+  border-radius: 2px 12px 0 0;
   height: 40px;
   width: 90px;
   bottom: 0;
@@ -1030,7 +1030,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 103;
   color: #fff;
   font-size: 14px;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
   border-bottom: none;
 }
 .player__btn svg {
@@ -1091,7 +1091,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px !important;
 }
 .plyr__tooltip:before {
-  border-top-color: #101010;
+  border-top-color: #222227;
 }
 .plyr__wrap {
   display: flex;
@@ -1361,8 +1361,8 @@ body::-webkit-scrollbar-thumb {
   right: -15px;
   width: auto;
   top: 0;
-  border-top: 1px solid #101010;
-  border-bottom: 1px solid #101010;
+  border-top: 1px solid #222227;
+  border-bottom: 1px solid #222227;
   bottom: 0;
   background-color: #16151a;
 }
@@ -1391,13 +1391,13 @@ body::-webkit-scrollbar-thumb {
   background-color: #101010;
   color: #fff;
   font-size: 14px;
-  border-radius: 12px;
+  border-radius: 2px;
   border: none;
   padding: 0 60px 0 20px;
   font-family: 'Tajawal','Inter', sans-serif;
 }
 .main__filter-search input:focus {
-  border-color: #101010;
+  border-color: #222227;
 }
 .main__filter-search button {
   position: absolute;
@@ -1422,7 +1422,7 @@ body::-webkit-scrollbar-thumb {
 .main__load {
   width: 160px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #f9c74f;
   display: flex;
   flex-direction: row;
@@ -1489,7 +1489,7 @@ body::-webkit-scrollbar-thumb {
   border-spacing: 0;
 }
 .main__table thead {
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
 }
 .main__table thead th {
   font-size: 14px;
@@ -1529,7 +1529,7 @@ body::-webkit-scrollbar-thumb {
 .main__table tbody tr {
   border-bottom: none;
   background-color: transparent;
-  border-top: 1px solid #101010;
+  border-top: 1px solid #222227;
 }
 .main__table tbody td {
   padding: 0;
@@ -1537,7 +1537,7 @@ body::-webkit-scrollbar-thumb {
   border: 0px solid transparent;
 }
 .main__table tbody td:first-child .main__table-text {
-  border-radius: 12px 0 0 12px;
+  border-radius: 2px 0 0 12px;
 }
 .main__table tbody td:last-child .main__table-text,
 .main__table tbody td:last-child .main__table-btns {
@@ -1849,10 +1849,10 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   background-color: #16151a;
   padding: 20px 20px 0;
-  border-radius: 12px;
+  border-radius: 2px;
   position: relative;
   margin-top: 20px;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
 }
 .profile__tabs {
   display: flex;
@@ -2055,7 +2055,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   width: 100%;
   min-height: 300px;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
   padding: 40px 20px;
   position: relative;
@@ -2103,7 +2103,7 @@ body::-webkit-scrollbar-thumb {
   width: auto;
   min-width: 120px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #101010;
   display: inline-flex;
   flex-direction: row;
@@ -2270,7 +2270,7 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   left: 50%;
   margin: -28px 0 0 -28px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #101010;
   transform: scale(0.8);
   opacity: 0;
@@ -2399,10 +2399,10 @@ body::-webkit-scrollbar-thumb {
 ==============================*/
 .release {
   margin-top: 20px;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
   background-color: #16151a;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   position: release;
   display: flex;
   flex-direction: column;
@@ -2414,7 +2414,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   position: relative;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
 }
 .release__cover img {
@@ -2458,7 +2458,7 @@ body::-webkit-scrollbar-thumb {
 .release__buy {
   width: 100%;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #f9c74f;
   display: flex;
   flex-direction: row;
@@ -2512,10 +2512,10 @@ body::-webkit-scrollbar-thumb {
 ==============================*/
 .store-item {
   margin-top: 20px;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
   background-color: #16151a;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   position: release;
   display: flex;
   flex-direction: column;
@@ -2527,7 +2527,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   position: release;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
 }
 .store-item__cover img {
@@ -2541,7 +2541,7 @@ body::-webkit-scrollbar-thumb {
 .store-item__buy {
   width: 100%;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #f9c74f;
   display: flex;
   flex-direction: row;
@@ -2654,7 +2654,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(37,165,106,0.8) 0%, rgba(37,165,106,0) 100%);
+  background: linear-gradient(45deg, rgb(243 255 57 / 59%) 0%, rgba(37,165,106,0) 100%);;
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 2;
@@ -2770,7 +2770,7 @@ body::-webkit-scrollbar-thumb {
   right: 20px;
   min-width: 130px;
   height: 40px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #101010;
   display: inline-flex;
   flex-direction: row;
@@ -2805,7 +2805,7 @@ body::-webkit-scrollbar-thumb {
   right: 20px;
   min-width: 120px;
   height: 40px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #f9c74f;
   display: inline-flex;
   flex-direction: row;
@@ -2840,7 +2840,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
   height: 58px;
 }
 .single-item:last-child {
@@ -3101,7 +3101,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   height: 40px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #101010;
   font-family: 'Tajawal','Inter', sans-serif;
   font-weight: 500;
@@ -3236,7 +3236,7 @@ body::-webkit-scrollbar-thumb {
 }
 .live__cover {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -3414,7 +3414,7 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   left: 50%;
   margin: -24px 0 0 -24px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #101010;
   transform: scale(0.8);
   opacity: 0;
@@ -3506,10 +3506,10 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   margin-top: 20px;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #16151a;
   width: 100%;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
 }
 .stats span {
   font-family: 'Tajawal','Inter', sans-serif;
@@ -3646,9 +3646,9 @@ body::-webkit-scrollbar-thumb {
 .dashbox {
   background-color: #16151a;
   margin-top: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
 }
 .dashbox__title {
   display: flex;
@@ -3656,7 +3656,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
 }
 .dashbox__title h3 {
   display: flex;
@@ -3762,7 +3762,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
   height: 58px;
 }
 .dashbox__note:last-child {
@@ -3840,7 +3840,7 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   margin-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
 }
 .feature__icon {
   display: flex;
@@ -3849,7 +3849,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   width: 46px;
   height: 46px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: rgba(37,165,106,0.15);
 }
 .feature__icon svg {
@@ -3922,16 +3922,16 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   margin-top: 20px;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #16151a;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
 }
 .step__number {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 2px;
   width: 46px;
   height: 46px;
   font-family: 'Tajawal','Inter', sans-serif;
@@ -3970,11 +3970,11 @@ body::-webkit-scrollbar-thumb {
   display: block;
   margin-top: 20px;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #16151a;
   position: relative;
   overflow: hidden;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
 }
 .plan--red .plan__title {
   color: #eb5757;
@@ -4058,7 +4058,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #101010;
+  border-bottom: 1px solid #222227;
   display: block;
   line-height: 100%;
 }
@@ -4069,7 +4069,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   min-width: 140px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #101010;
   display: flex;
   flex-direction: row;
@@ -4171,7 +4171,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #16151a;
   width: 100%;
   padding: 0;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
   border-radius: 20px;
   min-height: 400px;
   margin-top: 20px;
@@ -4314,7 +4314,7 @@ body::-webkit-scrollbar-thumb {
   width: 80px;
   margin: 0;
   height: 40px;
-  border-radius: 12px;
+  border-radius: 2px;
 }
 .cart__promo .sign__input {
   width: calc(100% - 90px);
@@ -4327,7 +4327,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   background-color: #101010;
   height: 36px;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 0 10px;
 }
 .cart__amount input {
@@ -4476,14 +4476,14 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
 }
 .article__content iframe {
   display: block;
   width: 100%;
   height: 240px;
   margin-bottom: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   border: none;
 }
 .article__content h1,
@@ -4625,7 +4625,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   background-color: #101010;
   height: 36px;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 0 10px;
   margin-bottom: 20px;
 }
@@ -4660,7 +4660,7 @@ body::-webkit-scrollbar-thumb {
 .article__buy {
   width: 180px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #f9c74f;
   display: flex;
   flex-direction: row;
@@ -4698,7 +4698,7 @@ body::-webkit-scrollbar-thumb {
   height: auto;
   width: 200px !important;
   margin-right: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
 }
 .article__artist div {
   width: 100%;
@@ -4830,7 +4830,7 @@ body::-webkit-scrollbar-thumb {
 .comments {
   margin-top: 50px;
   padding-top: 50px;
-  border-top: 1px solid #101010;
+  border-top: 1px solid #222227;
 }
 .comments__title {
   display: flex;
@@ -4922,8 +4922,8 @@ body::-webkit-scrollbar-thumb {
   line-height: 26px;
   padding: 20px 0;
   position: relative;
-  border-top: 1px solid #101010;
-  border-bottom: 1px solid #101010;
+  border-top: 1px solid #222227;
+  border-bottom: 1px solid #222227;
 }
 .comments__text b {
   font-weight: 600;
@@ -4941,7 +4941,7 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
   position: relative;
   min-height: 80px;
-  border-radius: 12px;
+  border-radius: 2px;
   color: #c0c0c0;
   background-color: #101010;
 }
@@ -4949,9 +4949,9 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 20px;
   display: block;
   background-color: #16151a;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
 }
 .comments__item--answer,
 .comments__item--quote {
@@ -5057,9 +5057,9 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 .comments__form {
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 20px;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
   background-color: #16151a;
   margin-top: 30px;
 }
@@ -5297,12 +5297,12 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 30px 20px;
   position: relative;
   width: 100%;
   max-width: 420px;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
 }
 .sign__form--contacts,
 .sign__form--profile,
@@ -5364,7 +5364,7 @@ body::-webkit-scrollbar-thumb {
 .sign__input {
   background-color: #101010;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 2px;
   height: 46px;
   position: relative;
   color: #fff;
@@ -5377,10 +5377,10 @@ body::-webkit-scrollbar-thumb {
   border-color: #f9c74f;
 }
 .sign__select {
-  background: url("../assets/img/arrow2.svg") no-repeat center right 20px #101010;
+  background: url("../assets/img/arrow2.svg") no-repeat center right 20px #222227;
   background-size: 18px auto;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 2px;
   height: 46px;
   position: relative;
   color: #fff;
@@ -5396,7 +5396,7 @@ body::-webkit-scrollbar-thumb {
 .sign__textarea {
   background-color: #101010;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 2px;
   height: 144px;
   position: relative;
   color: #fff;
@@ -5495,7 +5495,7 @@ body::-webkit-scrollbar-thumb {
 .sign__btn {
   width: 100%;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #f9c74f;
   display: flex;
   flex-direction: row;
@@ -5562,7 +5562,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   height: 46px;
   width: calc(33% - 10px);
-  border-radius: 12px;
+  border-radius: 2px;
   color: #fff;
 }
 .sign__social a svg {
@@ -5648,7 +5648,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 6px solid #101010;
+  border: 6px solid #222227;
   background-color: transparent;
   border-radius: 50%;
   left: 0;
@@ -5723,12 +5723,12 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 20px;
   position: relative;
   width: 100%;
   max-width: 420px;
-  border: 1px solid #101010;
+  border: 1px solid #222227;
 }
 .page-404__title {
   position: relative;
@@ -5751,7 +5751,7 @@ body::-webkit-scrollbar-thumb {
 .page-404__btn {
   width: 100%;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 2px;
   background-color: #f9c74f;
   display: flex;
   flex-direction: row;
@@ -5791,7 +5791,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   max-width: 420px;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
 }
 .modal__icon {
@@ -5906,7 +5906,7 @@ body::-webkit-scrollbar-thumb {
   transition: opacity 0.4s ease-out;
 }
 .mfp-iframe-scaler iframe {
-  border-radius: 12px;
+  border-radius: 2px;
   box-shadow: none;
   background-color: #16151a;
 }
@@ -5967,7 +5967,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   background-color: #101010;
   padding: 5px 0;
-  border-radius: 12px;
+  border-radius: 2px;
   margin-top: 10px;
   position: relative;
   width: 100%;
@@ -6085,7 +6085,7 @@ body::-webkit-scrollbar-thumb {
   border-right: none;
   border-bottom: none;
   border-top: none;
-  border-radius: 12px !important;
+  border-radius: 2px !important;
   min-width: 180px;
   padding: 5px 0 5px 15px;
   background-color: #101010;
@@ -6102,7 +6102,7 @@ body::-webkit-scrollbar-thumb {
 	Scrollbar-track
 ==============================*/
 .scrollbar-track-y {
-  background: #101010 !important;
+  background: #222227 !important;
   top: 0px !important;
   bottom: 0px !important;
   height: auto !important;
@@ -6117,7 +6117,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px !important;
 }
 .scrollbar-track-x {
-  background: #101010 !important;
+  background: #222227 !important;
   left: 0px !important;
   right: 0px !important;
   height: 4px !important;
