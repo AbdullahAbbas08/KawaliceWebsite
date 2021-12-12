@@ -18,6 +18,6 @@ export class ProgramResolver implements Resolve<any> {
   constructor(private Service:ProgramService , private _CategoryService:CategoryService){}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CollectionData<Program>> {
-    return this.Service.GetPrograms(this._CategoryService.categoryID).pipe(map(programs=>programs));
+    return this.Service.GetProgramsByCatId(this._CategoryService.categoryID).pipe(map(programs=>programs));
   }
 }

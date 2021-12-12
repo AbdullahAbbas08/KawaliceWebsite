@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { forEach } from 'src/assets/fontawesome-free-5.15.4-web/js/v4-shims';
 import { CollectionData } from 'src/DTO/collection-data';
 import { ProgramModel } from 'src/DTO/Program/program-model';
 import { Recently } from 'src/DTO/Recently';
@@ -22,12 +23,18 @@ export class ProgramDetailsComponent implements OnInit {
               private _SeasonService:SeasonService,
               private _EpisodeService:EpisodeService,
               private interviewerService:InterviewerService,
-              private route:ActivatedRoute , private _CategoryService:CategoryService) { }
+              private route:ActivatedRoute , private _CategoryService:CategoryService) { 
+
+                // this.GetProgramById();
+                // this.GetSeasonsByProgramID();
+                // this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
+                // this.GetEpisodebyProgramID(this.ProgramID);
+              }
 
    //#region Declaration Section
    ProgramObject : ProgramModel = new ProgramModel();
    Programs : CollectionData<ProgramModel> = new CollectionData<ProgramModel>();
-   Seasons : Season[] =[];
+   Seasons : Recently[] =[];
    Episodes : Recently[] =[];
    EpisodeCollection : CollectionData<Recently> = new CollectionData<Recently>();
    categoryID:number=0;
@@ -70,18 +77,16 @@ export class ProgramDetailsComponent implements OnInit {
  //#region Get All Season Realted With This Program
  GetSeasonsByProgramID()
  {
-       //#region  Filter Program By Category ID
-       //this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
-      //#endregion
    let Seasons = this._SeasonService.GetSeasonsByProgramId(this.Service.ProgramID).subscribe(
      (data)=>
      {
-       this.Seasons = data;
+       this.Seasons = data.DataList;
      },
      (err)=>{ }
    );
  }
  //#endregion
+
 
   //#region Get All Episode Realted With This Program
   GetEpisodebyProgramID(id:number)

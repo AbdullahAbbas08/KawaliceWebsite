@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CollectionData } from 'src/DTO/collection-data';
+import { Recently } from 'src/DTO/Recently';
 import { environment } from 'src/environments/environment';
 import { Season } from 'src/Models/Season';
 
@@ -17,8 +18,8 @@ export class SeasonService {
       //#endregion
 
      //#region  All Seasons By Program ID
-GetSeasonsByProgramId(ID:number): Observable<Season[]> {
-  return this.http.get<Season[]>(`${environment.URL}/season/getallseasonsbyprogramid?ID=${ID}`, this.httpOptionsWithKey);
+GetSeasonsByProgramId(ID:number): Observable<CollectionData<Recently>> {
+  return this.http.get<CollectionData<Recently>>(`${environment.URL}/episodes/episodesfilterforseasons?&ProgramID=${ID}`, this.httpOptionsWithKey);
 }
 //#endregion 
 

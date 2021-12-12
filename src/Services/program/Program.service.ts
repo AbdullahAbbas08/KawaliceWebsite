@@ -23,8 +23,8 @@ export class ProgramService {
   //#endregion
 
   //#region  Program API's
-  GetPrograms(ID:number): Observable<CollectionData<Program>> {
-    return this.http.get<CollectionData<Program>>(`${environment.URL}/programs/getallprogramsbycategoryid?ID=${ID}`, this.httpOptionsWithKey);
+  GetPrograms(): Observable<CollectionData<Program>> {
+    return this.http.get<CollectionData<Program>>(`${environment.URL}/programs/getallprogramsapikey`, this.httpOptionsWithKey);
   }
   //#endregion
 
