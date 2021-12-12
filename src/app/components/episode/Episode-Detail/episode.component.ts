@@ -25,6 +25,7 @@ export class EpisodeComponent implements OnInit {
   Programs: CollectionData<ProgramModel> = new CollectionData<ProgramModel>();
   Seasons: Season[] = [];
   Episodes: Recently[] = [];
+  EpisodesRelated: Recently[] = [];
   EpisodeCollection: CollectionData<Recently> = new CollectionData<Recently>();
   categoryID: number = 0;
   ProgramID: number = 0;
@@ -33,7 +34,7 @@ export class EpisodeComponent implements OnInit {
 
   //#region Init Methode
   ngOnInit(): void {
-    // this.GetEpisodebyID( query['id']);
+    // this.GetEpisodebyID( query['id']); 
     this.route.queryParams.subscribe(
       (query) => {
           this._EpisodeService.GetEpisodebyID(query['id']).subscribe(
@@ -46,6 +47,16 @@ export class EpisodeComponent implements OnInit {
             (err) => { }
           );
         }) 
+
+//programID
+      this._EpisodeService.GetEpisodebyProgramID( 1).subscribe(
+        (data) => {
+          let Episodes = data.DataList;
+          this.EpisodesRelated = Episodes.filter(x=>x.EpisodeId !==  this.EpisodeObject.EpisodeId )
+        },
+        (err) => { }
+      );
+            
   }
 
   //#endregion

@@ -22,6 +22,7 @@ export class ProgramDetailsResolver implements Resolve<any> {
     //#endregion
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CollectionData<ProgramModel>> {
+    
     return this.Service.GetProgramById(this.Service.ProgramID).pipe(map(programDetail=>programDetail));
   }
 }
