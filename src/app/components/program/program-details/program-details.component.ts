@@ -44,6 +44,7 @@ export class ProgramDetailsComponent implements OnInit {
   
    //#region Init Methode
     ngOnInit(): void {
+      this.Seasons = [];
       this.EpisodeCollection.DataList = [];
 
       this.GetProgramById();

@@ -65,8 +65,8 @@
 					<!-- share -->
 					<div class="row">
 						<!-- *ngIf="Seasons.length !== 0; else elseBlock" -->
-						<div class="col-12" > 
-							<div *ngFor="let item of Seasons" style="padding-right: 10px;display: inline-block;">
+						<div class="col-12" *ngIf="Seasons.length !== 0; else elseBlock" > 
+							<div  *ngFor="let item of Seasons" style="padding-right: 10px;display: inline-block;">
 								<!-- [routerLink]="['/Episodes']" [queryParams]="{id: item.SessionId}" -->
 								<a [routerLink]="['/Episodes',item.SessionId]" >
 									<span style="color: white;" >
@@ -75,9 +75,9 @@
 								</a>
 							</div>
 						</div>
-						<!-- <ng-template #elseBlock>
-						 <h3 style="padding-right: 20px;"> سيتم إضافة الموسم الأول قريبا </h3> 
-						</ng-template> -->
+						<ng-template #elseBlock>
+						 <h3 style="padding-right: 20px;color: white;"> سيتم إضافة الموسم الأول قريبا </h3> 
+						</ng-template>
 
 
 					</div>
