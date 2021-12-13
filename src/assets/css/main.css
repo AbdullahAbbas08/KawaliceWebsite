@@ -252,7 +252,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   right: 0;
   width: auto;
-  height: 70px;
+  height: 90px;
   background-color: #101010;
   border-bottom: 1px solid #222227;
   z-index: 101;
@@ -798,7 +798,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  height: 70px;
+  height: 90px;
   width: 100%;
   padding: 0 30px 0 15px;
   border-bottom: 1px solid #222227;
@@ -2513,7 +2513,7 @@ body::-webkit-scrollbar-thumb {
 .store-item {
   margin-top: 20px;
   border: 1px solid #222227;
-  background-color: #16151a;
+  background-color: #101010;
   padding: 20px;
   border-radius: 2px;
   position: release;
