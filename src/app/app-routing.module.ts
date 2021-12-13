@@ -21,13 +21,13 @@ import { ProgramDetailsComponent } from './components/program/program-details/pr
 import { ProgramComponent } from './components/program/Programs/program.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent, resolve:{trending:TrendingResolver}},
+  {path:'',component:HomeComponent, resolve:{trending:TrendingResolver}, pathMatch: 'full' },
   {path:'Categories', component:CategoryComponent , resolve:{categories:CategoryResolver}},
-  {path:'Programs', component:ProgramComponent , resolve:{programs:ProgramResolver}},
+  {path:'Programs/:CategoryId', component:ProgramComponent , resolve:{programs:ProgramResolver}},
   {path:'Interviewer',component:InterviewerComponent, resolve:{interviewer:InterviewerResolverResolver}},
-  {path:'ProgramDetails',component:ProgramDetailsComponent, resolve:{programDetail:ProgramDetailsResolver}},
-  {path:'InterviewerDetails',component:InterviewerDetailComponent, resolve:{interviewer:InterviewerDetailResolver}},
-  {path:'Episode',component:EpisodeComponent, resolve:{EpisodeDetail:EpisodeResolver}},
+  {path:'ProgramDetails/:ProgramID',component:ProgramDetailsComponent, resolve:{programDetail:ProgramDetailsResolver}},
+  {path:'InterviewerDetails/:InterviewerID',component:InterviewerDetailComponent, resolve:{interviewer:InterviewerDetailResolver}},
+  {path:'Episode/:EpisodeId',component:EpisodeComponent, resolve:{EpisodeDetail:EpisodeResolver}},
   {path:'Episodes',component:EpisodesComponent, resolve:{Episodes:EpisodesRelatedResolver}},
   {path:'Type',component:ProgramTypeComponent,resolve:{programType:ProgramTypeResolver}},
 

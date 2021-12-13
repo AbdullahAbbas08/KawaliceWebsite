@@ -45,15 +45,15 @@ export class EpisodesComponent implements OnInit {
   //#endregion
 
   //#region Set Data Into Service
-  SetEpisode(ID:number)
-  {
-    this._EpisodeService.EpisodeID = ID;
-  }
+  // SetEpisode(ID:number)
+  // {
+  //   this._EpisodeService.EpisodeID = ID;
+  // }
  
-  SetProgramID(ID:number)
-  {
-    this.Service.ProgramID = ID;
-  }
+  // SetProgramID(ID:number)
+  // {
+  //   this.Service.ProgramID = ID;
+  // }
   // SetInterviewer(ID:number)
   // {
   //   this.interviewerService.InterviewerID = ID;

@@ -68,12 +68,12 @@ export class CategoryComponent implements OnInit {
   }
 //#endregion
 
-    //#region Set Variables in Service
-    SetCategories(ID:number)
-    {
-      this.Service.categoryID = ID;
-    }
-    //#endregion
+  //#region Set Variables in Service
+  // SetCategories(ID:number)
+  // {
+  //   this.Service.categoryID = ID;
+  // }
+  //#endregion
 
   
   }

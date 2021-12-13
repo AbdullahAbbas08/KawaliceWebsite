@@ -23,6 +23,6 @@ export class ProgramDetailsResolver implements Resolve<any> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CollectionData<ProgramModel>> {
     
-    return this.Service.GetProgramById(this.Service.ProgramID).pipe(map(programDetail=>programDetail));
+    return this.Service.GetProgramById(Number(route.paramMap.get('ProgramID'))).pipe(map(programDetail=>programDetail));
   }
 }

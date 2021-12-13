@@ -17,6 +17,6 @@ export class InterviewerDetailResolver implements Resolve<any> {
   constructor(private Service:InterviewerService){}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CollectionData<InterviewerProgfile>> {
-    return this.Service.FindInterviewer(this.Service.InterviewerID).pipe(map(interviewer=>interviewer));
+    return this.Service.FindInterviewer(Number(route.paramMap.get('InterviewerID'))).pipe(map(interviewer=>interviewer));
   }
 }

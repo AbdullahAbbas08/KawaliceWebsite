@@ -44,10 +44,11 @@ export class ProgramDetailsComponent implements OnInit {
   
    //#region Init Methode
     ngOnInit(): void {
+      this.EpisodeCollection.DataList = [];
+
       this.GetProgramById();
       this.GetSeasonsByProgramID();
-      this.route.queryParams.subscribe( (query)=>{ this.ProgramID = query['id']  })
-      this.GetEpisodebyProgramID(this.ProgramID);
+      this.GetEpisodebyProgramID( Number(this.route.snapshot.paramMap.get('ProgramID')));
     }
 //#endregion
 
@@ -77,13 +78,17 @@ export class ProgramDetailsComponent implements OnInit {
  //#region Get All Season Realted With This Program
  GetSeasonsByProgramID()
  {
-   let Seasons = this._SeasonService.GetSeasonsByProgramId(this.Service.ProgramID).subscribe(
-     (data)=>
-     {
-       this.Seasons = data.DataList;
-     },
-     (err)=>{ }
-   );
+
+    this.Seasons = this.route.snapshot.data['Seasons']
+
+  //  let Seasons = this._SeasonService.GetSeasonsByProgramId(this.Service.ProgramID).subscribe(
+  //    (data)=>
+  //    {
+  //      this.Seasons = data.DataList;
+  //    },
+  //    (err)=>{ }
+  //  );
+
  }
  //#endregion
 
@@ -106,22 +111,22 @@ export class ProgramDetailsComponent implements OnInit {
   //#endregion
 
   //#region Set Data Into Service
-  SetEpisode(ID:number)
-  {
-    this._EpisodeService.EpisodeID = ID;
-  }
-  SetInterviewer(ID:number)
-  {
-    this.interviewerService.InterviewerID = ID;
-  }
+  // SetEpisode(ID:number)
+  // {
+  //   this._EpisodeService.EpisodeID = ID;
+  // }
+  // SetInterviewer(ID:number)
+  // {
+  //   this.interviewerService.InterviewerID = ID;
+  // }
   SetSeason(ID:number)
   {
     this.Service.SeasonID = ID;
   }
-  SetCategories(ID:number)
-  {
-    this._CategoryService.categoryID = ID;
-  }
+  // SetCategories(ID:number)
+  // {
+  //   this._CategoryService.categoryID = ID;
+  // }
   //#endregion
 
 }

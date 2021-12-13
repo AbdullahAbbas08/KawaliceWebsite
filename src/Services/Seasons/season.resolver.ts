@@ -5,21 +5,19 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { SeasonService } from './season.service';
 import { map } from 'rxjs/operators';
 import { CollectionData } from 'src/DTO/collection-data';
 import { Recently } from 'src/DTO/Recently';
-import { EpisodeService } from './episode.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class EpisodeResolver implements Resolve<any> {
-  constructor(private _EpisodeService: EpisodeService ){}
-
+export class SeasonResolver implements Resolve<any> {
+  constructor(private Service:SeasonService){}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CollectionData<Recently>> {
-    return this._EpisodeService.GetEpisodebyID(Number(route.paramMap.get('EpisodeId'))).pipe(map(EpisodeDetail=>EpisodeDetail));
- 
-   
-   
+    return this.Service.GetSeasonsByProgramId(Number(route.paramMap.get('ProgramID'))).pipe(map(Seasons=>Seasons));
+
   }
 }

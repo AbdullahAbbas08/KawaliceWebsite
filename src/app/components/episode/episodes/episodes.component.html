@@ -53,8 +53,7 @@
 				<div class="row row--grid">
 					<!-- post -->
 					<div class="col-12 col-sm-6 col-lg-4" *ngFor="let item of Episodes.DataList">
-						<div class="post ProgramStyle" (click)="SetEpisode(item.EpisodeId)"
-							[routerLink]="['/Episode']" [queryParams]="{id: item.EpisodeId , programID:item.ProgramId}">
+						<div class="post ProgramStyle" [routerLink]="['/Episode',item.EpisodeId]">
 							<a class="post__img" style="aspect-ratio: 0 !important;">
 								<img class=" img-style" src="{{Url}}{{item.EpisodeImg}}" alt="">
 							</a>

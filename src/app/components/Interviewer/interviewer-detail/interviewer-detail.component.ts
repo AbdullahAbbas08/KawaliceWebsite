@@ -61,16 +61,14 @@ export class InterviewerDetailComponent implements OnInit {
   //#endregion
 
 
-  //#region Get Interviewer By Id
+  //#region Get Programs by Interviewer 
   GetProgramsByInterviewerId() {
-    this.route.queryParams.subscribe((query) => {
-       this._ProgramService.GetProgramsByInterviewerId( query['id']).subscribe(
+       this._ProgramService.GetProgramsByInterviewerId( Number(this.route.snapshot.paramMap.get('InterviewerID'))).subscribe(
         (data) => {
           this.Programs.DataList = data.DataList;
           this.Interviewers.Url = data.Url; },
         (err) => { }
-      );})  
-  }
+      );}
   //#endregion
 
 

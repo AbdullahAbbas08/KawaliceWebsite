@@ -34,29 +34,24 @@ export class EpisodeComponent implements OnInit {
 
   //#region Init Methode
   ngOnInit(): void {
+    this.EpisodesRelated = [];
     // this.GetEpisodebyID( query['id']); 
-    this.route.queryParams.subscribe(
-      (query) => {
-          this._EpisodeService.GetEpisodebyID(query['id']).subscribe(
-            (data) => {
-              this.EpisodeCollection = data;
-              this.EpisodeObject = this.EpisodeCollection .DataList[0];
-              // console.log(this.EpisodeObject)
-              this.Url = this.EpisodeCollection.Url;
-            },
-            (err) => { }
-          );
-        }) 
+    // this.route.queryParams.subscribe(
+    //   (query) => {
+    //       this._EpisodeService.GetEpisodebyID(query['id']).subscribe(
+    //         (data) => {
+    //           this.EpisodeCollection = data;
+    //           this.EpisodeObject = this.EpisodeCollection .DataList[0];
+    //           // console.log(this.EpisodeObject)
+    //           this.Url = this.EpisodeCollection.Url;
+    //         },
+    //         (err) => { }
+    //       );
+    //     }) 
 
-//programID
-      this._EpisodeService.GetEpisodebyProgramID( 1).subscribe(
-        (data) => {
-          let Episodes = data.DataList;
-          this.EpisodesRelated = Episodes.filter(x=>x.EpisodeId !==  this.EpisodeObject.EpisodeId )
-        },
-        (err) => { }
-      );
-            
+    //Get Episodes Related
+    this.GetEpisodebyID();
+    this.getEpisodesRelated();
   }
 
   //#endregion
@@ -77,5 +72,27 @@ export class EpisodeComponent implements OnInit {
   // }
   //#endregion
 
+  //#region Get Episode Details
+  GetEpisodebyID() {
+    this.EpisodeCollection = this.route.snapshot.data['EpisodeDetail'];
+    this.EpisodeObject = this.EpisodeCollection.DataList[0];
+    this.Url = this.EpisodeCollection.Url;
+  }
+
+  //#endregion
+
+  //#region Get Episodes Related With Program ID
+  getEpisodesRelated() {
+    let res = this._EpisodeService.GetEpisodebyProgramID(this.EpisodeObject.ProgramId).subscribe(
+      (data) => { 
+       this.EpisodesRelated = data.DataList.filter(x => x.EpisodeId != this.EpisodeObject.EpisodeId)
+      },
+      (err) => {});
+
+     
+     
+
+  }
+  //#endregion
 
 }

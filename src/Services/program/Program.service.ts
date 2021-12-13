@@ -14,7 +14,7 @@ export class ProgramService {
   constructor(private http: HttpClient) { }
 
       //#region  Variables
-      ProgramID : number;
+      // ProgramID : number;
       SeasonID:number;
       //#endregion
 

@@ -46,8 +46,8 @@
 				<div class="row row--grid">
 					<!-- post -->
 					<div class="col-12 col-sm-6 col-lg-4" *ngFor="let item of Programs.DataList">
-						<div class="post ProgramStyle" (click)="SetProgramID(item.ProgramId)"
-							[routerLink]="['/ProgramDetails']" [queryParams]="{id: item.ProgramId}">
+						<div class="post ProgramStyle" 
+							[routerLink]="['/ProgramDetails',item.ProgramId]">
 							<a class="post__img" style="aspect-ratio: 0 !important;">
 								<img class=" img-style" src="{{Programs.Url}}{{item.ProgramImg}}" alt="">
 							</a>

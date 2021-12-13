@@ -15,7 +15,7 @@ export class InterviewerService {
 constructor(private http: HttpClient) { }
 
       //#region  Variables
-      InterviewerID:number;
+      // InterviewerID:number;
       //#endregion
 
     //#region Options

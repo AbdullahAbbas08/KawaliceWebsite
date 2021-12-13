@@ -29,21 +29,23 @@ export class ProgramComponent implements OnInit {
       //#endregion
 
       //#region Call Methods
-      this.GetPrograms();
+       this.GetPrograms();
       //#endregion
 
       //#region  Filter Program By Category ID
-      this.route.queryParams.subscribe(
-        (query)=>{
-          this.Service.GetProgramsByCatId( query['id']).subscribe(
-            (data)=>{
-              this.Programs.DataList = data.DataList
-              // console.log( this.Programs.DataList);
-            }
-          )
-        }
-      )
+      // const routeParams = this.route.snapshot.paramMap;
+      // const productIdFromRoute = Number(routeParams.get('id'));
+      // console.log("productIdFromRoute : ",productIdFromRoute);
+      //     this.Service.GetProgramsByCatId(productIdFromRoute).subscribe(
+      //       (data)=>{
+      //         this.Programs.DataList = data.DataList;
+      //         this.Programs.Url = data.Url;
+      //         // console.log( this.Programs.DataList);
+      //       }
+      //     )
       //#endregion
+      
+     
     }
     //#endregion
 
@@ -55,9 +57,9 @@ export class ProgramComponent implements OnInit {
     //#endregion
 
     //#region  Set Program ID
-    SetProgramID(ID:number)
-    {
-      this.Service.ProgramID = ID
-    }
+    // SetProgramID(ID:number)
+    // {
+    //   this.Service.ProgramID = ID
+    // }
     //#endregion
 }
