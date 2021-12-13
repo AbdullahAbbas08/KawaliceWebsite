@@ -53,15 +53,6 @@ export class ProgramComponent implements OnInit {
     //#region Get Programs
     GetPrograms()
         {
-          // let Programs = this.Service.GetPrograms().subscribe(
-          //   (data)=>
-          //   {
-          //     this.Programs.DataList = data.DataList;
-          //     this.Programs.Url = data.Url;
-          //   },
-          //   (err)=>{ }
-          // );
-          //programs
           this.Programs = this.route.snapshot.data['programs']
         }
     //#endregion

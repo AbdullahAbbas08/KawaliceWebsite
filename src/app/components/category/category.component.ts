@@ -4,6 +4,8 @@ import { CollectionData } from 'src/DTO/collection-data';
 import { CategoryService } from 'src/Services/Category/category.service';
 import { ObjectIDName } from 'src/DTO/object-idname';
 import { ActivatedRoute } from '@angular/router';
+import { Program } from 'src/Models/Program';
+import { ProgramService } from 'src/Services/program/Program.service';
 
 @Component({
   selector: 'app-category',
@@ -12,11 +14,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor(private Service:CategoryService , private route: ActivatedRoute) { }
+  constructor(private Service:CategoryService ,private _ProgramService:ProgramService, private route: ActivatedRoute) { }
 
     //#region Declaration Section
     Categories : CollectionData<Category> = new CollectionData<Category>();
-
+    Programs : CollectionData<Program> = new CollectionData<Program>();
+    categoryID:number;
     //#endregion
 
     //#region Init Method Section
@@ -30,6 +33,7 @@ export class CategoryComponent implements OnInit {
 
       //#region Call Methods
       this.getCategory();
+      this.GetPrograms();
       //#endregion
     }
     //#endregion
@@ -51,6 +55,19 @@ export class CategoryComponent implements OnInit {
         }
     //#endregion
 
+  //#region Get Programs
+  GetPrograms()
+  {
+       this._ProgramService.GetPrograms().subscribe(
+            (data)=>
+            {
+              this.Programs.DataList = data.DataList;
+            },
+            (err)=>{ }
+          );
+  }
+//#endregion
+
     //#region Set Variables in Service
     SetCategories(ID:number)
     {
@@ -58,4 +75,5 @@ export class CategoryComponent implements OnInit {
     }
     //#endregion
 
-}
+  
+  }

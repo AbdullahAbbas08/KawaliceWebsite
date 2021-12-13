@@ -28,6 +28,10 @@ export class EpisodeService {
         return  this.http.get<CollectionData<Recently>>(`${environment.URL}/episodes/episodesfilterforrecently?EpisodeID=${ID}`, this.httpOptionsWithKey);
       }
 
+      GetEpisodes(): Observable<CollectionData<Recently>> {
+        return  this.http.get<CollectionData<Recently>>(`${environment.URL}/episodes/episodesfilterforrecently`, this.httpOptionsWithKey);
+      }
+
       GetEpisodesbySeasonID(ID:number): Observable<CollectionData<Recently>> {
         return  this.http.get<CollectionData<Recently>>(`${environment.URL}/episodes/episodesfilterforrecently?SeasonID=${ID}`, this.httpOptionsWithKey);
       }

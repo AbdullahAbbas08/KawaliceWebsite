@@ -21,23 +21,23 @@
 
 						<div class="col-12">
 							<i class="fa fa-home"></i>
-							<a (click)="SetCategories(ProgramObject.CategoryId)" [routerLink]="['/Categories']" [queryParams]="{id: ProgramObject.CategoryId}">
+							<a style="color: white;" (click)="SetCategories(ProgramObject.CategoryId)" [routerLink]="['/Categories']" [queryParams]="{id: ProgramObject.CategoryId}">
 								<span style="padding-right: 10px;">{{ProgramObject.CategoryName}}</span>
 							</a>
-							<i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
+							<i style="color: white;" class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
 								<span style="padding-right: 10px;">{{ProgramObject.ProgramName}} </span>
 						</div>
 
 						<div class="col-12">
 							<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i>
-							<a (click)="SetInterviewer( ProgramObject.InterviewerId)" [routerLink]="['/InterviewerDetails']" [queryParams]="{id: ProgramObject.InterviewerId}"> 
+							<a style="color: white;" (click)="SetInterviewer( ProgramObject.InterviewerId)" [routerLink]="['/InterviewerDetails']" [queryParams]="{id: ProgramObject.InterviewerId}"> 
 								<span style="padding-right: 10px;"> {{ProgramObject.InterviewerName}}</span>
 							</a>
 							
 						</div>
 
 						<div class="dol-12">
-							<i class="fa fa-dot-circle-o" aria-hidden="true" style="font-size: 20px;padding-right:15px;padding-left: 15px;"></i>
+							<i class="fas fa-layer-group paddingIcon"></i>
 							<span>{{ProgramObject.ProgramTypeName}}</span>
 						</div>
 
@@ -63,20 +63,26 @@
 
 					<!-- share -->
 					<div class="row">
-						<div class="col-12">
-							<div *ngFor="let item of Seasons" style="padding-right: 20px;display: inline-block;">
-								<a (click)="SetSeason(item.SessionId)" [routerLink]="['/Episodes']" [queryParams]="{id: item.SessionId}"> {{item.SessionTitle}}</a>
+						<!-- *ngIf="Seasons.length !== 0; else elseBlock" -->
+						<div class="col-12" > 
+							<div *ngFor="let item of Seasons" style="padding-right: 10px;display: inline-block;">
+								<a style="color: white;" (click)="SetSeason(item.SessionId)" [routerLink]="['/Episodes']" [queryParams]="{id: item.SessionId}"> {{item.SeasonTitle}}</a>
 							</div>
 						</div>
+						<!-- <ng-template #elseBlock>
+						 <h3 style="padding-right: 20px;"> سيتم إضافة الموسم الأول قريبا </h3> 
+						</ng-template> -->
+
+
 					</div>
 					
 					<!-- end share -->
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" >
 				<!-- title -->
-				<div class="col-12" style="color: white;padding-top: 20px;">
+				<div class="col-12" *ngIf="EpisodeCollection.DataList.length !== 0" style="color: white;padding-top: 20px;">
 						<h3> حلقات متعلقة بالبرنامج</h3>
 				</div>
 				<!-- end title -->
@@ -118,10 +124,10 @@
 		</section>
 		<!-- end events -->
 	</div>
+	<app-footer></app-footer>
 </main>
 <!-- end main content -->
 
-<app-footer></app-footer>
 
 <!-- modal ticket -->
 <form action="#" id="modal-ticket" class="zoom-anim-dialog mfp-hide modal modal--form">

@@ -15,7 +15,10 @@
 			<!-- title -->
 			<div class="col-12">
 				<div class="" style="color: white;font-size: 22px;margin-top: 25px;">
-					<a (click)="SetProgramID(ProgramID)"  [routerLink]="['/ProgramDetails']" > <span>{{ProgramTitle}}</span> </a> &nbsp;
+					<!-- <a (click)="SetProgramID(ProgramID)"  [routerLink]="['/ProgramDetails']" >  -->
+						<span>{{ProgramTitle}}</span> 
+					<!-- </a>  -->
+					&nbsp;
 					<i class="fas fa-angle-double-left"></i>&nbsp;
 					<span>{{SeasonTitle}}</span>&nbsp; 
 					<i class="fas fa-angle-double-left"></i>&nbsp;
@@ -458,9 +461,9 @@
 			</div>
 		</div>
 	</div>
+	<app-footer></app-footer>
 </main>
 <!-- end main content -->
-<app-footer></app-footer>
 
 
 <!-- modal info -->
