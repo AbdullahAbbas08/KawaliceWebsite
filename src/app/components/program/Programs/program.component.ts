@@ -13,7 +13,6 @@ export class ProgramComponent implements OnInit {
 
   constructor(private Service:ProgramService ,private route:ActivatedRoute,private router:Router) { }
 
-
     //#region Declaration Section
     Programs : CollectionData<Program> = new CollectionData<Program>();
     categoryID:number;
@@ -30,49 +29,27 @@ export class ProgramComponent implements OnInit {
       //#endregion
 
       //#region Call Methods
+       if(this.route.snapshot.paramMap.get('CategoryId') == undefined)
+        this.Programs = this.route.snapshot.data['Allprograms'];
+        else
        this.GetPrograms();
-      //#endregion
-
-
-      //#region  Filter Program By Category ID
-      // const routeParams = this.route.snapshot.paramMap;
-      // const productIdFromRoute = Number(routeParams.get('id'));
-      // console.log("productIdFromRoute : ",productIdFromRoute);
-      //     this.Service.GetProgramsByCatId(productIdFromRoute).subscribe(
-      //       (data)=>{
-      //         this.Programs.DataList = data.DataList;
-      //         this.Programs.Url = data.Url;
-      //         // console.log( this.Programs.DataList);
-      //       }
-      //     )
-      this.route.queryParams.subscribe(
-        (query)=>{
-          this.Service.GetProgramsByCatId(query['id']).subscribe(
-            (data)=>{
-              this.Programs.DataList = data.DataList
-              // console.log( this.Programs.DataList);
-
-            }
-          )
-        }
-      )
-      //#endregion
-      
-     
+      //#endregion      
+    
     }
     //#endregion
 
-    //#region Get Programs
+    //#region Get Programs By Cat ID
     GetPrograms()
         {
           this.Programs = this.route.snapshot.data['programs']
         }
     //#endregion
 
-    //#region  Set Program ID
-    // SetProgramID(ID:number)
-    // {
-    //   this.Service.ProgramID = ID
-    // }
+        //#region Get All Programs
+        GetAllPrograms()
+        {
+          this.Programs = this.route.snapshot.data['programs']
+        }
     //#endregion
+
 }

@@ -78,17 +78,13 @@ export class ProgramDetailsComponent implements OnInit {
  //#region Get All Season Realted With This Program
  GetSeasonsByProgramID()
  {
-
-    this.Seasons = this.route.snapshot.data['Seasons']
-
-  //  let Seasons = this._SeasonService.GetSeasonsByProgramId(this.Service.ProgramID).subscribe(
-  //    (data)=>
-  //    {
-  //      this.Seasons = data.DataList;
-  //    },
-  //    (err)=>{ }
-  //  );
-
+    // this.Seasons = this.route.snapshot.data['Seasons']
+   let Seasons = this._SeasonService.GetSeasonsByProgramId(Number(this.route.snapshot.paramMap.get('ProgramID'))).subscribe(
+     (data)=>
+     {
+       this.Seasons = data.DataList;
+     },
+     (err)=>{ } );
  }
  //#endregion
 

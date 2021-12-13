@@ -87,8 +87,8 @@
 				<div class="row flex-row-reverse">
 					<div class="col-6 col-sm-4 col-lg-2 "
 					*ngFor="let item of EpisodesRelated | slice:0:6; let i=index">
-						<div class="album" [routerLink]="['/Episode',item.EpisodeId]">
-							<div class="album__cover">
+						<div class="album">
+							<div style="cursor: pointer;" class="album__cover"  [routerLink]="['/Episode',item.EpisodeId]">
 								<img src="{{Url}}{{item.EpisodeImg}}" alt="">
 								<a ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 										<path
@@ -100,8 +100,11 @@
 									</span>
 							</div>
 							<div class="album__title">
-								<h3>{{item.EpisodeTitle}}</h3>
-								<span><a [routerLink]="['/ProgramDetails',EpisodeObject.ProgramId]">{{item.ProgramName}}</a></span>
+								<h3 style="cursor: pointer;" >{{item.EpisodeTitle}}</h3>
+								<span>
+									<a [routerLink]="['/ProgramDetails',EpisodeObject.ProgramId]">
+									{{item.ProgramName}}</a>
+								</span>
 							</div>
 						</div>
 				</div>

@@ -68,9 +68,11 @@
 						<div class="col-12" > 
 							<div *ngFor="let item of Seasons" style="padding-right: 10px;display: inline-block;">
 								<!-- [routerLink]="['/Episodes']" [queryParams]="{id: item.SessionId}" -->
-								<span style="color: white;" >
-									{{item.SeasonTitle}}
-								</span>
+								<a [routerLink]="['/Episodes',item.SessionId]" >
+									<span style="color: white;" >
+										{{item.SeasonTitle}}
+									</span>
+								</a>
 							</div>
 						</div>
 						<!-- <ng-template #elseBlock>
