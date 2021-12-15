@@ -3,7 +3,7 @@ import { Category } from 'src/Models/Category';
 import { CollectionData } from 'src/DTO/collection-data';
 import { CategoryService } from 'src/Services/Category/category.service';
 import { ObjectIDName } from 'src/DTO/object-idname';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Program } from 'src/Models/Program';
 import { ProgramService } from 'src/Services/program/Program.service';
 
@@ -14,7 +14,7 @@ import { ProgramService } from 'src/Services/program/Program.service';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor(private Service:CategoryService ,private _ProgramService:ProgramService, private route: ActivatedRoute) { }
+  constructor(private Service:CategoryService ,private _ProgramService:ProgramService, private route: ActivatedRoute , private router:Router) { }
 
     //#region Declaration Section
     Categories : CollectionData<Category> = new CollectionData<Category>();
@@ -75,5 +75,6 @@ export class CategoryComponent implements OnInit {
   // }
   //#endregion
 
-  
+
+
   }
