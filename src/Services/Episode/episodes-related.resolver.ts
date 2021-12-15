@@ -19,6 +19,6 @@ export class EpisodesRelatedResolver implements Resolve<any> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CollectionData<Recently>> {
     return this._EpisodeService.GetEpisodesbySeasonID(Number(route.paramMap.get('SeasonID'))).pipe(map(Episodes=>Episodes));
- 
+
   }
 }

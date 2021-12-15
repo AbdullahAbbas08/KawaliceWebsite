@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { CollectionData } from 'src/DTO/collection-data';
 import { ProgramModel } from 'src/DTO/Program/program-model';
 import { Recently } from 'src/DTO/Recently';
@@ -7,6 +7,7 @@ import { Season } from 'src/Models/Season';
 import { EpisodeService } from 'src/Services/Episode/episode.service';
 import { ProgramService } from 'src/Services/program/Program.service';
 import { SeasonService } from 'src/Services/Seasons/season.service';
+
 
 @Component({
   selector: 'app-episode',
@@ -35,7 +36,7 @@ export class EpisodeComponent implements OnInit {
   //#region Init Methode
   ngOnInit(): void {
     this.EpisodesRelated = [];
-    // this.GetEpisodebyID( query['id']); 
+    // this.GetEpisodebyID( query['id']);
     // this.route.queryParams.subscribe(
     //   (query) => {
     //       this._EpisodeService.GetEpisodebyID(query['id']).subscribe(
@@ -47,11 +48,14 @@ export class EpisodeComponent implements OnInit {
     //         },
     //         (err) => { }
     //       );
-    //     }) 
+    //     })
 
     //Get Episodes Related
-    this.GetEpisodebyID();
-    this.getEpisodesRelated();
+    this.route.params.forEach((param:Params)=>{
+      this.GetEpisodebyID();
+      this.getEpisodesRelated();
+    });
+
   }
 
   //#endregion
@@ -84,13 +88,13 @@ export class EpisodeComponent implements OnInit {
   //#region Get Episodes Related With Program ID
   getEpisodesRelated() {
     let res = this._EpisodeService.GetEpisodebyProgramID(this.EpisodeObject.ProgramId).subscribe(
-      (data) => { 
+      (data) => {
        this.EpisodesRelated = data.DataList.filter(x => x.EpisodeId != this.EpisodeObject.EpisodeId)
       },
       (err) => {});
 
-     
-     
+
+
 
   }
   //#endregion
