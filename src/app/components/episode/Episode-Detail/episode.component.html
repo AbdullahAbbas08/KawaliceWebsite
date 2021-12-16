@@ -25,21 +25,23 @@
 								<!-- <span style="padding-right: 10px;">{{EpisodeObject.ProgramName}}</span> -->
 							<!-- </a> -->
 							<!-- <i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i> -->
-								<span style="padding-right: 10px;">{{EpisodeObject.EpisodeTitle}} </span>
+								<span style="color:#f9c74f">{{EpisodeObject.EpisodeTitle}} </span>
                  &nbsp; - &nbsp; <span>{{EpisodeObject.SeasonTitle}} </span>
 						</div>
 
 						<div class="col-12" style="color: white;">
 							<!-- <i class="fas fa-th" style="font-size: 15px;"></i> -->
 							<!-- <a style="color: white;"  [routerLink]="['/Categories']"> -->
-								<span style="padding-right: 10px;"> {{EpisodeObject.CategoryTitle}}</span> ,
-								<span style="padding-right: 10px;"> 	{{EpisodeObject.ProgramTypeTitle}}</span>
+								<span > {{EpisodeObject.CategoryTitle}}</span> ,
+								<span > 	{{EpisodeObject.ProgramTypeTitle}}</span>
 							<!-- </a> -->
 
 						</div>
 
-						<div class="dol-12" style="color: white;margin-right: 15px;">
-              <span style="padding-right: 10px;"> 	{{EpisodeObject.EpisodePublishDate | date:'short'}}  </span>
+						<div class="dol-12" style="color: white">
+              <!-- <span style="padding-right: 10px;" >
+                {{EpisodeObject.EpisodePublishDate | date:'dd-MM-YYY'  }}
+               </span> -->
 
 							<!-- <i style="padding-left: 5px;" class="fas fa-layer-group"></i>
 							{{EpisodeObject.ProgramTypeTitle}} -->
@@ -81,7 +83,7 @@
 		<div class="row" [hidden]="EpisodesRelated.length == 0 " >
 				<!-- title -->
 				<div class="col-12" style="color: white;padding-top: 20px;">
-						<h3> حلقات متعلقة بالبرنامج</h3>
+						<h3 style="margin-right: 15px;"> حلقات متعلقة بالبرنامج</h3>
 				</div>
 				<!-- end title -->
 		</div>
