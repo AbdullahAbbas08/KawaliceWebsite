@@ -33,8 +33,8 @@ export class ProgramComponent implements OnInit {
         this.Programs = this.route.snapshot.data['Allprograms'];
         else
        this.GetPrograms();
-      //#endregion      
-    
+      //#endregion
+      window.scrollTo(0, 0)
     }
     //#endregion
 

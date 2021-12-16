@@ -19,28 +19,28 @@
 					<!-- article content -->
 					<div class="article__content Content">
 
-						<div class="col-12">
-							<i class="fa fa-home"></i>
-							<a style="color: white;"  [routerLink]="['/Categories']" >
-								<span style="padding-right: 10px;">{{ProgramObject.CategoryName}}</span>
-							</a>
-							<i style="color: white;" class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
-								<span style="padding-right: 10px;">{{ProgramObject.ProgramName}} </span>
+						<div class="col-12" style="padding-right:0px">
+							<!-- <i class="fa fa-home"></i> -->
+							<!-- <a style="color: white;"  [routerLink]="['/Categories']" > -->
+								<span >{{ProgramObject.CategoryName}}</span>
+							<!-- </a> --> &nbsp; - &nbsp;
+							<!-- <i style="color: white;" class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i> -->
+								<span >{{ProgramObject.ProgramName}} </span>
 						</div>
-
-						<div class="col-12">
-							<!-- <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i> -->
-							<i class="fas fa-user-tie"></i>
-							<a style="color: white;" [routerLink]="['/InterviewerDetails',ProgramObject.InterviewerId]"> 
-								<span style="padding-right: 10px;"> {{ProgramObject.InterviewerName}}</span>
-							</a>
-							
-						</div>
-
-						<div class="dol-12">
-							<i class="fas fa-layer-group paddingIcon"></i>
+            <div class="dol-12">
+							<!-- <i class="fas fa-layer-group paddingIcon"></i> -->
 							<span>{{ProgramObject.ProgramTypeName}}</span>
 						</div>
+						<div class="col-12" style="padding-right:0px">
+							<!-- <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i> -->
+							<i class="fas fa-user-tie"></i>
+							<a style="color: #f9c74f;" [routerLink]="['/InterviewerDetails',ProgramObject.InterviewerId]">
+								<span style="padding-right: 10px;"> {{ProgramObject.InterviewerName}}</span>
+							</a>
+
+						</div>
+
+
 
 						<div class="col-12 Description">
 							<p>{{ProgramObject.ProgramDescription}}</p>
@@ -65,7 +65,7 @@
 					<!-- share -->
 					<div class="row">
 						<!-- *ngIf="Seasons.length !== 0; else elseBlock" -->
-						<div class="col-12" *ngIf="Seasons.length !== 0; else elseBlock" > 
+						<div class="col-12" *ngIf="Seasons.length !== 0; else elseBlock" >
 							<div  *ngFor="let item of Seasons" style="padding-right: 10px;display: inline-block;">
 								<!-- [routerLink]="['/Episodes']" [queryParams]="{id: item.SessionId}" -->
 								<a [routerLink]="['/Episodes',item.SessionId]" >
@@ -76,12 +76,12 @@
 							</div>
 						</div>
 						<ng-template #elseBlock>
-						 <h3 style="padding-right: 20px;color: white;"> سيتم إضافة الموسم الأول قريبا </h3> 
+						 <h3 style="padding-right: 20px;color: white;"> سيتم إضافة الموسم الأول قريبا </h3>
 						</ng-template>
 
 
 					</div>
-					
+
 					<!-- end share -->
 				</div>
 			</div>

@@ -35,6 +35,7 @@ export class CategoryComponent implements OnInit {
       this.getCategory();
       this.GetPrograms();
       //#endregion
+      window.scrollTo(0, 0)
     }
     //#endregion
 

@@ -39,6 +39,7 @@ export class InterviewerDetailComponent implements OnInit {
     this.FindInterviewer();
     this.GetProgramsByInterviewerId();
     //#endregion
+    window.scrollTo(0, 0)
   }
   //#endregion
 
@@ -52,8 +53,8 @@ export class InterviewerDetailComponent implements OnInit {
     //       console.log(this.InterviewerObject)
     //       this.Interviewers.Url = data.Url; },
     //     (err) => { }
-    //   );}) 
-    
+    //   );})
+
     this.Interviewers = this.route.snapshot.data['interviewer'];
     this.InterviewerObject = this.Interviewers.DataList[0];
 
@@ -61,7 +62,7 @@ export class InterviewerDetailComponent implements OnInit {
   //#endregion
 
 
-  //#region Get Programs by Interviewer 
+  //#region Get Programs by Interviewer
   GetProgramsByInterviewerId() {
        this._ProgramService.GetProgramsByInterviewerId( Number(this.route.snapshot.paramMap.get('InterviewerID'))).subscribe(
         (data) => {

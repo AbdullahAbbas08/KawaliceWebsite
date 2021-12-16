@@ -30,7 +30,8 @@ export class EpisodesComponent implements OnInit {
 
   ngOnInit(): void {
 
-        this.GetEpisodes(); 
+        this.GetEpisodes();
+        window.scrollTo(0, 0)
   }
 
   //#region Get Episodes Related With Season ID
@@ -49,7 +50,7 @@ export class EpisodesComponent implements OnInit {
   // {
   //   this._EpisodeService.EpisodeID = ID;
   // }
- 
+
   // SetProgramID(ID:number)
   // {
   //   this.Service.ProgramID = ID;

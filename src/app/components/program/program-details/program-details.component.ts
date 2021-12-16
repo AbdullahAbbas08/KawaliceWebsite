@@ -23,7 +23,7 @@ export class ProgramDetailsComponent implements OnInit {
               private _SeasonService:SeasonService,
               private _EpisodeService:EpisodeService,
               private interviewerService:InterviewerService,
-              private route:ActivatedRoute , private _CategoryService:CategoryService) { 
+              private route:ActivatedRoute , private _CategoryService:CategoryService) {
 
                 // this.GetProgramById();
                 // this.GetSeasonsByProgramID();
@@ -41,7 +41,7 @@ export class ProgramDetailsComponent implements OnInit {
    ProgramID:number=0;
    Url:String="";
    //#endregion
-  
+
    //#region Init Methode
     ngOnInit(): void {
       this.Seasons = [];
@@ -50,6 +50,7 @@ export class ProgramDetailsComponent implements OnInit {
       this.GetProgramById();
       this.GetSeasonsByProgramID();
       this.GetEpisodebyProgramID( Number(this.route.snapshot.paramMap.get('ProgramID')));
+      window.scrollTo(0, 0)
     }
 //#endregion
 
@@ -65,7 +66,7 @@ export class ProgramDetailsComponent implements OnInit {
   //      this.Programs.DataList = data.DataList;
   //      this.ProgramObject = this.Programs.DataList[0];
   //      this.Programs.Url = data.Url;
-       
+
   //    },
   //    (err)=>{ }
   //  );
@@ -99,7 +100,7 @@ export class ProgramDetailsComponent implements OnInit {
     let Episodes = this._EpisodeService.GetEpisodebyProgramID(id).subscribe(
       (data)=>
       {
-        this.EpisodeCollection = data; 
+        this.EpisodeCollection = data;
         this.Url = this.EpisodeCollection.Url;
       },
       (err)=>{ }

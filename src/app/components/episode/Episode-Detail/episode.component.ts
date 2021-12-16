@@ -55,7 +55,7 @@ export class EpisodeComponent implements OnInit {
       this.GetEpisodebyID();
       this.getEpisodesRelated();
     });
-
+    window.scrollTo(0, 0)
   }
 
   //#endregion
