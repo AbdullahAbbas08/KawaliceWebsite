@@ -259,7 +259,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header__content {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 100%;
@@ -270,9 +270,9 @@ body::-webkit-scrollbar-thumb {
 .header__logo {
   display: inline-flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 90px;
   width: 100%;
 }
 .header__logo img {
@@ -281,7 +281,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
 }
 .header__actions {
-  display: inline-flex;
+  /* display: inline-flex; */
   flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
@@ -623,6 +623,7 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 @media (min-width: 400px) {
+  .AppIcon{display: none;}
   .header__action {
     margin-left: 20px;
   }
@@ -634,6 +635,8 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media (min-width: 576px) {
+  .AppIcon{display: none;}
+
   .header__action--signin {
     width: auto;
     padding-right: 22px;
@@ -685,7 +688,13 @@ body::-webkit-scrollbar-thumb {
     width: 260px;
   }
 }
+@media (min-width:300px) {
+  .AppIcon{display: none;}
+
+}
 @media (min-width: 768px) {
+  .AppIcon{display: none;}
+
   .header__action {
     margin-left: 30px;
   }
@@ -694,6 +703,10 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media (min-width: 1200px) {
+  /* .AppIcon{display: flex; justify-content: space-around; width: 100%;} */
+  .AppIcon{display: flex; justify-content: start; margin-left: 30px; width: 100%;}
+
+
   .header {
     position: relative;
     padding-right: 280px;
@@ -2187,7 +2200,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 992px) {
   .hero__slide {
-    padding-right: 25%;
+    /* padding-right: 25%; */
   }
 }
 @media (min-width: 1200px) {
