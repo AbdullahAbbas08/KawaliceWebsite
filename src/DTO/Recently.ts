@@ -6,7 +6,7 @@ export class Recently {
   EpisodeDescription: string;
   EpisodeImg: string;
   EpisodeViews: number;
-  EpisodePublishDate: string;
+  EpisodePublishDate: any;
   ProgramId: number;
   ProgramName: string;
   ProgramImg: string;

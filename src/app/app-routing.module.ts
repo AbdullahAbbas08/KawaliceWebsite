@@ -24,7 +24,7 @@ import { ProgramComponent } from './components/program/Programs/program.componen
 const routes: Routes = [
   {path:'',component:HomeComponent, resolve:{trending:TrendingResolver}, pathMatch: 'full' },
   {path:'Categories', component:CategoryComponent , resolve:{categories:CategoryResolver}},
-  {path:'Programs/:id1/:id2', component:ProgramComponent , resolve:{programs:ProgramResolver}},
+  {path:'Programs/:CategoryId', component:ProgramComponent , resolve:{programs:ProgramResolver}},
   {path:'Programs', component:ProgramComponent , resolve:{Allprograms:AllProgramsResolver}},
   {path:'Interviewer',component:InterviewerComponent, resolve:{interviewer:InterviewerResolverResolver}},
   {path:'ProgramDetails/:ProgramID',component:ProgramDetailsComponent, resolve:{programDetail:ProgramDetailsResolver}},

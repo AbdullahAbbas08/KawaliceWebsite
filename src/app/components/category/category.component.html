@@ -26,7 +26,7 @@
 
 						<div class="store-item__content" style="margin-left: 15px;" [routerLink]="['/Programs',item.CategoryId]">
 							<!-- <div class="store-item__carousel owl-carousel"> -->
-								<div class="store-item__cover ">
+								<div class="store-item__cover " style="margin-bottom: 20px;">
 									<img src="{{Categories.Url}}{{item.CategoryImg}}" alt="assets/img/store/item4.jpg">
 								</div>
 								<!-- <div class="store-item__cover">
@@ -47,7 +47,7 @@
 							</div>
 							<!-- end article content -->
 							<!-- share -->
-							<div style="margin-top: 10px;margin-bottom: 15px;" >
+							<div style="margin-top: 60px" >
 								<span *ngFor="let program of Programs.DataList">
 									<span *ngIf="program.CategoryId == item.CategoryId" style="color: white;">
 										<div style="display: inline-block;" [routerLink]="['/ProgramDetails',program.ProgramId]" >
@@ -57,15 +57,15 @@
 														<img width="100"   src="{{Categories.Url}}{{program.ProgramImg}}">
 												</div>
 											</a><br/>
-											<span>{{program.ProgramName}}</span>									
+											<span>{{program.ProgramName}}</span>
 										</div>
 									</span>
 								</span>
-							</div>	
-						<!-- end share -->
-							<div>
-								<a [routerLink]="['/Programs',item.CategoryTitle,item.CategoryId]" class="article__buy" style="width:fit-content;"> برامج خاصة بتصنيف {{item.CategoryTitle}}</a>
 							</div>
+						<!-- end share -->
+							<!-- <div>
+								<a [routerLink]="['/Programs',item.CategoryTitle,item.CategoryId]" class="article__buy" style="width:fit-content;"> برامج خاصة بتصنيف {{item.CategoryTitle}}</a>
+							</div> -->
 						</div>
 					</div>
 				</div>

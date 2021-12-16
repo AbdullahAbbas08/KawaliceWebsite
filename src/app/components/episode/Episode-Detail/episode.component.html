@@ -20,25 +20,29 @@
 					<div class="article__content Content" style="font-size: 20px;">
 
 						<div class="col-12" style="color: white;">
-							<i class="fa fa-home"></i>
-							<a style="color: white;" [routerLink]="['/ProgramDetails',EpisodeObject.ProgramId]">
-								<span style="padding-right: 10px;">{{EpisodeObject.ProgramName}}</span>
-							</a>
-							<i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i>
+							<!-- <i class="fa fa-home"></i> -->
+							<!-- <a style="color: white;" [routerLink]="['/ProgramDetails',EpisodeObject.ProgramId]"> -->
+								<!-- <span style="padding-right: 10px;">{{EpisodeObject.ProgramName}}</span> -->
+							<!-- </a> -->
+							<!-- <i class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i> -->
 								<span style="padding-right: 10px;">{{EpisodeObject.EpisodeTitle}} </span>
+                 &nbsp; - &nbsp; <span>{{EpisodeObject.SeasonTitle}} </span>
 						</div>
 
 						<div class="col-12" style="color: white;">
-							<i class="fas fa-th" style="font-size: 15px;"></i>
-							<a style="color: white;"  [routerLink]="['/Categories']"> 
-								<span style="padding-right: 10px;"> {{EpisodeObject.CategoryTitle}}</span>
-							</a>
-							
+							<!-- <i class="fas fa-th" style="font-size: 15px;"></i> -->
+							<!-- <a style="color: white;"  [routerLink]="['/Categories']"> -->
+								<span style="padding-right: 10px;"> {{EpisodeObject.CategoryTitle}}</span> ,
+								<span style="padding-right: 10px;"> 	{{EpisodeObject.ProgramTypeTitle}}</span>
+							<!-- </a> -->
+
 						</div>
 
 						<div class="dol-12" style="color: white;margin-right: 15px;">
-							<i style="padding-left: 5px;" class="fas fa-layer-group"></i>
-							{{EpisodeObject.ProgramTypeTitle}}
+              <span style="padding-right: 10px;"> 	{{EpisodeObject.EpisodePublishDate | date:'short'}}  </span>
+
+							<!-- <i style="padding-left: 5px;" class="fas fa-layer-group"></i>
+							{{EpisodeObject.ProgramTypeTitle}} -->
 						</div>
 
 						<div class="col-12 Description">
@@ -69,12 +73,12 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<!-- end share -->
 				</div>
 			</div>
 		</div>
-		<div class="row" [hidden]="EpisodesRelated.length == 0 ">
+		<div class="row" [hidden]="EpisodesRelated.length == 0 " >
 				<!-- title -->
 				<div class="col-12" style="color: white;padding-top: 20px;">
 						<h3> حلقات متعلقة بالبرنامج</h3>
@@ -82,7 +86,7 @@
 				<!-- end title -->
 		</div>
 		<!-- events -->
-		<section class="row row--grid">
+		<section class="row row--grid" style="margin-right: 15px;">
 			<!-- releases -->
 				<div class="row flex-row-reverse">
 					<div class="col-6 col-sm-4 col-lg-2 "
