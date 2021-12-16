@@ -1,3 +1,9 @@
+a
+{
+  color: white;
+  transition: 1s;
+
+}
 .Description
 {
     min-height: 50px;
@@ -24,3 +30,26 @@
       padding-right: 15px;
       padding-left: 10px;
   }
+
+  .SeasonsStyle
+  {
+    padding-right: 10px;display: inline-block;
+    border: 1px solid ;
+    border-color: rgba(255, 255, 255, 0.2);
+    margin-left: 5px;
+    padding: 2px;
+    transition: 1s;
+  }
+
+  .SeasonsStyle:hover
+  {
+
+    background-color: white;
+  }
+  .SeasonsStyle a:hover
+  {
+    font-weight: bolder;
+    color: rgb(8,8,8);
+  }
+
+

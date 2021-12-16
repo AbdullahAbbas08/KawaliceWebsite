@@ -22,18 +22,18 @@
 						<div class="col-12" style="padding-right:0px">
 							<!-- <i class="fa fa-home"></i> -->
 							<!-- <a style="color: white;"  [routerLink]="['/Categories']" > -->
-								<span >{{ProgramObject.CategoryName}}</span>
-							<!-- </a> --> &nbsp; - &nbsp;
+								<!-- <span >{{ProgramObject.CategoryName}}</span> -->
+							<!-- </a> -->
 							<!-- <i style="color: white;" class="fa fa-arrow-left" aria-hidden="true" style="padding-right: 20px;"></i> -->
-								<span >{{ProgramObject.ProgramName}} </span>
+								<span  style="color: #f9c74f;">{{ProgramObject.ProgramName}} </span>
 						</div>
             <div class="dol-12">
 							<!-- <i class="fas fa-layer-group paddingIcon"></i> -->
 							<span>{{ProgramObject.ProgramTypeName}}</span>
 						</div>
-						<div class="col-12" style="padding-right:0px">
+						<div class="col-12" style="padding-right:0px;margin-top:20px;">
 							<!-- <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 15px;"></i> -->
-							<i class="fas fa-user-tie"></i>
+							<i style="color: #f9c74f;" class="fas fa-user-tie"></i>
 							<a style="color: #f9c74f;" [routerLink]="['/InterviewerDetails',ProgramObject.InterviewerId]">
 								<span style="padding-right: 10px;"> {{ProgramObject.InterviewerName}}</span>
 							</a>
@@ -42,7 +42,7 @@
 
 
 
-						<div class="col-12 Description">
+						<div class="col-12 Description" style="padding-right:0px">
 							<p>{{ProgramObject.ProgramDescription}}</p>
 						</div>
 
@@ -66,10 +66,11 @@
 					<div class="row">
 						<!-- *ngIf="Seasons.length !== 0; else elseBlock" -->
 						<div class="col-12" *ngIf="Seasons.length !== 0; else elseBlock" >
-							<div  *ngFor="let item of Seasons" style="padding-right: 10px;display: inline-block;">
+              <span style="font-size: 20px;padding-left: 20px;">المواسم</span>
+							<div  *ngFor="let item of Seasons" class="SeasonsStyle">
 								<!-- [routerLink]="['/Episodes']" [queryParams]="{id: item.SessionId}" -->
 								<a [routerLink]="['/Episodes',item.SessionId]" >
-									<span style="color: white;" >
+									<span >
 										{{item.SeasonTitle}}
 									</span>
 								</a>
