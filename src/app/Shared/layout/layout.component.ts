@@ -5,11 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
+
+
 export class LayoutComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ModalClick(){
+      $(this).toggleClass('header__btn--active');
+      $('.sidebar').toggleClass('sidebar--active');
   }
 
 }

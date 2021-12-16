@@ -1,23 +1,24 @@
-function myFun()
-{
-  setTimeout(function () {
-    "use strict"; // start of use strict
-
-    /*==============================
+ /*==============================
     Menu
     ==============================*/
-    $('.header__btn').on('click', function() {
-      $(this).toggleClass('header__btn--active');
-      $('.sidebar').toggleClass('sidebar--active');
-    });
+function responsiveButton(){
+  $('.header__btn').on('click', function() {
+    $(this).toggleClass('header__btn--active');
+    $('.sidebar').toggleClass('sidebar--active');
+  });
+}
+
+function myFun()
+{
+
+    "use strict"; // start of use strict
 
     $('.header__search .close, .header__action--search button').on('click', function() {
       $('.header__search').toggleClass('header__search--active');
     });
-
-    /*==============================
-    Home slider
-    ==============================*/
+/*==============================
+ Home slider
+==============================*/
     $('.hero').owlCarousel({
       mouseDrag: true,
       rtl:true,
@@ -271,31 +272,31 @@ function myFun()
     /*==============================
     Modal
     ==============================*/
-    $('.open-video, .open-map').magnificPopup({
-      disableOn: 0,
-      fixedContentPos: true,
-      type: 'iframe',
-      preloader: false,
-      removalDelay: 300,
-      mainClass: 'mfp-fade',
-    });
+    // $('.open-video, .open-map').magnificPopup({
+    //   disableOn: 0,
+    //   fixedContentPos: true,
+    //   type: 'iframe',
+    //   preloader: false,
+    //   removalDelay: 300,
+    //   mainClass: 'mfp-fade',
+    // });
 
-    $('.open-modal').magnificPopup({
-      fixedContentPos: true,
-      fixedBgPos: true,
-      overflowY: 'auto',
-      type: 'inline',
-      preloader: false,
-      focus: '#username',
-      modal: false,
-      removalDelay: 300,
-      mainClass: 'my-mfp-zoom-in',
-    });
+    // $('.open-modal').magnificPopup({
+    //   fixedContentPos: true,
+    //   fixedBgPos: true,
+    //   overflowY: 'auto',
+    //   type: 'inline',
+    //   preloader: false,
+    //   focus: '#username',
+    //   modal: false,
+    //   removalDelay: 300,
+    //   mainClass: 'my-mfp-zoom-in',
+    // });
 
-    $('.modal__close').on('click', function (e) {
-      e.preventDefault();
-      $.magnificPopup.close();
-    });
+    // $('.modal__close').on('click', function (e) {
+    //   e.preventDefault();
+    //   $.magnificPopup.close();
+    // });
 
     /*==============================
     Select
@@ -563,7 +564,7 @@ function myFun()
         }
       }
     }
-  }, 1000);
+  
 
 }
 

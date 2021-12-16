@@ -24,6 +24,7 @@ import { ArabicNumberPipe } from './Shared/Pipes/arabic-number.pipe';
 import { InterviewerDetailComponent } from './components/Interviewer/interviewer-detail/interviewer-detail.component';
 import { EpisodeComponent } from './components/episode/Episode-Detail/episode.component';
 import { EpisodesComponent } from './components/episode/episodes/episodes.component';
+import { ADsComponent } from './Shared/ads/ads.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { EpisodesComponent } from './components/episode/episodes/episodes.compon
     ProgramTypeComponent,
     ArabicNumberPipe,
     InterviewerDetailComponent,
-    EpisodesComponent
+    EpisodesComponent,
+    ADsComponent
   ],
   imports: [
     BrowserModule,

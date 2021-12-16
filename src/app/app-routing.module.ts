@@ -22,7 +22,7 @@ import { ProgramDetailsComponent } from './components/program/program-details/pr
 import { ProgramComponent } from './components/program/Programs/program.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent, resolve:{trending:TrendingResolver}, pathMatch: 'full' },
+  {path:'',component:HomeComponent, resolve:{trending:TrendingResolver,slider:SliderResolver}, pathMatch: 'full' },
   {path:'Categories', component:CategoryComponent , resolve:{categories:CategoryResolver}},
   {path:'Programs/:CategoryId', component:ProgramComponent , resolve:{programs:ProgramResolver}},
   {path:'Programs', component:ProgramComponent , resolve:{Allprograms:AllProgramsResolver}},

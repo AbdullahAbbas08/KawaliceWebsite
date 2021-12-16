@@ -1,65 +1,65 @@
 <!-- slider -->
 <section class="row">
   <div class="col-12">
-    <div class="hero owl-carousel" id="hero">
-      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + imageUrl+slideOne.SliderImagePath + ')'}">
+    <div class="hero owl-carousel" id="hero" >
+      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + sliderData.Url+sliderData.DataList[0].SliderImagePath + ')'}">
         <!-- <h2 class="hero__title">{{slideSex.SliderTitle}}</h2>
         <p class="hero__text">There are many variations of passages of Lorem Ipsum available, but the majority have
           suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
           believable</p> -->
           <div class="hero__btns">
-            <a href="#" class="hero__btn">شاهد الان</a>
+            <a [routerLink]="['/Episode',sliderData.DataList[0].EpisodeId]" class="hero__btn">شاهد الان</a>
           </div>
       </div>
 
-      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + imageUrl+slideTwo.SliderImagePath + ')'}">
+      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + sliderData.Url+sliderData.DataList[1].SliderImagePath + ')'}">
         <!-- <h2 class="hero__title">{{slideSex.SliderTitle}}</h2>
         <p class="hero__text">There are many variations of passages of Lorem Ipsum available, but the majority have
           suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
           believable</p> -->
           <div class="hero__btns">
-            <a href="#" class="hero__btn">شاهد الان</a>
+            <a [routerLink]="['/Episode',sliderData.DataList[1].EpisodeId]" class="hero__btn">شاهد الان</a>
           </div>
       </div>
 
-      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + imageUrl+slideThree.SliderImagePath + ')'}">
+      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + sliderData.Url+sliderData.DataList[2].SliderImagePath + ')'}">
         <!-- <h2 class="hero__title">{{slideSex.SliderTitle}}</h2>
         <p class="hero__text">There are many variations of passages of Lorem Ipsum available, but the majority have
           suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
           believable</p> -->
           <div class="hero__btns">
-            <a href="#" class="hero__btn">شاهد الان</a>
+            <a [routerLink]="['/Episode',sliderData.DataList[2].EpisodeId]" class="hero__btn">شاهد الان</a>
           </div>
       </div>
 
-      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + imageUrl+slideFour.SliderImagePath + ')'}">
+      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + sliderData.Url+sliderData.DataList[3].SliderImagePath + ')'}">
         <!-- <h2 class="hero__title">{{slideSex.SliderTitle}}</h2>
         <p class="hero__text">There are many variations of passages of Lorem Ipsum available, but the majority have
           suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
           believable</p> -->
           <div class="hero__btns">
-            <a href="#" class="hero__btn">شاهد الان</a>
+            <a [routerLink]="['/Episode',sliderData.DataList[3].EpisodeId]" class="hero__btn">شاهد الان</a>
           </div>
       </div>
 
-      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + imageUrl+slideFive.SliderImagePath + ')'}">
-        <h2 class="hero__title">{{slideFive.SliderTitle}}</h2>
+      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + sliderData.Url+sliderData.DataList[4].SliderImagePath + ')'}">
+        <!-- <h2 class="hero__title">{{slideFive.SliderTitle}}</h2> -->
         <!-- <h2 class="hero__title">{{slideSex.SliderTitle}}</h2>
         <p class="hero__text">There are many variations of passages of Lorem Ipsum available, but the majority have
           suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
           believable</p> -->
           <div class="hero__btns">
-            <a href="#" class="hero__btn">شاهد الان</a>
+            <a [routerLink]="['/Episode',sliderData.DataList[4].EpisodeId]" class="hero__btn">شاهد الان</a>
           </div>
       </div>
 
-      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + imageUrl+slideSex.SliderImagePath + ')'}">
+      <div class="hero__slide" [style.background-size]="'cover'" [style.background-position]="'center'"[style.background-repeat]= "'no-repeat'" [ngStyle]="{'background-image': 'url(' + sliderData.Url+sliderData.DataList[5].SliderImagePath + ')'}">
         <!-- <h2 class="hero__title">{{slideSex.SliderTitle}}</h2>
         <p class="hero__text">There are many variations of passages of Lorem Ipsum available, but the majority have
           suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
           believable</p> -->
         <div class="hero__btns">
-          <a href="#" class="hero__btn">شاهد الان</a>
+          <a [routerLink]="['/Episode',sliderData.DataList[5].EpisodeId]" class="hero__btn">شاهد الان</a>
         </div>
       </div>
     </div>
