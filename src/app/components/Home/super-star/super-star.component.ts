@@ -3,6 +3,9 @@ import { CollectionData } from 'src/DTO/collection-data';
 import { InterviewerService } from 'src/Services/Interviewer/Interviewer.service';
 import { SuperStar } from './../../../../Models/SuperStar';
 
+
+declare function myFun():any;
+
 @Component({
   selector: 'app-super-star',
   templateUrl: './super-star.component.html',
@@ -17,11 +20,12 @@ export class SuperStarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSuperStar()
+    myFun()
   }
 
   getSuperStar(){
     this.interviewerService.GetSuperStars().subscribe((res)=>{
-      this.superStar=res
+      this.superStar=res as CollectionData<SuperStar>;
     },
     (err)=>{console.log(err)})
   }

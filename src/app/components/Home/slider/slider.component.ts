@@ -40,20 +40,6 @@ export class SliderComponent implements OnInit {
   }
 
   GetSlider(){
-    // this.slider.getall().subscribe(
-    //    (res)=>{
-    //      this.imageUrl=res.Url,
-    //      this.sliderData.Url=res.Url,
-    //      this.sliderData.DataList=res.DataList
-    //      this.slideOne=this.sliderData.DataList[0]
-    //      this.slideTwo=this.sliderData.DataList[1]
-    //      this.slideThree=this.sliderData.DataList[2]
-    //      this.slideFour=this.sliderData.DataList[3]
-    //      this.slideFive=this.sliderData.DataList[4]
-    //      this.slideSex=this.sliderData.DataList[5]
-    //    },
-    //    (err)=>{console.log(err)}
-    //  )
     this.sliderData=this.route.snapshot.data['slider']
    }
 }

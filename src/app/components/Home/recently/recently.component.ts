@@ -29,7 +29,6 @@ export class RecentlyComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.getRecently();
   }
 
