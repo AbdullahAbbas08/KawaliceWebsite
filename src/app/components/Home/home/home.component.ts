@@ -4,6 +4,7 @@ import { Slider } from 'src/Models/Slider';
 import { SliderService } from 'src/Services/Slider/slider.service';
 
 import '../../../../assets/js/main.js';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,6 @@ import '../../../../assets/js/main.js';
 export class HomeComponent implements OnInit {
 
   jQuery: any;
-
   constructor() { }
 
   ngOnInit(): void {
