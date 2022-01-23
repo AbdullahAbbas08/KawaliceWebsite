@@ -8,6 +8,7 @@ import { InterviewerResolverResolver } from 'src/Services/Interviewer/interviewe
 import { AllProgramsResolver } from 'src/Services/program/all-programs.resolver';
 import { ProgramDetailsResolver } from 'src/Services/program/program-details.resolver';
 import { ProgramResolver } from 'src/Services/program/program.resolver';
+import { ProgramByTypeResolver } from 'src/Services/program/programByType.resolver';
 import { ProgramTypeResolver } from 'src/Services/ProgramType/program-type.resolver';
 import { SliderResolver } from 'src/Services/Slider/slider.resolver';
 import { TrendingResolver } from 'src/Services/trending.resolver';
@@ -25,7 +26,7 @@ const routes: Routes = [
   {path:'',component:HomeComponent, resolve:{trending:TrendingResolver,slider:SliderResolver}, pathMatch: 'full' },
   {path:'Categories', component:CategoryComponent , resolve:{categories:CategoryResolver}},
   {path:'Programs/:CategoryId', component:ProgramComponent , resolve:{programs:ProgramResolver}},
-  {path:'Programs', component:ProgramComponent , resolve:{Allprograms:AllProgramsResolver}},
+  {path:'Programs', component:ProgramComponent , resolve:{Allprograms:AllProgramsResolver , programsByType:ProgramByTypeResolver}},
   {path:'Interviewer',component:InterviewerComponent, resolve:{interviewer:InterviewerResolverResolver}},
   {path:'ProgramDetails/:ProgramID',component:ProgramDetailsComponent, resolve:{programDetail:ProgramDetailsResolver}},
   {path:'InterviewerDetails/:InterviewerID',component:InterviewerDetailComponent, resolve:{interviewer:InterviewerDetailResolver}},
@@ -36,7 +37,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
 exports: [RouterModule]
 })
 export class AppRoutingModule { }

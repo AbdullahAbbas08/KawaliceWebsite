@@ -87,14 +87,10 @@ export class EpisodeComponent implements OnInit {
 
   //#region Get Episodes Related With Program ID
   getEpisodesRelated() {
-    let res = this._EpisodeService.GetEpisodebyProgramID(this.EpisodeObject.ProgramId).subscribe(
+    this._EpisodeService.GetEpisodebyProgramID(this.EpisodeObject.ProgramId).subscribe(
       (data) => {
        this.EpisodesRelated = data.DataList.filter(x => x.EpisodeId != this.EpisodeObject.EpisodeId)
-      },
-      (err) => {});
-
-
-
+      });
 
   }
   //#endregion

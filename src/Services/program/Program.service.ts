@@ -40,11 +40,19 @@ GetProgramById(ID:number): Observable<CollectionData<ProgramModel>> {
 }
 //#endregion
 
-//#region  Program By Interviewer ID 
+//#region  Program By Interviewer ID
 //
 GetProgramsByInterviewerId(ID:number): Observable<CollectionData<Program>> {
   let x=  this.http.get<CollectionData<Program>>(`${environment.URL}/interviewers/getprogramsbyinterviewerid?ID=${ID}`, this.httpOptionsWithKey);
 return x;
+}
+//#endregion
+
+//#region  Program By Type ID
+//
+GetProgramsByTypeId(ID:number): Observable<CollectionData<Program>> {
+  return this.http.get<CollectionData<Program>>(`${environment.URL}/programs/getallprogramsbytypeid?ID=${ID}`, this.httpOptionsWithKey);
+
 }
 //#endregion
 

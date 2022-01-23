@@ -1,7 +1,8 @@
 <app-layout></app-layout>
+<app-ads [placementId]="1020"></app-ads>
 <!-- main content -->
 <main class="main ">
-  <div class="container-fluid">
+  <div class="container-fluid pb-5">
     <!-- artists -->
     <div class="row mt-0">
       <!-- breadcrumb -->
@@ -35,7 +36,7 @@
 
         <div class="row flex-row-reverse mt-0">
           <div class="col-6 col-sm-4 col-md-3 col-xl-2" *ngFor="let item of Interviewers.DataList">
-            <a href="artist.html" class="artist">
+            <a [routerLink]="['/InterviewerDetails' , item.InterviewerId]" class="artist">
               <div class="artist__cover">
                 <img src="{{Interviewers.Url}}{{item.InterviewerPicture}}" alt="">
               </div>
@@ -47,6 +48,7 @@
         <!-- <button class="main__load" type="button">Load more</button> -->
       </div>
     </div>
+    <app-ads [placementId]="1021"></app-ads>
   </div>
   <app-footer></app-footer>
 </main>

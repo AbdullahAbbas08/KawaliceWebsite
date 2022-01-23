@@ -1140,7 +1140,7 @@ body::-webkit-scrollbar-thumb {
 .main {
   position: relative;
   margin-top: 70px;
-  padding: 20px 0 60px;
+  padding-top: 20px ;
 }
 .main__title {
   display: flex;
@@ -1636,7 +1636,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 576px) {
   .main {
-    padding: 20px 15px 50px;
+    padding: 20px 15px 20px;
   }
   .main__list--dashbox .single-item__title {
     max-width: 150px;
@@ -1651,7 +1651,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 768px) {
   .main {
-    padding: 0px 15px 70px;
+    padding: 0px 15px 20px;
   }
   .main__title {
     margin-top: 30px;
@@ -1727,7 +1727,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1200px) {
   .main {
-    padding: 0 295px 70px 15px;
+    padding: 0 295px 0px 15px;
     margin-top: 0;
   }
   .main__carousel .owl-dots {
@@ -5207,7 +5207,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   font-size: 14px;
   color: #c0c0c0;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .footer__copyright a {
   color: #c0c0c0;

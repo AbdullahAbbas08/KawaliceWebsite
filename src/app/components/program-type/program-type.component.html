@@ -1,7 +1,8 @@
 <app-layout></app-layout>
+<app-ads [placementId]="1018"></app-ads>
 <!-- main content -->
 <main class="main">
-  <div class="container-fluid">
+  <div class="container-fluid pb-5">
     <div class="row row--grid">
       <div class="col-12">
         <div class="row mt-0">
@@ -25,6 +26,7 @@
 
         <div class="row flex-row-reverse">
           <div class="col-6 col-sm-4 col-lg-3" *ngFor="let item of programType.DataList">
+           <a [routerLink]="['/Programs']"  [queryParams]="{ Type:item.ProgramTypeId}">
             <div class="product">
               <div class="product__img">
                 <img src="{{programType.Url}}{{item.ProgramTypeImgPath}}" alt="">
@@ -37,12 +39,14 @@
               <span class="product__price">يحتوي علي {{item.ProgramCount | arabicNumber}} برامج </span>
               <!-- <span class="product__new">New</span> -->
             </div>
+           </a>
           </div>
         </div>
 
         <!-- <button class="main__load" type="button">Load more</button> -->
       </div>
     </div>
+    <app-ads [placementId]="1019"></app-ads>
   </div>
   <app-footer></app-footer>
 </main>

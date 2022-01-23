@@ -29,6 +29,7 @@ export class InterviewerComponent implements OnInit {
 
       //#region Call Methods
       this.Interviewers= this.route.snapshot.data['interviewer']
+
       //#endregion
 
       window.scrollTo(0, 0)
@@ -38,5 +39,7 @@ export class InterviewerComponent implements OnInit {
     //#region Get Interviewers
 
     //#endregion
+
+
 
 }

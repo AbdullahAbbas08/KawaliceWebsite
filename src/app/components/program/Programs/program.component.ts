@@ -29,19 +29,21 @@ export class ProgramComponent implements OnInit {
       //#endregion
 
       //#region Call Methods
-       if(this.route.snapshot.paramMap.get('CategoryId') == undefined)
-        this.Programs = this.route.snapshot.data['Allprograms'];
+       if(this.route.snapshot.paramMap.get('CategoryId') != undefined)
+        this.Programs = this.route.snapshot.data['programs'];
+      else  if(this.route.snapshot.queryParamMap.get('Type') != undefined)
+        this.Programs = this.route.snapshot.data['programsByType'];
         else
        this.GetPrograms();
       //#endregion
-      window.scrollTo(0, 0)
+
     }
     //#endregion
 
     //#region Get Programs By Cat ID
     GetPrograms()
         {
-          this.Programs = this.route.snapshot.data['programs']
+          this.Programs = this.route.snapshot.data['Allprograms']
         }
     //#endregion
 

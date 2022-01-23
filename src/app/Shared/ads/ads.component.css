@@ -1,0 +1,30 @@
+.ads {
+  height: 250px;
+  text-align: center;
+}
+.img {
+  height: 250px;
+  width: 970px;
+}
+
+/* 425 to 1045 */
+@media(max-width:1045px){
+  .ads {
+    height: 167px ;
+  }
+  .img {
+    height: 167px ;
+    width:650px;
+  }
+}
+
+/* 0 to 425 */
+@media(max-width:425px){
+  .ads {
+  height: 64px ;
+}
+.img {
+  height: 64px ;
+  width:250px;
+}
+}

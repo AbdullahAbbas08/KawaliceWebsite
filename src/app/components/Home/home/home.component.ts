@@ -13,7 +13,6 @@ import { Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  jQuery: any;
   constructor() { }
 
   ngOnInit(): void {

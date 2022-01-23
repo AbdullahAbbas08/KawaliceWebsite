@@ -1,7 +1,7 @@
-<div class="row" style="height: 100px; margin-top: 30px; cursor: pointer;">
-  <div class="col-12 bg-secondary text-white">
-    <div class="Ads d-flex justify-content-center" style="height: 100%;align-items: center;background-color: darkgray;">
-      <h2 style="width: 100%; text-align: center; ">للاعلان اضغط هنا</h2>
-    </div>
-  </div>
+<div class="ads container-fluid " *ngIf="dataList != null" style=" margin: 30px 0px; cursor: pointer;" >
+
+      <a  [href]="[dataList?.URL]">
+        <img [src]="url+dataList?.ImagePath" alt="" class="img-fluid img" style="  margin-top: 30px;">
+        </a>
+
 </div>
